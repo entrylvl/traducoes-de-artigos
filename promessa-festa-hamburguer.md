@@ -66,6 +66,8 @@ Vamos dar uma olhada no código que temos até agora. Quando você chama a funç
 
 Parece que o pager está apitando, vamos para o balcão pegar o pedido. Existem 2 cenários possíveis que podemos esperar nesse estágio.
 
+![](http://i.imgur.com/bIV4nE5.png)
+
 ## 1. Ordem completada
 
 Eba!!! Seu hambúrguer está pronto, a equipe da cozinha lhe entrega um hambúrguer recém-preparado. A promessa de um bom hambúrguer foi completa!
