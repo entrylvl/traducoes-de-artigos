@@ -10,6 +10,40 @@ Se você me conhecesse do twitter, eu sou uma pessoa visual que desenha [conceit
 
 Aqui está um pedaço dó código que iremos olhar nessa história.
 
+```
+// operação assincrona
+function cozinharHamburguer (tipo) { ... }
+
+// operação regular
+function fazerMilkshake (tipo) { ... }
+
+// função de pedido que retorna uma promise
+function pedido (tipo) {
+  return new Promise(function(resolve, reject) {
+    var hamburguer = cozinharHamburguer(tipo)
+    hamburguer.pronto = function (erro, hamburguer) {
+      if (erro) {
+        return reject(Error('Erro ao cozinhar'))
+      }
+      return resolve(hamburguer)
+    }
+  })
+}
+
+pedido('JakeBurger')
+  .then( hamburguer => {
+    const milkshake = fazerMilkshake('baunilha')
+    return { hamburguer: hamburguer, bebida: milkshake }
+  })
+  .then( ingredientes => {
+    console.log('FESTA DO HAMBURGUER !', ingredientes)
+  })
+  .catch( erro => {
+    console.log(erro)
+  })
+
+```
+
 ## Vamos dar uma festa do hambúrguer
 
 Bem-vindo ao Promise Square Park, casa da hamburgueria JakeShack. Os hambúrgueres da JakeSchack são muito famosos, mas eles não possuem muitos atendentes para anotar os pedidos, então a fila é sempre imensa. No entanto, a cozinha é muito bem equipada para preparar múltiplos pedidos ao mesmo tempo.
