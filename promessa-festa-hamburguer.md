@@ -10,6 +10,22 @@ Se você me conhecesse do twitter, eu sou uma pessoa visual que desenha [conceit
 
 Aqui está um pedaço dó código que iremos olhar nessa história.
 
+## Vamos dar uma festa do hambúrguer
+
+Bem-vindo ao Promise Square Park, casa da hamburgueria JakeShack. Os hambúrgueres da JakeSchack são muito famosos, mas eles não possuem muitos atendentes para anotar os pedidos, então a fila é sempre imensa. No entanto, a cozinha é muito bem equipada para preparar múltiplos pedidos ao mesmo tempo.
+
+> Caso você não seja familiar, [Madison Square Park (um parque de Nova Iorque) e ShakeShack (hamburgueria localizada próximo ao parque) são famosos em Nova Iorque](https://kosamari.com/notes/the-promise-of-a-burger-party). É *um lugar muito bom*, mas a fila sempre é grande.
+
+## Transformando a ação em promessa (promises)
+
+Para ser possível anotar pedidos no menor tempo possível, JakeShack utiliza um sistema de pagers. Quando um cliente faz um pedido no caixa, o atendente lhe entrega uma bandeja e um pager.
+
+A bandeja é uma promessa da hamburgueria de que eles irão colocar seu delicioso hambúrger nela quando estiver pronto, e o pager é um indicator do estado do pedido. Quando o pager não está vibrando, isso significa que o pedido está **pendente** - o pessoal da cozinha está ocupado preparando o seu pedido. Quando o pager fica vermelho e vibra, significa que o seu pedido está **resolvido**.
+
+Uma observação: **resolvido** aqui não quer dizer "pronto". Quer dizer que o pedido foi processado na cozinha e os atendentes estão chamando o cliente para tomar uma ação sobre ele. Você (um cliente) provavelmente quer retirar o seu pedido no balcão, mas em alguma situação, você poderia simplesmente ir embora. É uma escolha sua.
+
+Vamos dar uma olhada no código que temos até agora. Quando você chama a função pedido, ela "retorna uma promessa" (lhe entregando uma bandeja e um pager. Um valor de retorno (um hambúrguer) deve aparecer na bandeja assim que a promessa (promise) for cumprida e a função de callback chamada. Vejamos mais na próxima seção!
+
 ## Adicionar manipulador de promises
 
 Parece que o pager está apitando, vamos para o balcão pegar o pedido. Existem 2 cenários possíveis que podemos esperar nesse estágio.
