@@ -10,7 +10,7 @@ Se você me conhecesse do twitter, eu sou uma pessoa visual que desenha [conceit
 
 Aqui está um pedaço dó código que iremos olhar nessa história.
 
-```
+```js
 // operação assincrona
 function cozinharHamburguer (tipo) { ... }
 
@@ -53,6 +53,8 @@ Bem-vindo ao Promise Square Park, casa da hamburgueria JakeShack. Os hambúrguer
 ## Transformando a ação em promessa (promises)
 
 Para ser possível anotar pedidos no menor tempo possível, JakeShack utiliza um sistema de pagers. Quando um cliente faz um pedido no caixa, o atendente lhe entrega uma bandeja e um pager.
+
+![](http://i.imgur.com/Uu27RRU.png)
 
 A bandeja é uma promessa da hamburgueria de que eles irão colocar seu delicioso hambúrger nela quando estiver pronto, e o pager é um indicator do estado do pedido. Quando o pager não está vibrando, isso significa que o pedido está **pendente** - o pessoal da cozinha está ocupado preparando o seu pedido. Quando o pager fica vermelho e vibra, significa que o seu pedido está **resolvido**.
 
