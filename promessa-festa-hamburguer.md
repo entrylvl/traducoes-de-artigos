@@ -86,6 +86,8 @@ Aqui é como você pode preparar seu código para essas 2 situações.
 
 Vamos dizer que seu pedido foi completado, mas você percebeu que para ter uma super festa do hambúrguer, você também precisa de milkshake... então você vai até a fila-C (uma fila especial para bebidas, algo real no ShakeShack para otimizar a fila). Quando você pede um milkshake no balcão, o atendende do caixa lhe dá uma nova bandeja e um outro pager. Já que milkshakes ficam prontos super rápidos, o atendente irá lhe entregar o milkshake também. Não é preciso esperar pelo pager apitar (já está apitando).
 
+![](http://i.imgur.com/AH8SIfb.png)
+
 Vamos olhar como esse código funciona. Encadear promessas é tão fácil quanto adicionar um .then() no seu código. O retorno de uma .then() é sempre uma promise. Apenas lembre que cada .then() retorna uma bandeja e um pager, e um valor de retorno efetivo é passado como argumento para o callback.
 
 Agora que você tem um hambúrguer e um milkshake, você está pronto para a FESTA DO HAMBÚRGUER.
