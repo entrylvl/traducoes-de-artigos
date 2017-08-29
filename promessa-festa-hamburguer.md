@@ -8,6 +8,8 @@ Eu escrevi códigos baseados em promises várias vezes, mas de alguma maneira as
 
 Se você me conhecesse do twitter, eu sou uma pessoa visual que desenha [conceitos de código](http://https://twitter.com/kosamari/status/806941856777011200) como uma [metafóra física](http://https://twitter.com/kosamari/status/807303762188574720). É como eu consigo lidar com uma dupla camada de abstração (linguagem de programação e inglês como uma segunda língua). Então, naturalmente eu também precisei desenhar dessa vez.
 
+![](http://i.imgur.com/HWoFZiE.png)
+
 Aqui está um pedaço dó código que iremos olhar nessa história.
 
 ```js
@@ -61,6 +63,8 @@ A bandeja é uma promessa da hamburgueria de que eles irão colocar seu delicios
 Uma observação: **resolvido** aqui não quer dizer "pronto". Quer dizer que o pedido foi processado na cozinha e os atendentes estão chamando o cliente para tomar uma ação sobre ele. Você (um cliente) provavelmente quer retirar o seu pedido no balcão, mas em alguma situação, você poderia simplesmente ir embora. É uma escolha sua.
 
 Vamos dar uma olhada no código que temos até agora. Quando você chama a função pedido, ela "retorna uma promessa" (lhe entregando uma bandeja e um pager. Um valor de retorno (um hambúrguer) deve aparecer na bandeja assim que a promessa (promise) for cumprida e a função de callback chamada. Vejamos mais na próxima seção!
+
+![](http://i.imgur.com/cypH6gC.png)
 
 ## Adicionar manipulador de promises
 
