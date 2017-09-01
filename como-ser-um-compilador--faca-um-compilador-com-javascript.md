@@ -11,7 +11,7 @@ Um maravilhoso domingo em Bushwick, Brooklyn. Eu achei um livro chama ["Design b
 *Exemplo de código DNB http://dbn.media.mit.edu/introduction.html*
 
 Eu imediatamente pensei em fazer SVG através do DBN e rodar em browser, seria um projeto interessante em 2016, melhor que instalar o ambiente Java para executar o código fonte original do DBN.
-Eu percebi que teria que escrever um compilador de DBN para SVG, então a aventura de escrever um compilador começou. "Fazendo um compilador" para muito como ciência da computação...mas eu nunca cruzei nós em entrevistas de código, será que eu posso fazer um compilador?
+Eu percebi que teria que escrever um compilador de DBN para SVG, então a aventura de escrever um compilador começou. **"Fazendo um compilador" para muito como ciência da computação...mas eu nunca inverti nós de arvore em entrevistas de código, será que eu posso fazer um compilador?**
 
 ![](https://cdn-images-1.medium.com/max/960/1*mihwNKQqerkXUZ4GQhqgsg.png)
 *Meu compilador imaginário, onde o código vai ser punido. Se o código é ruim, ele é capturado na mensagem de erro para sempre.*
@@ -253,7 +253,7 @@ función () {
 }
 ```
 
-Exitem pessoas que fizeram linguagens de programação em Emoji (Emojicode) e em imagem colorida (Linguagem programação Piet). As possibilidades são infinitas!
+Exitem pessoas que fizeram linguagens de programação em [Emoji (Emojicode)](http://www.emojicode.org/) e em imagem colorida ([Linguagem programação Piet](http://www.dangermouse.net/esoteric/piet.html)). As possibilidades são infinitas!
 
 ## Aprendizados ao fazer um compilador
 
