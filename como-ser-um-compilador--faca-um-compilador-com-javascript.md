@@ -33,7 +33,7 @@ Você desenhou uma linha preta no meio da esqueda para a direta? Parabéns!
 
 Você acabou de se tornar um compilador.
 
-![](https://cdn-images-1.medium.com/max/800/1*aDJskliFHSIIfYhr8aN3UA.png)*Compiled result*
+![](https://cdn-images-1.medium.com/max/800/1*aDJskliFHSIIfYhr8aN3UA.png)*Resultado Compilado*
 
 ## Como um compilador funciona?
 
@@ -62,6 +62,9 @@ Quando nós analisamos a sintase pelo parseamento, nos transformamos a estrutura
 ### 4. Geração de código
 
 Por último, nós fazemos do resultado compilado, um desenho. Nesse ponto, nós seguimos as instruções que fizemos no último passo para desenhar.
+
+![](https://cdn-images-1.medium.com/max/800/1*250m-6zI6slTBirOxHX7kw.png)
+*Geração de código*
 
 E é isso que um compilador faz!
 
@@ -255,6 +258,8 @@ Exitem pessoas que fizeram linguagens de programação em Emoji (Emojicode) e em
 ## Aprendizados ao fazer um compilador
 
 Fazer um compilador foi divertido, mas acima de tudo, me ensinou muito sobre desenvolvimento de software. Aqui estão algumas coisas que eu aprendi enquanto fazia meu compilador.
+
+![](https://cdn-images-1.medium.com/max/960/1*AREFc7UVIAu_YIgk46EwaA.png)*Como eu imagino compulador depois de ter feito um*
 
 ### 1. Você não precisa conhecer tudo
 Assim como o nosso analisador léxico, você não precisa saber tudo desde o início. Se você realmente não entender uma parte do código ou tecnologia, não hesite em dizer "Tem isso, e eu sei um pouco dela" e passar para o próximo passo. Não se estresse com isso, você ir'á entender eventualmente.
