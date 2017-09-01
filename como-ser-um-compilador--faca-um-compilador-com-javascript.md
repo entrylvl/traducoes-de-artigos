@@ -69,13 +69,6 @@ E é isso que um compilador faz!
 
 O desenho que nós fizemos é o resultado compilado (como um .exe quando compilamos um código em C). Nós podemos passar esse desenho para qualquer um ou qualquer dispositivo (scanner, câmera e etc) para "rodar" e todos verão uma linha preta no meio.
 
-
-# Um compilador não deve usar recursão, busca em árvore e etc ?
-
-Sim, e essas são ótimas técnicas para construir um compilador, não não significa que você tem que usá-las na primeira vez.
-
-Eu comecei fazendo um compilador para uma pequena parte da linguagem DBN, uma parte bem limitada. Desde então, eu aumentei o escopo e agora planejo adicionar funcionalidades como variáveis, blocos e laços para este compilador. Seria uma ótima ideia usar estas técnicas agora, mas não é um requisito para começar.
-
 # Vamos fazer um compilador
 
 Agora que nós sabemos como um compilador funciona, vamos fazer um em JavaScript. Esse compilador recebe código DBN e tranforma em código SVG.
@@ -323,7 +316,16 @@ var svg = sbn.compile(code)
 document.body.innerHTML = svg
 ```
 
-Eu fiz uma demonstração interativa que mostra os resultados de cada etapa desse compilador. O código do compilador sbn foi disponibilizado no github. Estou adicionando novas funcionalidades no compilador neste momento. Se você quer checar o compilador básico que eu fiz nesse artigo por favor verifique essa [versão simples](https://github.com/kosamari/sbn/tree/simple)
+Eu fiz uma demonstração interativa que mostra os resultados de cada etapa desse compilador. O código do compilador sbn foi disponibilizado no github. Estou adicionando novas funcionalidades no compilador neste momento. Se você quer checar o compilador básico que eu fiz nesse artigo por favor verifique essa [versão simples](https://github.com/kosamari/sbn/tree/simple).
+
+![](https://cdn-images-1.medium.com/max/1200/1*7ADpMcLo1VOnW4-fF2vjDg.png)
+https://kosamari.github.io/sbn/
+
+# Um compilador não deve usar recursão, busca em árvore e etc ?
+
+Sim, e essas são ótimas técnicas para construir um compilador, não não significa que você tem que usá-las na primeira vez.
+
+Eu comecei fazendo um compilador para uma pequena parte da linguagem DBN, uma parte bem limitada. Desde então, eu aumentei o escopo e agora planejo adicionar funcionalidades como variáveis, blocos e laços para este compilador. Seria uma ótima ideia usar estas técnicas agora, mas não é um requisito para começar.
 
 
 ## Escrever um compilador é muito legal
