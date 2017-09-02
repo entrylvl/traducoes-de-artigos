@@ -1,3 +1,7 @@
+[Artigo original: How to be* a compiler — make a compiler with JavaScript](https://medium.com/@kosamari/how-to-be-a-compiler-make-a-compiler-with-javascript-4a8a13d473b4)
+
+---
+
 # Como ser* um compilador - Faça um compilador com JavaScript
 
 ## *Sim! Você deve ser um compilador. É muito legal.
@@ -68,7 +72,7 @@ Por último, nós fazemos do resultado compilado, um desenho. Nesse ponto, nós 
 
 E é isso o que um compilador faz!
 
-O desenho que nós fizemos é o resultado compilado (como um `.exe` quando compilamos um código em C). Nós podemos passar esse desenho para qualquer um ou qualquer dispositivo (scanner, câmera e etc) para "rodar" e todos verão uma linha preta no meio.xssdasd
+O desenho que nós fizemos é o resultado compilado (como um `.exe` quando compilamos um código em C). Nós podemos passar esse desenho para qualquer um ou qualquer dispositivo (scanner, câmera e etc) para "rodar" e todos verão uma linha preta no meio.
 
 # Vamos fazer um compilador
 
