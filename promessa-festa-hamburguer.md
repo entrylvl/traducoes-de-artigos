@@ -1,12 +1,12 @@
 # A promessa de uma festa do hambúrguer
-Eu escrevi esse artigo como uma introdução alternativa ao conceito de *promise* em JavaScript. Foi algo que eu esbocei no meu caderno enqaunto eu lia vários artigos sobre promises. Se você precisar de um tutorial mais avançado, eu listei uma sugestões de artigos no fim deste.
+Eu escrevi esse artigo como uma introdução alternativa ao conceito de *promise* em JavaScript. Foi algo que eu esbocei no meu caderno enquanto eu lia vários artigos sobre promises. Se você precisar de um tutorial mais avançado, eu listei sugestões de artigos no fim deste.
 👍
 
-Duas semanas atrás, eu estava em uma conversa sobre como implementar uma funcionalidade em JavaScript. Ela precisava ser assíncrona para acessar dados externos, eu disse "bem, vamos usar *fetch()*...então no código... umm..." enquanto eu parei para lembrar sobre a API do fetch, a pessoa com a qual eu estava conversando disse, "Retorna uma promise. Meu cérebro congelou, e eu disse: "Eu honestamente não sei o que você quer dizer".
+Duas semanas atrás, eu estava em uma conversa sobre como implementar uma funcionalidade em JavaScript. Ela precisava ser assíncrona para acessar dados externos, eu disse "bem, vamos usar *fetch()*...então no código... umm..." enquanto eu parei para lembrar sobre a API do fetch, a pessoa com a qual eu estava conversando disse, "Retorna uma promise". Meu cérebro congelou, e eu disse: "Eu honestamente não sei o que você quer dizer".
 
 Eu escrevi códigos baseados em promises várias vezes, mas de alguma maneira as coisas não se conectaram no meu cérebro desta vez. Eu percebi que na verdade eu não entendo promises.
 
-Se você me conhecesse do twitter, eu sou uma pessoa visual que desenha [conceitos de código](http://https://twitter.com/kosamari/status/806941856777011200) como uma [metafóra física](http://https://twitter.com/kosamari/status/807303762188574720). É como eu consigo lidar com uma dupla camada de abstração (linguagem de programação e inglês como uma segunda língua). Então, naturalmente eu também precisei desenhar dessa vez.
+Se você me conhece do twitter, eu sou uma pessoa visual que desenha [conceitos de código](http://https://twitter.com/kosamari/status/806941856777011200) como uma [metáfora física](http://https://twitter.com/kosamari/status/807303762188574720). É como eu consigo lidar com uma dupla camada de abstração (linguagem de programação e inglês como uma segunda língua). Então, naturalmente eu também precisei desenhar dessa vez.
 
 ![](http://i.imgur.com/HWoFZiE.png)
 
@@ -72,14 +72,17 @@ Parece que o pager está apitando, vamos para o balcão pegar o pedido. Existem 
 
 ![](http://i.imgur.com/bIV4nE5.png)
 
-## 1. Ordem completada
+## 1. Pedido completada
 
 Eba!!! Seu hambúrguer está pronto, a equipe da cozinha lhe entrega um hambúrguer recém-preparado. A promessa de um bom hambúrguer foi completa!
-## 2. Ordem rejeitada
+
+## 2. Pedido rejeitada
 
 Parece que a cozinha está sem hambúrguers, a promessa de um hambúrguer foi rejeitada. Certifique-se que você receberá um reembolso por isso.
 
 Aqui é como você pode preparar seu código para essas 2 situações.
+
+![](https://i.imgur.com/zA01ke5.png)
 
 .then() recebe outra função como segundo argumento que pode ser também usado como um manipulador de rejeição. Para o bem da simplicidade, eu apenas uso .catach() para rejeitar nesse artigo. Se você quiser saber mais sobre a diferença, você pode checar [esse artigo](https://developers.google.com/web/fundamentals/getting-started/primers/promises#error_handling).
 
@@ -93,6 +96,8 @@ Vamos dizer que seu pedido foi completado, mas você percebeu que para ter uma s
 ![](http://i.imgur.com/AH8SIfb.png)
 
 Vamos olhar como esse código funciona. Encadear promessas é tão fácil quanto adicionar um .then() no seu código. O retorno de uma .then() é sempre uma promise. Apenas lembre que cada .then() retorna uma bandeja e um pager, e um valor de retorno efetivo é passado como argumento para o callback.
+
+![](https://i.imgur.com/tNpNjnB.png)
 
 Agora que você tem um hambúrguer e um milkshake, você está pronto para a FESTA DO HAMBÚRGUER.
 
