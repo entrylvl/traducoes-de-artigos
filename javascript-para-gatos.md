@@ -21,3 +21,9 @@ JavaScript começou como uma forma de tornar as páginas `web` mais interativas.
 * Objetos
 * Callbacks
 * Leitura recomendada
+
+### Não seja um gato assustado
+
+![](https://github.com/maxogden/javascript-for-cats/blob/master/images/yarnify.png)
+
+Você sempre irá evoluir, mesmo com programação! Diferente de [dar patadas em um copo de água](https://github.com/maxogden/javascript-for-cats/blob/master/images/dealwithit.gif) sobre o seu laptop, nada nesses tutoriais irá danificar o seu computador de nenhuma forma, mesmo se você errar um comando ou clicar no botão errado. Assim como gatos, programas de computador erram o tempo todo: cometendo erros de ortografia, esquecendo aspas ou colchetes, e não lembrando sobre como funções básicas (como fio, lasers) funcionam. Programadores se preocupam mais em fazer as coisas funcionarem eventualmente do que com tentar que elas funcionem na primeira tentativa. O melhor jeito de aprender programação é cometendo erros.
