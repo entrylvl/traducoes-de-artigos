@@ -39,4 +39,112 @@ Isso é um console, também conhecido como "linha de comando" ou "terminal". Bas
 
 O console faz umas coisas muito legais. Aqui eu comecei a digitar uma coisa e o console está me ajudando dando a lista de todas as coisas que eu poderia continuar digitando. Outra coisa que você pode fazer é digitar `1 + 1` dentro do console, pressionar  a tecla `Enter` e ver o que acontece.
 
-Usar o console é uma parte muito importante do aprendizado de JavaScript. Se você não sabe se aquilo funciona ou qual o comando para alguma coisa, vá para o console e descubra! Aqui está um exemplo: 
+Usar o console é uma parte muito importante do aprendizado de JavaScript. Se você não sabe se aquilo funciona ou qual o comando para alguma coisa, vá para o console e descubra! Aqui está um exemplo:
+
+### <a id="arrays" href="#arrays">#</a> Arrays
+
+Eu já os havia mencionado algumas vezes, mas vamos gastar um tempinho aprendendo sobre eles. Imagine que você precisa rastrear todos os seus amigos. Um Array cairá bem para isso. Pense em um Array como uma lista ordenada onde você pode manter *toneladas* de coisas dentro.
+
+É assim que se faz um Array:
+
+```js
+var myCatFriends = ["bill", "tabby", "ceiling"]
+```
+
+Legal! Agora você tem uma lista com os seus amigos gatos.
+
+Elementos (que é como chamamos um único item em um array) de um array começam no índice 0 e vão incrementando conforme a quantidade de itens. Então, `myCatFriends[0]` retorna `bill`e `myCatFriends[1]` retorna `tabby`, e assim por diante.
+
+Para obter os amigos do seu Array novinho em folha, você pode simplesmente acessar um elemento diretamente, desse jeito:
+
+```js
+console.log(myCatFriends[0])
+```
+
+![console](http://jsforcats.com/images/array-access.png)
+
+Se na noite anterior você fez um novo amigo no clube de gatos mais badalado e quer adicioná-lo à sua lista, é super simples: `myCatFriends.push("super hip cat")`.
+
+Para verificar que o novo gato está no seu array, você pode usar `.length`:
+
+![console](http://jsforcats.com/images/array-push-length.png)
+
+Percebeu como `push` retornou o comprimento? Útil! Lembre-se também que arrays sempre **preservam ordernação**, o que significa que eles se lembrarão da ordem em que você adicionou ou definiu as coisas. Nem tudo em JavaScript preserva a ordenação, então lembre-se dessa propriedade especial dos Arrays!
+
+### <a id="objects" href="#objects">#</a> Objetos
+
+Arrays são bons para listas, mas para outras tarefas podem ser difíceis de se trabalhar. Considere nosso array de amigos gatos. E se você também quisesse armazenar mais do que apenas nomes?
+
+```js
+var myCatFriends = ["bill", "tabby", "ceiling"]
+var lastNames = ["the cat", "cat", "cat"]
+var addresses = ["The Alley", "Grandmas House", "Attic"]
+```
+
+Algumas vezes é interessante manter armazenados todos os endereços ou nomes em uma variável. Porém, ocasionalmente, você tem um gato em mente, Bill por exemplo, e quer localizar apenas o endereço deste gato. Fazer isto com arrays requer muito trabalho, porque você não pode simplesmente dizer 'hey array, me dê o endereço de Bill' porque 'Bill' está em um array e seu endereço está em um array totalmente diferente.
+
+![](http://jsforcats.com/images/array-lookup.png)
+
+Isso pode ser frágil pois, se nossos arrays mudam e adicionamos um novo gato no início, teríamos que atualizar também nossa variável `billsPosition` para apontar para a nova posição das informações de Bill nos arrays! Aqui está uma maneira mais fácil de manter armazenadas informações como estas usando objetos:
+
+```js
+var firstCat = { name: "bill", lastName: "the cat", address: "The Alley" }
+var secondCat = { name: "tabby", lastName: "cat", address: "Grandmas House" }
+var thirdCat = { name: "ceiling", lastName: "cat", address: "Attic" }
+```
+
+Por que faríamos isso desta forma? Porque agora temos uma variável para cada gato, que podemos usar para obtermos os valores dos gatos de uma forma mais conveniente e legível.
+
+![](http://jsforcats.com/images/object-lookup.png)
+
+Você pode pensar em Objetos como chaves em um chaveiro. Cada uma serve para uma porta específica e, se você tiver etiquetas nas chaves, pode abrir portas rapidamente. De fato, as coisas que estão à direita do `:`são chamadas **chaves** (também conhecidas como **propriedades**) e o que está à direita são os **valores**.
+
+```js
+// um objeto com uma única chave 'name' e único valor 'bill'
+{ name: 'bill' }
+```
+
+Então por que usar arrays se você pode simplesmente armazenar todos os seus dados em objetos? Porque objetos não se lembram da ordem em que as chaves foram definidas. Você pode criar um objeto como este:
+
+```js
+{ date: "10/20/2012", diary: "slept a bit today", name: "Charles" }
+```
+
+Mas o computador pode retorná-lo desta forma:
+
+```js
+{ diary: "slept a bit today", name: "Charles", date: "10/20/2012" }
+```
+
+Ou assim!
+
+```js
+{ name: "Charles", diary: "slept a bit today", date: "10/20/2012" }
+```
+
+Então você nunca pode confiar na ordem das chaves em objetos. Se quiser fazer algo BEM sofisticado, você pode fazer um array preenchido com objetos, ou um objeto preenchido com arrays!
+
+```js
+var moodLog = [
+  {
+    date: "10/20/2012",
+    mood: "catnipped"
+  },
+  {
+    date: "10/21/2012",
+    mood: "nonplussed"
+  },
+  {
+    date: "10/22/2012",
+    mood: "purring"
+  }
+]
+
+// em ordem crescente de preferência
+var favorites = {
+  treats: ["bird sighting", "belly rub", "catnip"],
+  napSpots: ["couch", "planter box", "human face"]
+}
+```
+
+Ao combinar coisas diferentes como estas, você está criando **estruturas de dados**, igual Lego!
