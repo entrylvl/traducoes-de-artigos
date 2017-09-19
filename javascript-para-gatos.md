@@ -41,6 +41,48 @@ O console faz umas coisas muito legais. Aqui eu comecei a digitar uma coisa e o 
 
 Usar o console é uma parte muito importante do aprendizado de JavaScript. Se você não sabe se aquilo funciona ou qual o comando para alguma coisa, vá para o console e descubra! Aqui está um exemplo:
 
+### <a id="loops" href="#loops">#</a> Loops
+
+Agora que nós temos algumas habilidades básicas em nosso cinto de utilidades (*Nota do autor: gatos ao menos usam cintos?*), podemos começar a ser preguiçosos. O que?! Sim, isso mesmo: programar é ser preguiçoso. Larry Wall, criador da linguagem de programação Perl, chamou a preguiça de [virtude mais importante](http://c2.com/cgi/wiki?LazinessImpatienceHubris) de um bom programador. Se os computadores não existissem, você teria que fazer todo tipo de tarefas tediosas manualmente, mas se você aprender a programas, pode deitar ao sol o dia todo enquanto um computador em algum lugar executa seus programas para você. É um estilo glorioso e cheio de relaxamento!
+
+Loops são uma das maneiras mais importantes de se aproveitar do poder de um computador. Lembra do `Underscore.js` de antes? Certifique-se de tê-lo carregado na página (lembre-se: você pode simplesmente pressionar algumas vezes a seta para cima em seu teclado e então pressionar `Enter` para carregá-lo novamente, caso necessário) e tente copiar/colar isto em seu console:
+
+```js
+function logANumber(someNumber) {
+  console.log(someNumber)
+}
+_.times(10, logANumber)
+```
+
+Esse código usa o método [times](http://underscorejs.org/#times) do Underscore, que recebe 1 número e 1 função como parâmetros e então começa do 0 ao 10, incrementando de 1 em 1, chamando a função com o número a cada passo.
+
+![console](http://jsforcats.com/images/times-loop.png)
+
+Se nós escrevessemos manualmente o que `times` está fazendo no código acima, ele seria parecido com isto:
+
+```js
+logANumber(0)
+logANumber(1)
+logANumber(2)
+logANumber(3)
+logANumber(4)
+logANumber(5)
+logANumber(6)
+logANumber(7)
+logANumber(8)
+logANumber(9)
+```
+
+Mas gatos se recusam a fazer trabalho manual desnecessário como esse, então devemos sempre nos perguntar: *"eu estou fazendo isso da forma mais preguiçosa possível?"*.
+
+Então por isso é chamado de looping? Pense nisso assim: se fossemos escrever uma lista de 10 números (de 0 a 9) usando um Array em JavaScript, se pareceria com isto:
+
+```js
+var zeroThroughTen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+O que `times` realmente faz é visitar cada número e repetir uma tarefa: no exemplo acima a tarefa era chamar a função `logANumber` com o número atual. Repetir tarefas dessa forma é chamado de *fazer um loop* sobre o Array.
+
 ### <a id="arrays" href="#arrays">#</a> Arrays
 
 Eu já os havia mencionado algumas vezes, mas vamos gastar um tempinho aprendendo sobre eles. Imagine que você precisa rastrear todos os seus amigos. Um Array cairá bem para isso. Pense em um Array como uma lista ordenada onde você pode manter *toneladas* de coisas dentro.
