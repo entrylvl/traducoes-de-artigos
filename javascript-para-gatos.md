@@ -63,6 +63,16 @@ Para salvar esses valores nós usamos coisas chamadas **variáveis**. A palavra 
 
 Se você simplesmente digitar o nome da variável no console ele vai imprimir o valor guardando naquela variável. Uma nota sobre variáveis é que por padrão elas somem quando você troca para uma página diferente. Se eu apertar o botão de atualizar a página no Chrome, por exemplo, minha variável `dogSentence` desapareceria como se nunca tivesse existido. Mas não se preocupe com isso por enquanto &mdash; você pode simplesmente apertar as setas 'para cima' e 'para baixo' do seu teclado no console você pode passar por tudo o que você digitou nele recentemente.
 
+### <a id="functions" href="#functions">#</a> Usando funções
+
+Agora que temos a nossa sentença armazenada em uma variável, vamos trocar a palavra que está dentro dela! Nós podemos fazer isso realizando uma *função*. *Funções* são um tipo de valor que, bem, serve à uma *função* (vulgo propósito ou ação) para nós. Chamar elas "ações" ficou estranho então acho que eles optaram pela palavra "função" no lugar.
+
+JavaScript tem uma função chamada `replace`que faz exatamente o que nós queremos! Funções pegam qualquer número de valores em seus parenteses (zero, um ou muitos) e retorna ou `undefined` (nada) ou a string mudada. A função `replace` é possível ser usada em strings e requer dois valores: os caracteres para serem retirados e os caracteres para serem trocados. Fica meio confuso descrever essas coisas aqui então vamos para um exemplo visual:
+
+![console](http://jsforcats.com/images/console-replace.gif)
+
+Percebe como o valor de `dogSentence` é o mesmo depois que nós executamos o `replace` nele? Isso porque a função `replace`, (e a maioria das funções JavaScript aliás) pega o valor que nós damos e retorna com um ***novo valor***, sem que haja modificação no valor que passamos. Já que nós não guardamos o resultado (não tem um `=` no lado esquerdo da função replace) ele simplesmente imprimiu o valor de retorno no nosso console.
+
 ### <a id="writing-functions" href="#writing-functions">#</a> Criando novas funções
 
 Você não está limitado a usar apenas funções de outras pessoas - você também pode escrever as suas próprias. É bem fácil! Vamos criar uma função chamada `makeMoreExciting` que adiciona um punhado de pontos de exclamação ao final de uma string.
