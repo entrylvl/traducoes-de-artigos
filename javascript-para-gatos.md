@@ -41,6 +41,17 @@ O console faz umas coisas muito legais. Aqui eu comecei a digitar uma coisa e o 
 
 Usar o console é uma parte muito importante do aprendizado de JavaScript. Se você não sabe se aquilo funciona ou qual o comando para alguma coisa, vá para o console e descubra! Aqui está um exemplo:
 
+### <a id="strings" href="#strings">#</a> Strings
+
+Já que eu sou um gato, eu quero trocar cada instância da palavra `cachorro` na internet com `esses cachorros malditos`. Primeiro, vá no seu console e digite algumas frases que contenham a palavra `cachorro` pelo menos uma vez. No Javascript um punhado de letras, números, palavras ou qualquer outra coisa é conhecido como **String**. Strings tem que começar E terminar com aspas, podendo ser aspas simples `'`ou aspas duplas `"`, tanto faz. Só tenha certeza que você está usando a mesma aspas no começo e no fim.
+
+![console](images/console-strings.gif)
+
+Viu essa mensagem de erro grotesca? Não se preocupe: você não cometeu nenhum crime. SyntaxError ILLEGAL é só uma forma que os robôs têm de falar que o seu programa tem um problema. As primeiras duas sentenças estão com suas aspas iguais no começo e no final, mas quando eu misturo aspas simples e duplas o console ficou maluco comigo.
+
+OK, pra consertar essas sentenças (substituindo `cachorro` com a nossa versão melhorada) nós precisamos primeiro salvar a sentença original para que possamos chama-la mais tarde com a nossa magia de troca de lugar. Perceba como a string fica repetida em vermelho quando a gente digita ela no console? Isso é porque nós não dissemos para salvar a sentença em lugar nenhum, então ele simplesmente nos retorna a sentença (ou nos devolve um Error falando que nós fizemos algo errado).
+
+
 ### <a id="loops" href="#loops">#</a> Loops
 
 Agora que nós temos algumas habilidades básicas em nosso cinto de utilidades (*Nota do autor: gatos ao menos usam cintos?*), podemos começar a ser preguiçosos. O que?! Sim, isso mesmo: programar é ser preguiçoso. Larry Wall, criador da linguagem de programação Perl, chamou a preguiça de [virtude mais importante](http://c2.com/cgi/wiki?LazinessImpatienceHubris) de um bom programador. Se os computadores não existissem, você teria que fazer todo tipo de tarefas tediosas manualmente, mas se você aprender a programas, pode deitar ao sol o dia todo enquanto um computador em algum lugar executa seus programas para você. É um estilo glorioso e cheio de relaxamento!
