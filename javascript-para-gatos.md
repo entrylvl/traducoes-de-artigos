@@ -51,6 +51,17 @@ Viu essa mensagem de erro grotesca? Não se preocupe: você não cometeu nenhum 
 
 OK, pra consertar essas sentenças (substituindo `cachorro` com a nossa versão melhorada) nós precisamos primeiro salvar a sentença original para que possamos chama-la mais tarde com a nossa magia de troca de lugar. Perceba como a string fica repetida em vermelho quando a gente digita ela no console? Isso é porque nós não dissemos para salvar a sentença em lugar nenhum, então ele simplesmente nos retorna a sentença (ou nos devolve um Error falando que nós fizemos algo errado).
 
+### <a id="values" href="#values">#</a> Valores e variáveis
+
+**Valores** são os componentes mais simples no JavaScript. `1` é um valor, `true` é um valor, `"olá"` é um valor, `function() {}`é um valor, a lista pode continuar! Tem um monte de **tipos** diferentes de valores no JavaScript mas nós não precisamos ver todos eles agora &mdash; você vai aprende-los naturalmente quanto mais você programar!
+
+Para salvar esses valores nós usamos coisas chamadas **variáveis**. A palavra 'variável' significa 'que muda' e é usada porque variáveis podem guardar diferentes tipos de valores e podem mudar seu valor muitas vezes. Eles são bem parecidos com caixas de correio. Nós colocamos algo dentro de uma variável, como nossa sentença, e damos a essa variável um endereço para olhar para a sentença depois. As caixas de correio da vida real tem o seu código postal, mas no JavaScript você geralmente usa letras minúsculas ou números sem espaços.
+
+![console](images/console-variables.gif)
+
+`var`é a abreviatura de variável e o `=`significa *guarde esta coisa do lado direito na coisa do lado esquerdo*. Além disso, como você pode ver, agora que estamos guardando a nossa sentença nessa variável o console não só retorna a sentença de cara, mas nos dá um `undefined` que significa *não tem nada para retornar*
+
+Se você simplesmente digitar o nome da variável no console ele vai imprimir o valor guardando naquela variável. Uma nota sobre variáveis é que por padrão elas somem quando você troca para uma página diferente. Se eu apertar o botão de atualizar a página no Chrome, por exemplo, minha variável `dogSentence` desapareceria como se nunca tivesse existido. Mas não se preocupe com isso por enquanto &mdash; você pode simplesmente apertar as setas 'para cima' e 'para baixo' do seu teclado no console você pode passar por tudo o que você digitou nele recentemente.
 
 ### <a id="loops" href="#loops">#</a> Loops
 
