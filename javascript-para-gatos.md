@@ -45,7 +45,7 @@ Usar o console é uma parte muito importante do aprendizado de JavaScript. Se vo
 
 Já que eu sou um gato, eu quero trocar cada instância da palavra `cachorro` na internet com `esses cachorros malditos`. Primeiro, vá no seu console e digite algumas frases que contenham a palavra `cachorro` pelo menos uma vez. No Javascript um punhado de letras, números, palavras ou qualquer outra coisa é conhecido como **String**. Strings tem que começar E terminar com aspas, podendo ser aspas simples `'`ou aspas duplas `"`, tanto faz. Só tenha certeza que você está usando a mesma aspas no começo e no fim.
 
-![console](images/console-strings.gif)
+![console](http://jsforcats.com/images/console-strings.gif)
 
 Viu essa mensagem de erro grotesca? Não se preocupe: você não cometeu nenhum crime. SyntaxError ILLEGAL é só uma forma que os robôs têm de falar que o seu programa tem um problema. As primeiras duas sentenças estão com suas aspas iguais no começo e no final, mas quando eu misturo aspas simples e duplas o console ficou maluco comigo.
 
@@ -57,7 +57,7 @@ OK, pra consertar essas sentenças (substituindo `cachorro` com a nossa versão 
 
 Para salvar esses valores nós usamos coisas chamadas **variáveis**. A palavra 'variável' significa 'que muda' e é usada porque variáveis podem guardar diferentes tipos de valores e podem mudar seu valor muitas vezes. Eles são bem parecidos com caixas de correio. Nós colocamos algo dentro de uma variável, como nossa sentença, e damos a essa variável um endereço para olhar para a sentença depois. As caixas de correio da vida real tem o seu código postal, mas no JavaScript você geralmente usa letras minúsculas ou números sem espaços.
 
-![console](images/console-variables.gif)
+![console](http://jsforcats.com/images/console-variables.gif)
 
 `var`é a abreviatura de variável e o `=`significa *guarde esta coisa do lado direito na coisa do lado esquerdo*. Além disso, como você pode ver, agora que estamos guardando a nossa sentença nessa variável o console não só retorna a sentença de cara, mas nos dá um `undefined` que significa *não tem nada para retornar*
 
