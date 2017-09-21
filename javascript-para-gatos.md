@@ -63,6 +63,73 @@ Para salvar esses valores nós usamos coisas chamadas **variáveis**. A palavra 
 
 Se você simplesmente digitar o nome da variável no console ele vai imprimir o valor guardando naquela variável. Uma nota sobre variáveis é que por padrão elas somem quando você troca para uma página diferente. Se eu apertar o botão de atualizar a página no Chrome, por exemplo, minha variável `dogSentence` desapareceria como se nunca tivesse existido. Mas não se preocupe com isso por enquanto &mdash; você pode simplesmente apertar as setas 'para cima' e 'para baixo' do seu teclado no console você pode passar por tudo o que você digitou nele recentemente.
 
+### <a id="writing-functions" href="#writing-functions">#</a> Criando novas funções
+
+Você não está limitado a usar apenas funções de outras pessoas - você também pode escrever as suas próprias. É bem fácil! Vamos criar uma função chamada `makeMoreExciting` que adiciona um punhado de pontos de exclamação ao final de uma string.
+
+    function makeMoreExciting(string) {
+      return string + '!!!!'
+    }
+
+Na minha cabeça, eu leio isso como: "existe uma função chamada 'makeMoreExciting' que recebe uma string e retorna uma nova cópia daquela string com um punhado de pontos de exclamação no final". Aqui está como nós escreveríamos isso manualmente no console se não estivéssemos usando uma função:
+
+![console](http://jsforcats.com/images/custom-function-manually.gif)
+
+A expressão `string + '!!!!'` retorna uma nova string e nossa variável chamada `string` permanece a mesma de antes (já que não atribuímos nada novo a ela com `=`).
+
+Vamos usar nossa função ao invés de fazer isso manualmente. Primeiro, cole a função no console e então **execute** a função **passando a ela** uma string:
+
+![console](http://jsforcats.com/images/custom-function-call.gif)
+
+Você também pode chamar a mesma função passando a ela uma variável que aponta para uma string (no exemplo acima apenas digitamos a string diretamente como um valor, ao invés de salvá-la antes em uma variável):
+
+![console](http://jsforcats.com/images/custom-function-call-variable.gif)
+
+A linha `makeMoreExciting(sentece)` é o equivalente a dizer `frase + '!!!!'`. E se quiséssemos realmente **modificar** (ou: atualizar) o valor de sentence? Simplesmente salvamos o valor de retorno da função de volta em nossa variável `sentence`:
+
+    var sentence = "time for a nap"
+    sentence = makeMoreExciting(sentence)
+
+Agora `sentence` terá os pontos de exclamação nela! Note que você só precisa usar `var` quando está **inicializando** uma variável &mdash; a primeira vez que a usa. Depois disso você não deve usar `var` a menos que queira re-inicializar (resetar/limpar/esvaziar) a variável.
+
+O que aconteceria se tirássemos o comando `return` de nossa função?
+
+![console](http://jsforcats.com/images/custom-function-no-return.gif)
+
+Por que `sentence` está vazia? Porque funções retornam `undefined`  por padrão! Você pode escolher retornar um valor usando `return`. Funções devem receber um valor e, se alterarem o valor ou criarem um novo que deve ser usado mais tarde, **retornar o valor** (curiosidade: um termo sofisticiado para este estilo é *programação funcional*). Aqui está uma outra função que não retorna nada, mas usa um método diferente para nos mostrar o resultado:
+
+```js
+function yellIt(string) {
+  string = string.toUpperCase()
+  string = makeMoreExciting(string)
+  console.log(string)
+}
+```
+
+Essa função, `yellIt`, usa nossa função anterior `makeMoreExciting` bem como o método [toUpperCase](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/toUpperCase), nativo do tipo String. Métodos são apenas um nome para uma função quando esta pertence a algo &mdash; nesse caso, `toUpperCase` é uma função que pertence à `String`, então podemos nos referir a ele tanto como um método *ou* uma função. Por outro lado, `makeMoreExciting` não pertence a ninguém, então seria técnicamente incorreto se referir a ela como um método (confuso, eu sei).
+
+A última linha da função é outro método nativo que simplesmente recebe quaisquer valores e, então, exibe-os no console.
+
+![console](http://jsforcats.com/images/custom-function-console-log.gif)
+
+Então, tem algo errado com a função `yellIt` acima? Depende! Aqui estão os dois principais tipos de funções:
+
+  - funções que modificam ou criam valores e os retornam
+  - funções que recebem valores e executam alguma ação que não pode ser retornada
+
+`console.log` é um exemplo do segundo tipo de função: ela imprime coisas no seu console &mdash; uma ação que você consegue ver com seus olhos, mas não pode ser representado como um valor em JavaScript. Minha própria regra é tentar manter os dois tipos de funções separados um do outro, então aqui está como eu escreveria a função `yellIt`:
+
+```js
+function yellIt(string) {
+  string = string.toUpperCase()
+  return makeMoreExciting(string)
+}
+
+console.log(yellIt("i fear no human"))
+```
+
+Dessa forma `yellIt` se torna mais **genérica**, o que significa que ela só faz uma ou duas coisas simples e não sabe nada sobre exibir ela mesma no console &mdash; essa parte pode sempre ser programada depois, fora da definição da função.
+
 ### <a id="loops" href="#loops">#</a> Loops
 
 Agora que nós temos algumas habilidades básicas em nosso cinto de utilidades (*Nota do autor: gatos ao menos usam cintos?*), podemos começar a ser preguiçosos. O que?! Sim, isso mesmo: programar é ser preguiçoso. Larry Wall, criador da linguagem de programação Perl, chamou a preguiça de [virtude mais importante](http://c2.com/cgi/wiki?LazinessImpatienceHubris) de um bom programador. Se os computadores não existissem, você teria que fazer todo tipo de tarefas tediosas manualmente, mas se você aprender a programas, pode deitar ao sol o dia todo enquanto um computador em algum lugar executa seus programas para você. É um estilo glorioso e cheio de relaxamento!
