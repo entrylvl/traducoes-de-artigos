@@ -73,6 +73,10 @@ JavaScript tem uma função chamada `replace`que faz exatamente o que nós quere
 
 Percebe como o valor de `dogSentence` é o mesmo depois que nós executamos o `replace` nele? Isso porque a função `replace`, (e a maioria das funções JavaScript aliás) pega o valor que nós damos e retorna com um ***novo valor***, sem que haja modificação no valor que passamos. Já que nós não guardamos o resultado (não tem um `=` no lado esquerdo da função replace) ele simplesmente imprimiu o valor de retorno no nosso console.
 
+### <a id="standard-library" href="#standard-library">#</a> Funções embutidas no JS
+
+Você deve estar imaginando quais outras funções estão disponíveis no JavaScript. A resposta: UMA TONELADA. Existem muitas **bibliotecas embutidas** que você pode aprender sobre no MDN (um site administrado pelo Mozilla que tem várias informações sobre tecnologias web). Por exemplo [aqui é uma página MDN sobre o objeto Math do JavaScript]((https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Math).
+
 ### <a id="writing-functions" href="#writing-functions">#</a> Criando novas funções
 
 Você não está limitado a usar apenas funções de outras pessoas - você também pode escrever as suas próprias. É bem fácil! Vamos criar uma função chamada `makeMoreExciting` que adiciona um punhado de pontos de exclamação ao final de uma string.
