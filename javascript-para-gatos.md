@@ -75,7 +75,13 @@ Percebe como o valor de `dogSentence` é o mesmo depois que nós executamos o `r
 
 ### <a id="standard-library" href="#standard-library">#</a> Funções embutidas no JS
 
-Você deve estar imaginando quais outras funções estão disponíveis no JavaScript. A resposta: UMA TONELADA. Existem muitas **bibliotecas embutidas** que você pode aprender sobre no MDN (um site administrado pelo Mozilla que tem várias informações sobre tecnologias web). Por exemplo [aqui é uma página MDN sobre o objeto Math do JavaScript]((https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Math).
+Você deve estar imaginando quais outras funções estão disponíveis no JavaScript. A resposta: UMA TONELADA. Existem muitas **bibliotecas embutidas** que você pode aprender sobre no MDN (um site administrado pelo Mozilla que tem várias informações sobre tecnologias web). Por exemplo [aqui é uma página MDN sobre o objeto Math do JavaScript]((https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Math
+
+### <a id="third-party-javascript" href="#third-party-javascript">#</a> Download de novas funções JS
+
+Existe também muito código de JavaScript que não é **embutido**. O código externo de JavaScript é geralmente referido como "biblioteca" ou "plugin". Um dos meus favoritos é chamado **Underscore.js**. Vamos lá usa-lo e carrega-lo na nossa página! Primeiro, vá para o site do Underscore, [http://underscorejs.org/](http://underscorejs.org/), clique no link para download (eu geralmente uso versões de desenvolvedor porque eles são mais fáceis de ler, mas os dois vão nos dar basicamente a mesma funcionalidade), e após isso copiar o código do site (você pode usar o "Selecionar Todos" do menu "Editar" para selecionar tudo). Depois, cole no nosso console e aperte enter. Agora o browser tem uma nova variável nele: `_`. Underscore te dá uma tonelada de funções úteis para você brincar. Nós aprenderemos melhor como usa-lo depois.
+
+![console](http://jsforcats.com/images/underscore.gif)
 
 ### <a id="writing-functions" href="#writing-functions">#</a> Criando novas funções
 
