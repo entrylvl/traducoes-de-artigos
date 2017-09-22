@@ -299,3 +299,32 @@ var favorites = {
 ```
 
 Ao combinar coisas diferentes como estas, você está criando **estruturas de dados**, igual Lego!
+
+## O fim!
+
+Este é apenas o começo do nosso relacionamento com o JavaScript! Você não pode aprender tudo de uma vez, mas é capaz que você ache o que funciona para ti e tentar aprender os conceitos por aqui.
+
+Eu recomendo voltar aqui amanhã e ver a coisa toda de novo desde o começo! Talvez leve algumas vezes até você entender tudo (programar é difícil). Apenas tente evitar esse artigo em espaços que contenham objetos brilhantes... eles podem te distrair de uma maneira incrível.
+
+Tem outro tópico que você gostaria de ver? Abra uma issue no [on github](http://github.com/maxogden/javascript-for-cats).
+
+### <a id="recommended-reading" href="#recommended-reading">#</a> Leitura recomendada
+
+  JavaScript para Gatos pula um monte de detalhes que não são importantes para quem está começando (gatos não são conhecidos por sua atenção), mas se você sente que precisa se aprofundar dê uma olhada:
+
+  - [NodeSchool.io](http://nodeschool.io/) é um software educacional open source guiado pela comunidade que ensina varias habilidades de desenvolvimento web de uma maneira iterativa e autoditada. Eu ajudei a fazer o NodeSchool! Infelizmente tem menos gatos do que nessa página.
+  - [Eloquent Javascript](http://eloquentjavascript.net/) é um livro grátis que ensina JavaScript! É muito bom, especialmente o capítulo [values, variables, and control flow][values, variables, and control flow](http://eloquentjavascript.net/chapter2.html)
+  - [Mozilla's JavaScript Guide](https://developer.mozilla.org/en-US/docs/JavaScript/Guide) também tem um ótimo capítulo de introdução chamado [values, variables and literals](https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Values,_variables,_and_literals)
+  - [`standard` JS Style Guide](https://github.com/feross/standard) é um linter para JS que não "requer configuração" que eu uso.
+  - [Let's Write Code by @shama](https://github.com/shama/letswritecode) uma grande série de tutoriais de código feito por um amigo meu.
+
+<hr>
+### <a id="satisfied-customers" href="#satisfied-customers">#</a> Clientes satisfeitos
+<center>![satisfied customer](http://jsforcats.com/images/customers5.jpg)</center>
+<center>![satisfied customer](http://jsforcats.com/images/customers1.png)</center>
+<center>![satisfied customer](http://jsforcats.com/images/customers2.png)</center>
+<center>![satisfied customer](http://jsforcats.com/images/customers3.png)</center>
+<center>![satisfied customer](http://jsforcats.com/images/customers4.png)</center>
+
+*JSForCats.com é trabalho de amor e ainda em progresso feito por [@maxogden](http://twitter.com/maxogden). Se você quer contribuir para fazer esse tutorial melhor aqui tem um repositório no Github[bem aqui](http://github.com/maxogden/javascript-for-cats).*
+<center>![console](http://jsforcats.com/images/awesome.jpg)</center>
