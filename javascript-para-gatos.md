@@ -308,6 +308,95 @@ Eu recomendo voltar aqui amanhã e ver a coisa toda de novo desde o começo! Tal
 
 Tem outro tópico que você gostaria de ver? Abra uma issue no [on github](http://github.com/maxogden/javascript-for-cats).
 
+### <a id="callbacks" href="#callbacks">#</a> Callbacks
+
+Callbacks não são, de fato, uma funcionalidade do JavaScript como `Objetos` ou `Arrays`, mas sim uma determinada maneira de utilizar funções. Para entender como callbacks são úteis, você primeiro deve aprender sobre programação assíncrona (às vezes chamada de *async programming*). Código assíncrono é, por definição, código escrito de maneira que não seja síncrono. Código síncrono é fácil de entender e escrever. Aqui está um exemplo para ilustrar:
+
+```js
+var photo = download('http://foo-chan.com/images/sp.jpg')
+uploadPhotoTweet(photo, '@maxogden')
+```
+
+
+Esse [pseudo-código](http://simple.wikipedia.org/wiki/Pseudocode) síncrono faz o download de uma linda foto de um gato e então faz o upload da foto para o Twitter e, então, tweeta a foto no perfil `@maxogden`. Bem direto!
+
+(*Nota do autor: Eu, @maxogden aceito alegremente tweets com fotos aleatórias de gatos*)
+
+Esse código é síncrono porque, para que seja feito o upload da foto para o tweet, o download da mesma deve ser completado. Isso significa que a linha 2 não pode ser executada até que a tarefa na linha 1 seja finalizada. Se fossemos realmente implementar esse pseudo-código, iríamos querer ter certeza que o `download` 'bloqueou' a execução até que o download seja finalizado, o que significa que ele deveria impedir *qualquer* outro JavaScript de ser executado até seu término, e então quando o download estiver completo, desbloquearia a execução do JavaScript, seguindo para a linha 2.
+
+Código síncrono é bom para coisas que acontecem rapidamente, mas é horrível para coisas que requerem salvar, carregar, download ou upload. E se o servidor de onde você estiver baixando a foto estiver lento, ou a conexão com a internet estiver ruim, ou se o computador que você está usando tem muitas abas do YouTube com vídeos de gatos abertas e está devagar? Isso significa que você poderia ter que esperar minutos até que a linha 2 seja executada. Enquanto isso, já que todo o JavaScript está bloqueado durante o download, a página congelaria totalmente e não apresentaria resposta até o fim do download.
+
+O bloqueio de execução deve ser evitado a todo custo, especialmente quando fazê-lo faz seu programa congelar ou não responder. Vamos assumir que o download da foto acima leve um segundo para completar. Para ilustrar o quanto um segundo é para um computador moderno, aqui está um programa que testa quantas tarefas JavaScript consegue processar em um segundo:
+
+```js
+function measureLoopSpeed() {
+  var count = 0
+  function addOne() { count = count + 1 }
+
+  // Date.now() returns a big number representing the number of
+  // milliseconds that have elapsed since Jan 01 1970
+  var now = Date.now()
+
+  // Loop until Date.now() is 1000 milliseconds (1 second) or more into
+  // the future from when we started looping. On each loop, call addOne
+  while (Date.now() - now < 1000) addOne()
+
+  // Finally it has been >= 1000ms, so let's print out our total count
+  console.log(count)
+}
+
+measureLoopSpeed()
+```
+
+Copie e cole o código acima em seu console JavaScript e, depois de um segundo, ele deve apresentar um número. No meu computador obtive `8527360`, aproximadamente **8,5 milhões**. Em um segundo, o JavaScript consegue executar a função `addOne` 8,5 milhões de vezes! Então, se você tiver um código síncrono para fazer o download de uma foto, e o download leva um segundo, isso significa que você está potencialmente impedindo 8,5 milhões de operações de acontecerem enquanto a execução do JavaScript está bloqueada.
+
+Algumas linguagens têm uma função chamada `sleep` que bloqueia a execução por um determinado número de segundos. Por exemplo, aqui está um código [`bash`](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) que usa `sleep` sendo executado no app Terminal em um Mac OS. Ao rodar o comando `sleep 3 && echo 'done sleeping now'`, ele bloqueia durante 3 segundos antes de imprimir `done sleeping now`.
+
+![console](http://jsforcats.com/images/bash-sleep.png)
+
+JavaScript não tem uma função`sleep`. Como você é um gato, deve estar se perguntando: "Por que estou aprendendo uma linguagem de programação que não envolve dormir?". Mas fique comigo. Ao invés de confiar ao `sleep` para esperar pelas coisas acontecerem, o design do JavaScript encoraja o uso de funções. Se você tem que esperar uma tarefa A terminar antes de executar uma tarefa B, você coloca todo o código da tarefa B em uma função e, somente executa esta função, quando A está finalizada.
+
+Por exemplo, este é um código bloqueante:
+
+```js
+a()
+b()
+```
+
+E este é um exemplo de código não-bloqueante:
+
+```js
+a(b)
+```
+
+Na versão não-bloqueante `b` é um callback para `a`. Já na versão bloqueante, `a` e `b` são igualmente executadas (ambas possuem `()` nelas, o que faz as funções executarem imeadiatamente). Na versão não-bloqueante você pode perceber que apenas `a` é executada, e `b` é simplesmente passada como argumento para `a`.
+
+Na versão bloqueante, não há um relacionamento explícito entre `a` e `b`. Na versão não-bloqueante vira responsabilidade de `a` fazer tudo o que precisa e, então, executar `b` quando finalizar. Usar funções desta maneira é chamado de callbacks porque a sua função callback, nesse caso `b`, é executada depois quando `a` está finalizada.
+
+Aqui está uma implementação em pseudo-código de como `a` poderia ser:
+
+```js
+function a(done) {
+  download('https://pbs.twimg.com/media/B4DDWBrCEAA8u4O.jpg:large', function doneDownloading(error, png) {
+    // handle error if there was one
+    if (err) console.log('uh-oh!', error)
+
+    // call done when you are all done
+    done()
+  })
+}
+```
+
+Pense novamente em nosso exemplo não-bloqueante, `a(b)`, onde executamos `a` e passamos `b` como o primeiro argumento. Na definição da função `a` acima, o argumento `done`*é* nossa função `b`. Esse comportamento é algo difícil de compreender num primeiro momento. Quando você executa uma função, os argumentos passados não terão os mesmos nomes que as variáveis quando estiverem dentro da função. Nesse caso, o que chamamos de `b` é chamado de `done` dentro da função. Mas `b` e `done` são apenas nomes de variáveis que aponta para a mesma função subjacente. Normalmente funções de callback são chamadas como `done` ou `callback` para deixar claro que elas são funções que devem ser executadas quando a função atual terminar.
+
+Então, enquanto `a` fizer seu trabalho e chamar `b` ao terminar, ambas `a` e `b` são executadas em ambas as versões não-bloqueante e bloqueante. A diferença é que na versão não-bloqueante nós não precisamos parar a execução do JavaScript. Em geral, o estilo não-bloqueante é como você escreve todas funções, para que elas possam retornar assim que possível, sem bloquear.
+
+Para aumentar ainda mais os pontos: Se `a` leva um segundo para completar, e você usa a versão bloqueante, isso significa que você só pode fazer uma única coisa. Se você usa a versão não-bloqueante (ou seja, usa callbacks) pode fazer *literalmente milhões* de coisas no mesmo segundo, o que significa que você pode terminar seu trabalho milhões de vezes mais rápido e dormir o resto do dia.
+
+Lembre-se: programação é sobre ser preguiçoso, e você deve ser quem está dormindo, não seu computador.
+
+Felizmente agora você pode ver que callbacks são apenas funções que chamam outras funções depois de alguma tarefa assíncrona. Exemplos comuns de tarefas assíncronas são coisas como carregar uma foto, fazer download de uma música, fazer upload de uma imagem, comunicar-se com um banco de dados, esperar o usuário pressionar uma tecla ou clicar em algum lugar, etc. Tudo o que leva tempo. O JavaScript é ótimo em lidar com tarefas assíncronas como essas contanto que você invista tempo em aprender como usar callbacks  e impredir seu JavaScript de ser bloqueado.
+
 ### <a id="recommended-reading" href="#recommended-reading">#</a> Leitura recomendada
 
   JavaScript para Gatos pula um monte de detalhes que não são importantes para quem está começando (gatos não são conhecidos por sua atenção), mas se você sente que precisa se aprofundar dê uma olhada:
