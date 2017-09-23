@@ -20,5 +20,5 @@ Já para quem vai consumir o conteúdo, a medida que essa pessoa começar a sent
 
 ### Javascript
 
-* [Como ser* um compilador - Faça um compilador com JavaScript](javascript/como-ser-um-compilador--faca-um-compilador-com-javascript)
-* [A promessa de uma festa do hambúrguer](javascript/promessa-festa-hamburguer)
+* [Como ser* um compilador - Faça um compilador com JavaScript](javascript/como-ser-um-compilador--faca-um-compilador-com-javascript.md)
+* [A promessa de uma festa do hambúrguer](javascript/promessa-festa-hamburguer.md)
