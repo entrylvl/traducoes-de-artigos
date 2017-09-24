@@ -13,3 +13,12 @@ Esse repositório é para isso, queremos fazer uma curadoria de artigos `entrylv
 Para as pessoas que já tem domínio sobre o inglês, acreditamos que essa é uma oportunidade de expandir ainda mais seus conhecimentos, já que para tradução de um artigo é preciso entender o contexto e significado de cada palavra.
 
 Já para quem vai consumir o conteúdo, a medida que essa pessoa começar a sentir mais confortável com o inglês ela poderá usar a tradução como forma de aprendizado.
+
+## Tópicos
+
+* [JavaScript](#javascript)
+
+### Javascript
+
+* [Como ser* um compilador - Faça um compilador com JavaScript](javascript/como-ser-um-compilador--faca-um-compilador-com-javascript.md)
+* [A promessa de uma festa do hambúrguer](javascript/promessa-festa-hamburguer.md)
