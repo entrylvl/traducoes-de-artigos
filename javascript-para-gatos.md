@@ -2,11 +2,11 @@
 
 ### Tão fácil que seu companheiro humano também pode fazer!
 
-JavaScript é uma lingugagem de programação ou, em outras palavras, uma maneira pela qual o computador é instruído a fazer coisas. Da mesma forma que um controla humanos com assobios e miados, um pode controlar computadores com instruções escritas em uma linguagem de programação. Todos os `web browsers` entendem JavaScript e você pode se beneficiar disso para que páginas `web` façam coisas malucas!
+JavaScript é uma linguagem de programação ou, em outras palavras, uma maneira pela qual o computador é instruído a fazer coisas. Da mesma forma que um felino controla humanos com assobios e miados, o humano pode controlar computadores com instruções escritas em uma linguagem de programação. Todos os `web browsers` entendem JavaScript e você pode se beneficiar disso para que páginas `web` façam coisas malucas!
 
-JavaScript começou como uma forma de tornar as páginas `web` mais interativas. Hoje em dia JavaScript roda em muitos lugares além dos `web browsers` - roda em servidores `web`, celulares e até robôs! Essa página irá te ensinar um pouco sobre o básico de JavaScript pra que você consiga começar agora mesmo*.
+JavaScript começou como uma forma de tornar as páginas `web` mais interativas. Hoje em dia JavaScript roda em muitos lugares além dos `web browsers` - roda em servidores `web`, celulares e até robôs! Esse artigo irá te ensinar um pouco sobre o básico de JavaScript pra que você consiga começar agora mesmo*.
 
-*  Tempo de leitura: Quase nada. Provavelmente uma hora ou duas. Aliás já que você é um gato, é mais provável que você fique deitado no sol por aí do que comece com isso agora.
+*  Tempo de leitura: Quase nada. Provavelmente uma hora ou duas. Aliás já que você é um gato, é mais provável que você fique deitado no sol por aí do que começar com isso agora.
 
 ### Tabela de conteúdo
 * O console
@@ -35,15 +35,15 @@ Primeiro, clique com o botão direito em qualquer lugar na tela e selecione **In
 
 ![](https://github.com/maxogden/javascript-for-cats/blob/master/images/console.gif)
 
-Isso é um console, também conhecido como "linha de comando" ou "terminal". Basicamente é um jeito de digitar uma coisa por vez em um computador, e imediatamente receber a resposta do computador de volta. Eles são super úteis como ferramente de aprendizado (eu ainda uso o console praticamente todos os dias enquanto faço códigos).
+Isso é um console, também conhecido como "linha de comando" ou "terminal". Basicamente é um jeito de digitar uma coisa por vez em um computador, e imediatamente receber a resposta do computador de volta. Eles são super úteis como ferramenta de aprendizado (eu ainda uso o console praticamente todos os dias enquanto faço códigos).
 
-O console faz umas coisas muito legais. Aqui eu comecei a digitar uma coisa e o console está me ajudando dando a lista de todas as coisas que eu poderia continuar digitando. Outra coisa que você pode fazer é digitar `1 + 1` dentro do console, pressionar  a tecla `Enter` e ver o que acontece.
+O console faz umas coisas muito legais. Aqui eu comecei a digitar uma coisa e o console está me ajudando dando a lista de todas as coisas que eu poderia continuar digitando. Outra coisa que você pode fazer é digitar `1 + 1` dentro do console, pressionar a tecla `Enter` e ver o que acontece.
 
 Usar o console é uma parte muito importante do aprendizado de JavaScript. Se você não sabe se aquilo funciona ou qual o comando para alguma coisa, vá para o console e descubra! Aqui está um exemplo:
 
 ### <a id="strings" href="#strings">#</a> Strings
 
-Já que eu sou um gato, eu quero trocar cada instância da palavra `cachorro` na internet com `esses cachorros malditos`. Primeiro, vá no seu console e digite algumas frases que contenham a palavra `cachorro` pelo menos uma vez. No Javascript um punhado de letras, números, palavras ou qualquer outra coisa é conhecido como **String**. Strings tem que começar E terminar com aspas, podendo ser aspas simples `'`ou aspas duplas `"`, tanto faz. Só tenha certeza que você está usando a mesma aspas no começo e no fim.
+Já que eu sou um gato, eu quero trocar cada instância da palavra `cachorro` na internet com `esses cachorros malditos`. Primeiro, vá no seu console e digite algumas frases que contenham a palavra `cachorro` pelo menos uma vez. No Javascript um punhado de letras, números, palavras ou qualquer outra coisa é conhecido como **String**. Strings tem que começar E terminar com aspas, podendo ser aspas simples `'`ou aspas duplas `"`, tanto faz. Só tenha certeza que você está usando as mesmas aspas no começo e no fim.
 
 ![console](http://jsforcats.com/images/console-strings.gif)
 
@@ -53,21 +53,21 @@ OK, pra consertar essas sentenças (substituindo `cachorro` com a nossa versão 
 
 ### <a id="values" href="#values">#</a> Valores e variáveis
 
-**Valores** são os componentes mais simples no JavaScript. `1` é um valor, `true` é um valor, `"olá"` é um valor, `function() {}`é um valor, a lista pode continuar! Tem um monte de **tipos** diferentes de valores no JavaScript mas nós não precisamos ver todos eles agora &mdash; você vai aprende-los naturalmente quanto mais você programar!
+**Valores** são os componentes mais simples no JavaScript. `1` é um valor, `true` é um valor, `"olá"` é um valor, `function() {}`é um valor, a lista pode continuar! Tem um monte de **tipos** diferentes de valores no JavaScript mas nós não precisamos ver todos eles agora &mdash; você vai aprendê-los naturalmente quanto mais você programar!
 
 Para salvar esses valores nós usamos coisas chamadas **variáveis**. A palavra 'variável' significa 'que muda' e é usada porque variáveis podem guardar diferentes tipos de valores e podem mudar seu valor muitas vezes. Eles são bem parecidos com caixas de correio. Nós colocamos algo dentro de uma variável, como nossa sentença, e damos a essa variável um endereço para olhar para a sentença depois. As caixas de correio da vida real tem o seu código postal, mas no JavaScript você geralmente usa letras minúsculas ou números sem espaços.
 
 ![console](http://jsforcats.com/images/console-variables.gif)
 
-`var`é a abreviatura de variável e o `=`significa *guarde esta coisa do lado direito na coisa do lado esquerdo*. Além disso, como você pode ver, agora que estamos guardando a nossa sentença nessa variável o console não só retorna a sentença de cara, mas nos dá um `undefined` que significa *não tem nada para retornar*
+`var`é a abreviatura de variável e o `=` significa *guarde esta coisa do lado direito na coisa do lado esquerdo*. Além disso, como você pode ver, agora que estamos guardando a nossa sentença nessa variável o console não só retorna a sentença de cara, mas nos dá um `undefined` que significa *não tem nada para retornar*
 
 Se você simplesmente digitar o nome da variável no console ele vai imprimir o valor guardando naquela variável. Uma nota sobre variáveis é que por padrão elas somem quando você troca para uma página diferente. Se eu apertar o botão de atualizar a página no Chrome, por exemplo, minha variável `dogSentence` desapareceria como se nunca tivesse existido. Mas não se preocupe com isso por enquanto &mdash; você pode simplesmente apertar as setas 'para cima' e 'para baixo' do seu teclado no console você pode passar por tudo o que você digitou nele recentemente.
 
 ### <a id="functions" href="#functions">#</a> Usando funções
 
-Agora que temos a nossa sentença armazenada em uma variável, vamos trocar a palavra que está dentro dela! Nós podemos fazer isso realizando uma *função*. *Funções* são um tipo de valor que, bem, serve à uma *função* (vulgo propósito ou ação) para nós. Chamar elas "ações" ficou estranho então acho que eles optaram pela palavra "função" no lugar.
+Agora que temos a nossa sentença armazenada em uma variável, vamos trocar a palavra que está dentro dela! Nós podemos fazer isso realizando uma *função*. *Funções* são um tipo de valor que, bem, serve à uma *função* (vulgo propósito ou ação) para nós. Chamar elas de "ações" ficou estranho então acho que eles optaram pela palavra "função" no lugar.
 
-JavaScript tem uma função chamada `replace`que faz exatamente o que nós queremos! Funções pegam qualquer número de valores em seus parenteses (zero, um ou muitos) e retorna ou `undefined` (nada) ou a string mudada. A função `replace` é possível ser usada em strings e requer dois valores: os caracteres para serem retirados e os caracteres para serem trocados. Fica meio confuso descrever essas coisas aqui então vamos para um exemplo visual:
+JavaScript tem uma função chamada `replace` que faz exatamente o que nós queremos! Funções pegam qualquer número de valores em seus parênteses (zero, um ou muitos) e retorna ou `undefined` (nada) ou a string mudada. A função `replace` é possível ser usada em strings e requer dois valores: os caracteres para serem retirados e os caracteres para serem trocados. Fica meio confuso descrever essas coisas aqui então vamos para um exemplo visual:
 
 ![console](http://jsforcats.com/images/console-replace.gif)
 
@@ -75,11 +75,11 @@ Percebe como o valor de `dogSentence` é o mesmo depois que nós executamos o `r
 
 ### <a id="standard-library" href="#standard-library">#</a> Funções embutidas no JS
 
-Você deve estar imaginando quais outras funções estão disponíveis no JavaScript. A resposta: UMA TONELADA. Existem muitas **bibliotecas embutidas** que você pode aprender sobre no MDN (um site administrado pelo Mozilla que tem várias informações sobre tecnologias web). Por exemplo [aqui é uma página MDN sobre o objeto Math do JavaScript]((https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Math
+Você deve estar imaginando quais outras funções estão disponíveis no JavaScript. A resposta: UMA TONELADA. Existem muitas **bibliotecas embutidas** que você pode aprender sobre no MDN (um site administrado pela Mozilla que tem várias informações sobre tecnologias web). Por exemplo [aqui é uma página MDN sobre o objeto Math do JavaScript]((https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Math
 
 ### <a id="third-party-javascript" href="#third-party-javascript">#</a> Download de novas funções JS
 
-Existe também muito código de JavaScript que não é **embutido**. O código externo de JavaScript é geralmente referido como "biblioteca" ou "plugin". Um dos meus favoritos é chamado **Underscore.js**. Vamos lá usa-lo e carrega-lo na nossa página! Primeiro, vá para o site do Underscore, [http://underscorejs.org/](http://underscorejs.org/), clique no link para download (eu geralmente uso versões de desenvolvedor porque eles são mais fáceis de ler, mas os dois vão nos dar basicamente a mesma funcionalidade), e após isso copiar o código do site (você pode usar o "Selecionar Todos" do menu "Editar" para selecionar tudo). Depois, cole no nosso console e aperte enter. Agora o browser tem uma nova variável nele: `_`. Underscore te dá uma tonelada de funções úteis para você brincar. Nós aprenderemos melhor como usa-lo depois.
+Existe também muito código de JavaScript que não é **embutido**. O código externo de JavaScript é geralmente referido como "biblioteca" ou "plugin". Um dos meus favoritos é chamado **Underscore.js**. Vamos lá usá-lo e carregá-lo na nossa página! Primeiro, vá para o site do Underscore, [http://underscorejs.org/](http://underscorejs.org/), clique no link para download (eu geralmente uso versões de desenvolvedor porque eles são mais fáceis de ler, mas os dois vão nos dar basicamente a mesma funcionalidade), e após isso copiar o código do site (você pode usar o "Selecionar Todos" do menu "Editar" para selecionar tudo). Depois, cole no nosso console e aperte enter. Agora o browser tem uma nova variável nele: `_`. Underscore te dá uma tonelada de funções úteis para você brincar. Nós aprenderemos melhor como usá-lo depois.
 
 ![console](http://jsforcats.com/images/underscore.gif)
 
@@ -167,7 +167,7 @@ Esse código usa o método [times](http://underscorejs.org/#times) do Underscore
 
 ![console](http://jsforcats.com/images/times-loop.png)
 
-Se nós escrevessemos manualmente o que `times` está fazendo no código acima, ele seria parecido com isto:
+Se nós escrevêssemos manualmente o que `times` está fazendo no código acima, ele seria parecido com isto:
 
 ```js
 logANumber(0)
