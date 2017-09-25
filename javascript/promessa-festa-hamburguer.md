@@ -84,10 +84,7 @@ Aqui é como você pode preparar seu código para essas 2 situações.
 
 ![](https://i.imgur.com/zA01ke5.png)
 
-.then() recebe outra função como segundo argumento que pode ser também usado como um manipulador de rejeição. Para o bem da simplicidade, eu apenas uso .catach() para rejeitar nesse artigo. Se você quiser saber mais sobre a diferença, você pode checar [esse artigo](https://developers.google.com/web/fundamentals/getting-started/primers/promises#error_handling).
-
-.then() takes another function as the second argument which can also be used as a reject handler. For the sake of simplicity, I only use .catch() for reject in this article. If you want to know more about the difference, you might want to check out this article.
-
+.then() recebe outra função como segundo argumento que pode ser também usado como um manipulador de rejeição. Para o bem da simplicidade, eu apenas uso .catch() para rejeitar nesse artigo. Se você quiser saber mais sobre a diferença, você pode checar [esse artigo](https://developers.google.com/web/fundamentals/getting-started/primers/promises#error_handling).
 
 ## Encadear a Promise
 
