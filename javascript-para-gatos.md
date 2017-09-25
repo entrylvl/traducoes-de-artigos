@@ -59,7 +59,7 @@ Para salvar esses valores nós usamos coisas chamadas **variáveis**. A palavra 
 
 ![console](http://jsforcats.com/images/console-variables.gif)
 
-`var`é a abreviatura de variável e o `=` significa *guarde esta coisa do lado direito na coisa do lado esquerdo*. Além disso, como você pode ver, agora que estamos guardando a nossa sentença nessa variável o console não só retorna a sentença de cara, mas nos dá um `undefined` que significa *não tem nada para retornar*
+`var` é a abreviatura de variável e o `=` significa *guarde esta coisa do lado direito na coisa do lado esquerdo*. Além disso, como você pode ver, agora que estamos guardando a nossa sentença nessa variável o console não só retorna a sentença de cara, mas nos dá um `undefined` que significa *não tem nada para retornar*
 
 Se você simplesmente digitar o nome da variável no console ele vai imprimir o valor guardando naquela variável. Uma nota sobre variáveis é que por padrão elas somem quando você troca para uma página diferente. Se eu apertar o botão de atualizar a página no Chrome, por exemplo, minha variável `dogSentence` desapareceria como se nunca tivesse existido. Mas não se preocupe com isso por enquanto &mdash; você pode simplesmente apertar as setas 'para cima' e 'para baixo' do seu teclado no console você pode passar por tudo o que você digitou nele recentemente.
 
