@@ -1,6 +1,3 @@
-//VOU CUIDAR DESSE TRECHO
-//Artigo: https://www.atlassian.com/git/tutorials/what-is-version-control
-
 # O que é controle de versão
 ## Benefícios do controle de versão
 Sistemas de controle de versão são uma categoria de ferramentas de software que ajudam uma equipe de software a gerenciar mudanças ao longo do tempo.
