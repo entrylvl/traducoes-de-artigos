@@ -18,7 +18,7 @@ Eu entendo que a maioria dos aspirantes a desenvolvedor web querem ser contratad
 
 Parece muito mais fácil fazer um curso intensivo sobre o básico de JavaScript, procurar por um framework estravagante, desenvolver uma lista de coisas a fazer (deixar um filhote morrer), enviar para o GitHub, e começar a procurar um emprego.
 
-### ...mas investir tempo em Vanilla JavaScript irá valer a pena a longo prazo
+## ...mas investir tempo em Vanilla JavaScript irá valer a pena a longo prazo
 
 Não me entenda errado aqui. Eu não estou tendenciando contra frameworks JavaScript de maneira nenhuma. É examente o oposto. Muitos deles te ajudam a escrever código mais legível e de fácil manutenção. Eles te deixam escrever código mais abstrato que é mais fácil de debugar.
 
@@ -38,42 +38,44 @@ Todos os frameworks e bibliotecas JavaScripts são inevitavelmente baseados no V
 
 Isto deve convencer qualquer um que o conhecimento de JavaScript puro é necessário a longo prazo. É um pré-requisito para qualquer desenvolvedor(a) de sucesos, especialmente para aqueles que trabalham desenvolvendo principalmente no ecossistema JavaScript.
 
-### Experiência Profissional
+## Experiência Profissional
 
-Not long ago, I looked back at my journey from a lawyer to a web developer. It has already been 18 months since I wrote my first JavaScript function, and my 10th month working as a professional front-end developer.
+Há não muito tempo atrás, eu olhei atrás para minha jornada de advogado a desenvolvedor web. Já fazem 18 meses desde que escrevi minha primeira função JavaScript, e meu 10º mês trabalhando profissionalmente como um desenvolvedor front-end.
 
-I still remember how challenging it was for me to discover the right way of learning JavaScript, since I had no prior programming experience. I have tried (and am still trying) many different ways to become an effective learner. Some of them were more rewarding, some of them less.
+Eu ainda lembro como foi desafiador para mim descobrir o jeito certo de aprender JavaScriot, desde que eu não tinha nenhuma experiência anterior com programação. Eu tentei (e ainda estou tentado) muitas maneiras diferentes de aprender de forma eficiente. Algumas são mais recompensadoras, outras menos.
 
-Most important, I cannot stress enough how helpful it was for me that I put emphasis on learning pure JavaScript from the beginning. Frameworks came later.
-picture credit
+Mais importante, eu não posso expressar o quão foi importante para mim ter enfatizado em aprender JavaScript puro desde o começo. Framworks vieram depois.
 
-At the moment, I am working with a React-Redux stack. Even so, I often come across a problem that I can solve thanks to my knowledge of Vanilla JavaScript. These bugs would be much more challenging to solve with only the knowledge of a particular framework.
+No momento, estou trabalhando com React e Redux. Mesmo assim, muitas vezes aparece um problema que eu consigo resolver graças ao meu conhecimento em Vanilla JavaScript. Estes bugs seria muito mais desafiadores de resolver com apenas o meu conhecimento de um framework em particular.
 
-Learning React or Angular 2 won’t teach you that objects are passed by reference or how closures works. Trying to understand these concepts under the abstractions brought by the framework is much harder. This makes simple JavaScript concepts more difficult to understand.
 
-Furthermore, if you are working with JSX (React, Vue, Inferno) or TypeScript (Angular 2), you have an another layer of abstraction on top of it.
+Aprender React ou Angular 2 não irá te ensinar que objetos são passados por referência ou como closure funciona. Tentar entender estes conceitos por trás das abstrações dos framwrosk é muito mais difícil. Isto torna conceitos simples de JavaScript mais difíceis de entender.
 
-If you want to understand how these frameworks work under the hood, you need to know how JavaScript itself works first.
+Além disso, se você está trabalhando com JSX (React, Vue, Inferno) ou TypeScript (Angular 2), você tem outra camada de abstração no topo disso tudo.
 
-You can test your knowledge of pure JavaScript by reading the source code of your favorite framework. Not only will this give you a picture of how it works under the hood, it will also teach you a lot about its logic, which you can use in your own code. You will see that framework’s functions that seems to be doing a lot of magic in your application are just compositions of basic JavaScript concepts.
-Give me something I can learn from
+Se você quer entender como estes framworks funcionam por debaixo dos panos, você precisa saber primeiro como JavaScript funciona.
 
-The question you might be asking now is “What are some good resources that can help me to acquire decent knowledge of Vanilla JavaScript?”.
+Você pode testar seu conhecimento de JavaScript puro lendo o código fonte do seu framework favorito. Isso não irá apenas te dar uma ideia de como funciona por debaixo dos panos, irá te ensinar muito sobre a lógica, o que você pode utilizar em seu próprio código. Você verá que as funções dos frameworks que parecem fazer muita mágica na sua aplicação são apenas composições de conceitos básicos de JavaScript.
 
-There are tons of courses and books about JavaScript and its frameworks. Yet few of them aim to teach you Vanilla JavaScript in a comprehensive way. Most of them specialize for a particular JavaScript technology.
+## Me dê algo de que eu possa aprender
 
-But there are still some good ones…
+A pergunta que você pode estar se fazendo agora é "quais são bons recursos que podem me ajudar a adquirir conhecimento em Vanilla JavaScript?".
 
-Eloquent JavaScript will teach you not only basics of JavaScript, but also basics of programming in general. If you are already an advanced developer, this book will provide you a fresh perspective on JavaScript and on its core principles.
+Existem vários cursos e livros sobre JavaScript e seus frameworks. Ainda assim, apenas alguns deles tentam te ensinar Vanilla JavaScript de forma abrangente. Muitos deles são especializados em uma tecnologia JavaScript em particular.
 
-Another great resource is the book series You Don’t Know JavaScript (YDKJS) by Kyle Simpson. Kyle really knows how to teach. His explanations of advanced JavaScript concepts are beginner-friendly and he covers them in-depth. The mere titles of the books will give you a hint about what you are going to learn. “Up & Going”, “Scope & Closures”, “this & Object Prototypes”, “Types & Grammar”, “Async & Performance”, “ES6 & Beyond”. There is also a new 7th book about functional programming in JavaScript.
+Mas ainda assim há alguns bons...
 
-One of the great things about Eloquent JavaScript and YDKJS is that you can get them for free (check the provided links). But if you really find them useful, don’t forget to support the authors by buying them.
+[Eloquente JavaScript](http://eloquentjavascript.net/) irá te ensinar não apenas o básico de JavaScriot, mas também o básico de programação em geral. Se você já é um(a) programador(a) avançado(a), este livro irá te prover uma perspectiva sobre JavaScript e seus conceitos principais.
 
-If you’re more a video course person, you can watch Kyle’s online courses. I guess the best thing you can do is to watch them as a companion to his books since the topics are the same. However, these courses are paid.
+Outro ótimo recurso é a série de livros [Você Não Sabe JavaScript](https://github.com/cezaraugusto/You-Dont-Know-JS) de Kyle Simpson (o link aponta para a versão traduzida). Suas explicações sobre conceitos avançados de JavaScript são amigáveis para iniciantes e ele os aprofunda. Os títulos dos livros te darão uma dica sobre o que você irá aprender. "Iniciando", "Escopos & Clausuras", "this & Prototipagem de Objetos", "Tipos e Gramática", "Async e Performance", "ES6 e Além". Existe também um novo sétimo livro sobre [programação funcional em JavaScript](https://github.com/getify/Functional-Light-JS).
 
-Another video course that I find useful is Javascript: Understanding the Weird Parts by Anthony Alicea. It explains what happens under the hood of JavaScript in an approachable way. It covers advanced concepts such as prototypical inheritance, functional programming and scope chains.
-Learn Vanilla JavaScript, now
+Uma das ótimas coisas sobre JavaScript Eloquente e Você Não Sabe JavaScript é que **você pode tê-los de graça** (cheque os links fornecidos). Mas se você achá-los úteis, não esqueça de apoiar os autores comprando seus livros.
+
+Se você é uma pessoa que gosta de vídeo aulas, você pode assistir os [vídeos online do Kyle](https://frontendmasters.com/kyle-simpson/). Eu acho que a melhor coisa que você pode fazer é assisti-los em conjunto de seus livros, já que os tópicos são os mesmos. No entanto, estes cursos são pagos.
+
+Outro curso online que eu acho útil é [Javascript: Understanding the Weird Parts](https://www.udemy.com/understand-javascript/) de Anthony Alicea. Ele explica o que acontece debaixo dos panos de uma forma acessível. Ele aborda conceitos avançados como herança protótipa, programação funcional e cadeias de escopo.
+
+## Aprenda Vanilla JavaScript, agora
 
 If you invest your precious time in learning Vanilla JavaScript, you won’t regret it. Not only does it contains the word vanilla, but it will have a beneficial impact on programming skills.
 
