@@ -10,9 +10,9 @@ Artigo Original: https://blog.sessionstack.com/how-does-javascript-actually-work
   
   Visão Geral
   
-  Muitos ja ouviram falar da engine V8 como um conceito, e a maioria sabe que o JavaScript é single-threaded* ou que usa uma fila para callback*.
+  Muitos já ouviram falar da engine V8 como um conceito, e a maioria sabe que o JavaScript é single-threaded* ou que usa uma fila para callback*.
   Neste artigo iremos passar por todos estes conceitos em detalhes e explicaremos como JavaScript realmente roda. Sabendo desses detalhes, voce tera a habilidade de escrever aplicativos melhores, que utilizam as APIs disponiveis da melhor forma.
-  Se você for relativamente novo em JavaScript, este artigo irá te ajudar a entender o porque JavaScript é tão "estranho" comparado a outras linguagens. E, se você for um desenvolvedor JavaScript experiente, te dará novas formas de pensar e encarar como o JavaScript Runtime que você usa todo dia funciona.
+  Se você for relativamente novo em JavaScript, este artigo irá te ajudar a entender o porque JavaScript é tão "estranho" comparado a outras linguagens. E, se você for um desenvolvedor JavaScript experiente, te dará novas formas de pensar e encarar como o JavaScript Runtime que você usa todo dia funciona. 
   
   The JavaScript Engine
   
