@@ -10,7 +10,7 @@ Este post é o primeiro numa série com a intenção de se aprofundar em JavaScr
 
 Como visto nas estatisticas do GitHut (http://githut.info), JavaScript está no topo em termos de repositórios ativos e pushes totais no GitHub. E não fica muito atras em outras categorias. 
 
-[![N|Solid](https://cdn-images-1.medium.com/max/1600/1*Zf4reZZJ9DCKsXf5CSXghg.png)]
+![](https://cdn-images-1.medium.com/max/1600/1*Zf4reZZJ9DCKsXf5CSXghg.png)
 
 ####Confira as estatísticas de língua atualizadas
 
