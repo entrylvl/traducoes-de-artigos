@@ -2,9 +2,9 @@
 
 ---
 
-#Tratando uma resposta AJAX em Javascript (com ou sem jQuery)
+# Tratando uma resposta AJAX em Javascript (com ou sem jQuery)
 
-##O problema e a solução
+## O problema e a solução
 
 Umas das coisas mais perguntadas no [StackOverflow](http://www.stackoverflow.com/) tende a envolver chamadas AJAX, e a incapacidade de usar a resposta imediatamente, como a seguir:
 
@@ -58,7 +58,7 @@ jQuery.get('/ajax.php', function (response) {
 });
 ```
 
-##A explicação
+## A explicação
 
 Um "callback" é necessário porque um AJAX, como o nome `Javascript e XML Assíncrono` sugere, é assíncrono. Quando você inicia uma chamada AJAX usando o método XMLHttpRequest nativo ou por jQuery, a requisição HTTP é enviada, mas o motor do JavaScript não espera por uma resposta. Ao invés disso, o fluxo de execução continua. Para conseguirmos monitorar o progresso da requisição, nos é permitido passar uma função de "callback" que será executada quando o estado da requisição HTTP muda. O "callback" pode ser enviado para o objeto [XMLHttpRequest](http://www.w3.org/TR/XMLHttpRequest/#toc) nativo através do atributo onreadystatechange:
 
