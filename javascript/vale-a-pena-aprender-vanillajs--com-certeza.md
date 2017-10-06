@@ -35,21 +35,21 @@ Ou é melhor entender como a linguagem em que todas essas bibliotecas e framewor
 
 Sim, você está certo, é a segunda opção.
 
-Se você possui um sólido conhecimento nos fundamentos JavaScript, a única coisa que você precisa é estar familiarizado quando começar a trabalhar com um novo framwork é sua sintaxe. As regras básicas serão as mesmas já que debaixo de todas as camadas de abstração, ainda é apenas JavaScript.
+Se você possui um sólido conhecimento dos fundamentos do JavaScript, a única coisa de que você precisa para se familiarizar ao começar a trabalhar com um novo framework é a *sintaxe* dele. As regras básicas serão as mesmas já que debaixo de todas as camadas de abstração, ainda é apenas JavaScript.
 
-Se seu conhecimento é limitado a um único framework JavaScript, você terá dificuldades em aprender um novo. Diferentes frameworks são normalmente baseados em um conjunto diferente de princípios do JavaScript. A long prazo você irá passar mais tempo tentando entender vários frameworks e debugando o código que você escreveu neles.
+Se seu conhecimento é limitado a um único framework JavaScript, você terá dificuldades em aprender um novo. Diferentes frameworks são normalmente baseados em um conjunto diferente de princípios do JavaScript. A longo prazo você irá passar mais tempo tentando entender vários frameworks e debugando o código que você escreveu neles.
 
 Todos os frameworks e bibliotecas JavaScripts são inevitavelmente baseados no Vanilla.
 
-Isto deve convencer qualquer um que o conhecimento de JavaScript puro é necessário a longo prazo. É um pré-requisito para qualquer desenvolvedor(a) de sucesso, especialmente para aqueles que trabalham desenvolvendo principalmente no ecossistema JavaScript.
+Isto deve convencer qualquer um que o conhecimento de JavaScript puro é necessário a longo prazo. É um pré-requisito para qualquer desenvolvedor(a) de sucesso, especialmente para aqueles que trabalham desenvolvendo no ecossistema JavaScript.
 
 ## Experiência Profissional
 
-Há não muito tempo atrás, eu olhei atrás para minha jornada de advogado a desenvolvedor web. Já fazem 18 meses desde que escrevi minha primeira função JavaScript, e meu 10º mês trabalhando profissionalmente como um desenvolvedor front-end.
+Há não muito tempo atrás, eu olhei atrás para minha jornada de advogado a desenvolvedor web. Já faz 18 meses desde que escrevi minha primeira função JavaScript, e meu 10º mês trabalhando profissionalmente como um desenvolvedor front-end.
 
 Eu ainda lembro como foi desafiador para mim descobrir o jeito certo de aprender JavaScript, considerando que eu não tinha nenhuma experiência anterior com programação. Eu tentei (e ainda estou tentado) muitas maneiras diferentes de aprender de forma eficiente. Algumas são mais recompensadoras, outras menos.
 
-Mais importante, eu não posso expressar o quão foi importante para mim ter enfatizado em aprender JavaScript puro desde o começo. Frameworks vieram depois.
+Mais importante, eu não posso expressar o quão importante foi para mim ter dado ênfase ao aprendizado JavaScript puro desde o começo. Frameworks vieram depois.
 
 No momento, estou trabalhando com React e Redux. Mesmo assim, muitas vezes aparece um problema que eu consigo resolver graças ao meu conhecimento em Vanilla JavaScript. Estes bugs seria muito mais desafiadores de resolver com apenas o meu conhecimento de um framework em particular.
 
@@ -58,7 +58,7 @@ Aprender React ou Angular 2 não irá te ensinar que objetos são passados por r
 
 Além disso, se você está trabalhando com JSX (React, Vue, Inferno) ou TypeScript (Angular 2), você tem outra camada de abstração no topo disso tudo.
 
-Se você quer entender como estes framworks funcionam por debaixo dos panos, você precisa saber primeiro como JavaScript funciona.
+Se você quer entender como estes frameworks funcionam por debaixo dos panos, você precisa saber primeiro como JavaScript funciona.
 
 Você pode testar seu conhecimento de JavaScript puro lendo o código fonte do seu framework favorito. Isso não irá apenas te dar uma ideia de como funciona por debaixo dos panos, irá te ensinar muito sobre a lógica, o que você pode utilizar em seu próprio código. Você verá que as funções dos frameworks que parecem fazer muita mágica na sua aplicação são apenas composições de conceitos básicos de JavaScript.
 
@@ -82,12 +82,12 @@ Outro curso online que eu acho útil é [Javascript: Understanding the Weird Par
 
 ## Aprenda Vanilla JavaScript, agora
 
-Se você investir seu precioso tempo aprendendo Vanilla JS, você não vai se arrepender. Ele não apenas contém a palvra 'baunilha', mas terá um impacto benéfico nas suas habiilidades de programação.
+Se você investir seu precioso tempo aprendendo Vanilla JS, você não vai se arrepender. Ele não apenas contém a palavra 'baunilha', mas terá um impacto benéfico nas suas habilidades de programação.
 
 Pra mim, o melhor trade-off é que aprender JavaScript puro vai ter muito mais valor ao longo prazo do que investir tempo em um framework em particular. Frameworks são apenas atalhos.
 Por baixo dos panos, é tudo JavaScript.
 
-Você verá por si mesmo em uma situação onde o framework que você está usando tiver uma comportamento inesperado. Nesse caso, você será forçado a investigar esse bug ao olhar o código font. Eu já disse que apesar de muitos frameworks não possuirem uma documentação decente, eles tem um código bem complexo? Mas, sem problemas, você com certeza já dedicou algum tempo aprendendo Vanilla JS. Ou ainda não?
+Você verá por si mesmo em uma situação onde o framework que você está usando tiver uma comportamento inesperado. Nesse caso, você será forçado a investigar esse bug ao olhar o código fonte. Eu já disse que apesar de muitos frameworks não possuirem uma documentação decente, eles tem um código bem complexo? Mas, sem problemas, você com certeza já dedicou algum tempo aprendendo Vanilla JS. Ou ainda não?
 
 Você deve se lembrar de apenas uma coisa deste artigo:
 
