@@ -32,8 +32,6 @@ E, se você for um desenvolvedor JavaScript experiente, te dará novas formas de
 
 Um exemplo popular de uma engine do JavaScript é a V8 do Google. A V8 é usada dentro do Chrome e do Node.js. Aqui está uma visão bem simplificada de como ela se parece:
 
-A popular example of a JavaScript Engine is Google’s V8 engine. The V8 engine is used inside Chrome and Node.js for example. Here is a very simplified view of what it looks like:
-
 ![](https://cdn-images-1.medium.com/max/1600/1*OnH_DlbNAPvB9KLxUCyMsA.png)
 
 A Engine consiste em 2 componentes principais:
