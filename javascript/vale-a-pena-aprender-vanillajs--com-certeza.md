@@ -5,7 +5,7 @@
 
 # Vale a pena aprender Vanilla JS? Claro!
 
-O propósito deste post é enfatizar a importância dos fundamentos JavaScript para todo programador front-end. Eu irei te dizer porque você deve ter um bom conhecimento do puro (Vanilla) JavaScript. Isto significa JavaScript sem nenhum framework ou biblioteca adicional.
+O propósito deste artigo é enfatizar a importância dos fundamentos JavaScript para todo programador front-end. Eu irei te dizer porque você deve ter um bom conhecimento do puro (Vanilla) JavaScript. Isto significa JavaScript sem nenhum framework ou biblioteca adicional.
 
 Eu também irei mencionar alguns recursos que me ajudaram a aprender o básico.
 
@@ -53,7 +53,6 @@ Mais importante, eu não posso expressar o quão importante foi para mim ter dad
 
 No momento, estou trabalhando com React e Redux. Mesmo assim, muitas vezes aparece um problema que eu consigo resolver graças ao meu conhecimento em Vanilla JavaScript. Estes bugs seria muito mais desafiadores de resolver com apenas o meu conhecimento de um framework em particular.
 
-
 Aprender React ou Angular 2 não irá te ensinar que objetos são passados por referência ou como closure funciona. Tentar entender estes conceitos por trás das abstrações dos frameworks é muito mais difícil. Isto torna conceitos simples de JavaScript mais difíceis de entender.
 
 Além disso, se você está trabalhando com JSX (React, Vue, Inferno) ou TypeScript (Angular 2), você tem outra camada de abstração no topo disso tudo.
@@ -84,7 +83,7 @@ Outro curso online que eu acho útil é [Javascript: Understanding the Weird Par
 
 Se você investir seu precioso tempo aprendendo Vanilla JS, você não vai se arrepender. Ele não apenas contém a palavra 'baunilha', mas terá um impacto benéfico nas suas habilidades de programação.
 
-Pra mim, o melhor trade-off é que aprender JavaScript puro vai ter muito mais valor ao longo prazo do que investir tempo em um framework em particular. Frameworks são apenas atalhos.
+Pra mim, a maior vantagem, é que aprender JavaScript puro vai ter muito mais valor ao longo prazo do que investir tempo em um framework em particular. Frameworks são apenas atalhos.
 Por baixo dos panos, é tudo JavaScript.
 
 Você verá por si mesmo em uma situação onde o framework que você está usando tiver uma comportamento inesperado. Nesse caso, você será forçado a investigar esse bug ao olhar o código fonte. Eu já disse que apesar de muitos frameworks não possuirem uma documentação decente, eles tem um código bem complexo? Mas, sem problemas, você com certeza já dedicou algum tempo aprendendo Vanilla JS. Ou ainda não?
@@ -93,7 +92,7 @@ Você deve se lembrar de apenas uma coisa deste artigo:
 
 Tenha sempre em mente que conhecimento de Vanilla JS vai te ajudar a se tornar um desenvolver muito melhor. Ponto.
 
-Se você gostou desse artigo, dê a ele algumas páginas. Eu ficarei muito agradecido.
+Se você gostou desse artigo, dê a ele algumas palmas no Medium. Eu ficarei muito agradecido.
 
 Vejo você no Twitter 😊
 David Kopal (@coding_lawyer) | Twitter
