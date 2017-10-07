@@ -20,4 +20,10 @@ Por exemplo, digamos que Alice, uma desenvolvedora, faz alterações no código 
 
 ## Flexibilidade
 
+## Flexibilidade
+
+Flexibidade é um objetivo chave para o projeto do Git. Ele é flexível em vários aspectos: no suporte de vários tipos de workflows de desenvolvimento não-lineares, na eficiência em pequenos e grandes projetos e na compatibilidade com vários sistemas existentes e protocolos.
+
+Git foi projetado para suportar `branching` e `tagging` como cidadãos de primeira classe (diferente do SVN) e operações que afetam `branches` e `tags`(como `merging` ou `reverting`) são também guardados como parte da mudança de histórico. Não são todos os controles de versão que possuem esse nível de rastreamento.
+
 ## Controle de versão com Git
