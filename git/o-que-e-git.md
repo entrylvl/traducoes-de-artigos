@@ -18,6 +18,19 @@ Por exemplo, digamos que Alice, uma desenvolvedora, faz alterações no código 
 
 ## Segurança
 
+Git foi desenvolvido priorizando a integridade do código fonte gerenciado.
+O conteúdo de cada arquivo assim como a relação apropriada entre arquivos 
+diretórios, versões,etiquetas -tags- e commits, e todos os objetos no repositório Git são
+protegidos com um algoritomo criptográfico de segurança hash chamado SHA1.
+Isso protege o código e o histórico de mudanças, sejam elas maliciosas ou 
+acidentais, e garantem que o histórico seja totalmente rastreável.
+
+Com o Git, você tem a certeza da autenticidade do histórico de conteúdo do seu código fonte.
+
+Outros sistemas de controle de versão não fornecem proteção contra futuras alterações anônimas do histórico.
+Isso pode vir a ser uma séria vulnerabilidade de segurança para qualquer organização que 
+trabalha com desenvolvimento de software.
+
 ## Flexibilidade
 
 ## Flexibilidade
