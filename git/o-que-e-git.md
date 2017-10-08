@@ -40,3 +40,35 @@ Flexibidade é um objetivo chave para o projeto do Git. Ele é flexível em vár
 Git foi projetado para suportar `branching` e `tagging` como cidadãos de primeira classe (diferente do SVN) e operações que afetam `branches` e `tags`(como `merging` ou `reverting`) são também guardados como parte da mudança de histórico. Não são todos os controles de versão que possuem esse nível de rastreamento.
 
 ## Controle de versão com Git
+
+Git é a melhor escolha para a maioria dos times de desenvolvimento de software atualmente. Ao passo em que todo time é diferente e deveria fazer sua própria análise quanto a isso, aqui vão alguns motivos pelos quais é recomendável realizar o controle de versionamento com Git ao invés de ferramentas alternativas:
+
+### Git é bom
+
+Git possui funcionalidades, desempenho, segurança e flexibilidade que a maioria dos times e desenvolvedores individuais precisam. Essas características são descritas acima. Em comparação com muitas das alternativas disponíveis, muitos times veem Git como a escolha mais favorável.
+
+### Git é de fato um padrão
+
+Git é a ferramenta de controle de versionamento mais adotada. Isso faz com que o Git seja atrativo pelos motivos descritos. Na Atlassian, quase todo o código fonte dos nossos projetos é gerenciado usando Git.
+
+Um grande número de desenvolvedores já tem experiência com Git e é possível que uma parcela significativa dos graduados na academia possa ter tido experiência apenas com Git. Enquanto algumas equipes podem ter que enfrentar uma curva de aprendizado ao migrar de uma outra ferramenta de versionamento para o Git, muitos dos seus atuais e futuros desenvolvedores não precisarão ser treinados em Git.
+
+Além dos benefícios ofertados pelo vasto banco de talentos, o fato de Git ser predominante também significa que muitos softwares e serviços de terceiros já estão integrados com Git incluindo IDEs e as nossas próprias ferramentas como o software cliente para DVCS [Sourcetree](https://www.atlassian.com/software/sourcetree), o software de monitoramente de projetos, [Jira](https://www.atlassian.com/software/jira), e o serviço de hospedagem de código, [Bitbucket](https://bitbucket.org/).
+
+Se você é um desenvolvedor com pouca experiência e deseja adquirir habilidades importantes em ferramentas de desenvolvimento de software, quando se fala em controle de versão, Git deve estar na sua lista.
+
+### Git é um projeto de código aberto com qualidade
+
+Git é um projeto de código aberto com um bom suporte e com mais de uma década de uma gestão efetiva. Com lançamento regular de novas versões com melhorias na usabilidade e funcionalidade, os responsáveis pelo projeto têm mostrado equilíbrio e uma abordagem madura na avaliação das necessidades de longo prazo dos usuários. A qualidade do software de código aberto pode ser facilmente analisado e inúmeros negócios dependem fortemente dessa qualidade.
+
+Git desfruta de um grande suporte por parte da comunidade e uma vasta base de usuários. A documentação é excelente e ampla, incluindo livros, tutoriais e websites dedicados. Além disso existem muitos podcasts e tutoriais em vídeo.
+
+Por ter código aberto, Git diminui o custo para desenvolvedores amadores, visto que eles podem usar Git sem pagar nenhum taxa. Para o uso em projetos de código aberto, Git é sem dúvida o sucessor de sistemas de controle de versionamento bem sucedidos no passado, como SVN e CVS.
+
+### Críticas ao Git
+
+Uma crítica frequente ao Git é que ele pode ser difícil de aprender. Alguns dos termos em Git serão inéditos para iniciantes e para usuários de outros sistemas. Por exemplo, o comando `revert` em Git tem um significado diferente para o SVN ou CVS. Apesar disso, Git é muito poderoso e fornece muitas utilidades para seus usuários. Aprender a usar esse poder pode levar tempo, contudo uma vez que se aprende, esse poder pode ser usado pelo time para aumentar a sua velocidade de desenvolvimento.
+
+Para os times acostumados com uma ferramenta de versionamento não distribuída, ter um repositório central pode parecer uma vantagem que eles não desejam abrir mão. Entretanto, por mais que Git tenha sido desenvolvido como uma ferramenta de versionamento distribuída (DVCS), com ele você ainda pode ter um repositório oficial e de acordo com as normas onde todas as alterações feitas ao software precisam ser armazenadas. Com Git, pelo fato de o repositório de todos os desenvolvedores estar sempre completo, o trabalho deles não precisa ficar limitado pela disponibilidade ou desempenho do servidor "central". Durante interrupções ou enquanto offline, desenvolvedores ainda podem consultar o histórico completo do projeto. Pelo fato de o Git ser flexível e distribuído, você pode trabalhar da maneira que você está acostumado e ainda desfrutar dos benefícios que o Git proporciona, alguns dos quais você pode até nem perceber que estava perdendo.
+
+Agora que você entende o que é controle de versão, o que é Git e por que times de desenvolvimento de software devem usá-lo, continue lendo para descobrir os benefícios que Git pode fornecer para a organização como um todo.
