@@ -42,6 +42,69 @@ A Engine consiste em 2 componentes principais:
 
 ## The Run Time
 
-## The Call Stack
+## A Pilha de Chamadas
+
+JavaScript é uma linguagem de programação `single-threaded`, o que signicia que tem apenas uma pilha de chamadas. Logo, só pode fazer uma coisa por vez.
+
+A pilha de chamadas é uma estrutura de dados que salva basicamente onde estamos no programa. Se entrarmos em uma função, nos a colocamos no topo da pilha. Se saírmos de uma função, nós tiramos ela do topo. Isso é tudo que a pilha faz.
+
+Vamos olhar um exemplo. Dê uma olhada no código a seguir: 
+
+```
+function multiply(x, y) {
+    return x * y;
+}
+function printSquare(x) {
+    var s = multiply(x, x);
+    console.log(s);
+}
+printSquare(5);
+```
+
+Quando o motor começa a executar esse código, a pilha de chamadas estará vazia. Depois os passos serão os seguintes:
+
+![](https://cdn-images-1.medium.com/max/2000/1*Yp1KOt_UJ47HChmS9y7KXw.png)
+
+Cada entrada na pilha de chamadas é chamada de quadro da pilha. 
+
+E é exatamente assim que o rastro da pilha está sendo construído quando uma exceção é disparada - é basicamente o estado da pilha de chamada quando a exceção aconteceu. Dê uma olhada nesse código: 
+
+```
+function foo() {
+    throw new Error('SessionStack will help you resolve crashes :)');
+}
+function bar() {
+    foo();
+}
+function start() {
+    bar();
+}
+start();
+```
+
+Se for executado no Chrome (assumindo que ele está em um arquivo chamado foo.js), o rastro da pilha será:
+
+![](https://cdn-images-1.medium.com/max/1600/1*T-W_ihvl-9rG4dn18kP3Qw.png)
+
+`Soprando a pilha` - isso acontece quando você chega no limite do tamanho da pilha de chamadas. E isso pode acontecer facilmente, especialmente se você está usando recursão sem testar seu código extensivamente. Olhe esse código: 
+
+```
+function foo() {
+    foo();
+}
+foo();
+```
+
+Quando o motor começa a executar esse código, ele começa chamado a função `foo`. Essa função, entretanto, é recursiva e começa a chamar a si mesmo sem condição de parada. Então em cada passo da execução, a mesma função é adicionada a pilha de chamadas infinitamente. Vai ser algo assim: 
+
+![](https://cdn-images-1.medium.com/max/1600/1*AycFMDy9tlDmNoc5LXd9-g.png)
+
+Em algum ponto, entretanto, o número de chamada de funções na pilha de chamada extrapola o tamanho da pilha, e o navegador irá tomar uma ação, disparando um erro, que pode ser esse: 
+
+![](https://cdn-images-1.medium.com/max/1600/1*e0nEd59RPKz9coyY8FX-uw.png)
+
+Rodar código em uma única `thread` pode ser bem simples, porque você não precisa lidar com cenários complicados que aparecem em ambientes `multi-thread`,por exemplo, `deadlocks`.
+
+Mas rodar em `single-tread` é limitante. Já que JavaScript tem apenas uma pilha de chamadas, ** o que acontece se as coisas ficam lentas ?**
 
 ## Concurrency & the Event Loop
