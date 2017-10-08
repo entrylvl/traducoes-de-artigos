@@ -18,26 +18,17 @@ Por exemplo, digamos que Alice, uma desenvolvedora, faz alterações no código 
 
 ## Segurança
 
-Git foi desenvolvido priorizando a integridade do código fonte gerenciado.
-O conteúdo de cada arquivo assim como a relação apropriada entre arquivos 
-diretórios, versões,etiquetas -tags- e commits, e todos os objetos no repositório Git são
-protegidos com um algoritomo criptográfico de segurança hash chamado SHA1.
-Isso protege o código e o histórico de mudanças, sejam elas maliciosas ou 
-acidentais, e garantem que o histórico seja totalmente rastreável.
+Git foi desenvolvido priorizando a integridade do código fonte gerenciado. Todo o conteúdo dos arquivos assim como a relação apropriada entre arquivos  diretórios, versões, `tags` e `commits` são protegidos com o uso de um algoritmo criptográfico de segurança hash chamado `SHA1`. Isso protege o código e o histórico de mudanças contra alterações maliciosas e/ou acidentais e também garante que o histórico possa ser totalmente rastreável.
 
 Com o Git, você tem a certeza da autenticidade do histórico de conteúdo do seu código fonte.
 
-Outros sistemas de controle de versão não fornecem proteção contra futuras alterações anônimas do histórico.
-Isso pode vir a ser uma séria vulnerabilidade de segurança para qualquer organização que 
-trabalha com desenvolvimento de software.
-
-## Flexibilidade
+Outros sistemas de controle de versão não fornecem proteção contra futuras alterações anônimas do histórico. Isso pode vir a ser uma séria vulnerabilidade para qualquer organização que trabalha com desenvolvimento de software.
 
 ## Flexibilidade
 
 Flexibidade é um objetivo chave para o projeto do Git. Ele é flexível em vários aspectos: no suporte de vários tipos de workflows de desenvolvimento não-lineares, na eficiência em pequenos e grandes projetos e na compatibilidade com vários sistemas existentes e protocolos.
 
-Git foi projetado para suportar `branching` e `tagging` como cidadãos de primeira classe (diferente do SVN) e operações que afetam `branches` e `tags`(como `merging` ou `reverting`) são também guardados como parte da mudança de histórico. Não são todos os controles de versão que possuem esse nível de rastreamento.
+Git foi projetado para suportar `branching` e `tagging` como cidadãos de primeira classe (diferente do SVN) e operações que afetam `branches` e `tags`(como `merging` ou `reverting`) são também guardados como parte do histórico de mudanças. Não são todos os controles de versão que possuem esse nível de monitoramento.
 
 ## Controle de versão com Git
 
