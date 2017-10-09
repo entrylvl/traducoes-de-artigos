@@ -10,7 +10,7 @@ Além de ser distribuído, Git foi desenvolvido tendo em mente o seu desempenho,
 
 Comparado a ferramentas alternativas, Git possui características de performance bruta bem melhores. Todas as operações de registro de alterações,criação de _branches_, mesclagem e comparação de versões têm desempenho otimizado. Os algoritmos implementados no Git se beneficiam de um conhecimento profundo a respeito de atributos comuns em diretórios de arquivos de código fonte reais, da forma como eles geralmente são modificados e de quais são os padrões de acesso.
 
-Diferentemente de algumas ferramentas de versionamento de controle, Git não leva em consideração o nome dos arquivos ao determinar a forma como eles devem ser armazenados e versionados. Ao invés disso, Git leva em consideração o conteúdo do arquivo em si. Afinal, esses arquivos são frequentemente renomeados, particionados e reordenados. O formato dos arquivos em um repositório Git usa uma combinação das técninas de codificação delta (armazenando as diferenças de conteúdo) e compressão e também armazena especificamente o conteúdo de diretórios e os objetos de metadados referente às versões.
+Diferentemente de algumas ferramentas de versionamento de controle, Git não leva em consideração o nome dos arquivos ao determinar a forma como eles devem ser armazenados e versionados. Ao invés disso, Git leva em consideração o conteúdo do arquivo em si. Afinal, esses arquivos são frequentemente renomeados, particionados e reordenados. O formato dos arquivos em um repositório Git usa uma combinação das técninas de codificação delta (armazenando as diferenças de conteúdo) e compressão, também armazena especificamente o conteúdo de diretórios e os objetos de metadados referente às versões.
 
 Além disso, por ser um sistema distribuído, Git possui vantagens significantes em performance.
 
@@ -18,7 +18,7 @@ Por exemplo, digamos que Alice, uma desenvolvedora, faz alterações no código 
 
 ## Segurança
 
-Git foi desenvolvido priorizando a integridade do código fonte gerenciado. Todo o conteúdo dos arquivos assim como a relação apropriada entre arquivos  diretórios, versões, `tags` e `commits` são protegidos com o uso de um algoritmo criptográfico de segurança hash chamado `SHA1`. Isso protege o código e o histórico de mudanças contra alterações maliciosas e/ou acidentais e também garante que o histórico possa ser totalmente rastreável.
+Git foi desenvolvido priorizando a integridade do código fonte gerenciado. Todo o conteúdo dos arquivos assim como a relação apropriada entre arquivos diretórios, versões, `tags` e `commits` são protegidos com o uso de um algoritmo criptográfico de segurança hash chamado `SHA1`. Isso protege o código e o histórico de mudanças contra alterações maliciosas e/ou acidentais e também garante que o histórico possa ser totalmente rastreável.
 
 Com o Git, você tem a certeza da autenticidade do histórico de conteúdo do seu código fonte.
 
