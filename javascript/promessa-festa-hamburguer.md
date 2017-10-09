@@ -94,7 +94,7 @@ Vamos dizer que seu pedido foi completado, mas você percebeu que para ter uma s
 
 Vamos olhar como esse código funciona. Encadear promessas é tão fácil quanto adicionar um .then() no seu código. O retorno de uma .then() é sempre uma promise. Apenas lembre que cada .then() retorna uma bandeja e um pager, e um valor de retorno efetivo é passado como argumento para o callback.
 
-![](https://i.imgur.com/tNpNjnB.png)
+![](https://i.imgur.com/vi7VZAS.png)
 
 Agora que você tem um hambúrguer e um milkshake, você está pronto para a FESTA DO HAMBÚRGUER.
 
