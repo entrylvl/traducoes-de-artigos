@@ -41,3 +41,4 @@ Já para quem vai consumir o conteúdo, a medida que essa pessoa começar a sent
 * [Como ser* um compilador - Faça um compilador com JavaScript](javascript/como-ser-um-compilador--faca-um-compilador-com-javascript.md)
 * [A promessa de uma festa do hambúrguer](javascript/promessa-festa-hamburguer.md)
 * [Javascript para gatos](javascript/javascript-para-gatos.md)
+* [Como JavaScript Funciona: Uma visão geral da engine, do runtime e da pilha de chamadas](javascript/como-javascript-funciona.md)
