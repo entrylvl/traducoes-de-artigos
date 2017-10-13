@@ -31,6 +31,7 @@ Dê uma olhada na [seção de contribuição](CONTRIBUTING.md) para ter mais det
 ## Tópicos
 
 * [JavaScript](#javascript)
+* [Git](#git)
 
 ### Javascript
 
@@ -38,6 +39,9 @@ Dê uma olhada na [seção de contribuição](CONTRIBUTING.md) para ter mais det
 * [A promessa de uma festa do hambúrguer](javascript/promessa-festa-hamburguer.md)
 * [Javascript para gatos](javascript/javascript-para-gatos.md)
 
+### Git
+
+* [O que é Git?](git/o-que-e-git.md)
 
 ## Licença
 [MIT License](https://github.com/entrylvl/traducoes-de-artigos//blob/master/LICENSE)
