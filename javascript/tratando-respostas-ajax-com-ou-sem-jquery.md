@@ -6,7 +6,7 @@
 
 ## O problema e a solução
 
-Umas das coisas mais perguntadas no [StackOverflow](http://www.stackoverflow.com/) tende a envolver chamadas AJAX, e a incapacidade de usar a resposta imediatamente, como a seguir:
+Umas das coisas mais perguntadas no [StackOverflow](http://www.stackoverflow.com/) tende a envolver chamadas AJAX e a incapacidade de usar a resposta imediatamente, como a seguir:
 
 ```
 var response = '';
@@ -32,7 +32,7 @@ var xhr = jQuery.ajax('/ajax.php', function (result) {
 // Tente usar response aqui (nota: não vai funcionar!)
 ```
 
-Este tipo de pergunta é tão comum no StackOverflow que é destaque na [descrição da tag JavaScript](http://stackoverflow.com/tags/javascript/info). A resposta para cada uma dessas perguntas recomenda ao autor usar um "callback" para tratar a resposta. Vamos olhar em instantes o motivo de um "callback" ser necessário. Mas para aqueles que estiverem com pressa, eu vou primeiro mostrar a solução:
+Este tipo de pergunta é tão comum no StackOverflow que é destaque na [descrição da tag JavaScript](http://stackoverflow.com/tags/javascript/info). A resposta para cada uma dessas perguntas recomenda ao autor usar um *callback* para tratar a resposta. Vamos olhar em instantes *o motivo* de um *callback* ser necessário. Mas para aqueles que estiverem com pressa, eu vou primeiro mostrar a solução:
 
 ```
 var xhr = new XMLHttpRequest(); //O tratamento de múltiplos browsers foi omitido por brevidade
@@ -60,7 +60,7 @@ jQuery.get('/ajax.php', function (response) {
 
 ## A explicação
 
-Um "callback" é necessário porque um AJAX, como o nome `Javascript e XML Assíncrono` sugere, é assíncrono. Quando você inicia uma chamada AJAX usando o método XMLHttpRequest nativo ou por jQuery, a requisição HTTP é enviada, mas o motor do JavaScript não espera por uma resposta. Ao invés disso, o fluxo de execução continua. Para conseguirmos monitorar o progresso da requisição, nos é permitido passar uma função de "callback" que será executada quando o estado da requisição HTTP muda. O "callback" pode ser enviado para o objeto [XMLHttpRequest](http://www.w3.org/TR/XMLHttpRequest/#toc) nativo através do atributo onreadystatechange:
+Um *callback* é necessário porque um AJAX, como o nome `Javascript e XML Assíncrono` sugere, é assíncrono. Quando você inicia uma chamada AJAX usando o método `XMLHttpRequest` nativo ou por jQuery, a requisição HTTP é enviada, mas o motor do JavaScript não *espera* por uma resposta. Ao invés disso, o fluxo de execução continua. Para conseguirmos monitorar o progresso da requisição, nos é permitido passar uma função de *callback* que será executada quando o estado da requisição HTTP muda. O *callback* pode ser enviado para o objeto [XMLHttpRequest](http://www.w3.org/TR/XMLHttpRequest/#toc) nativo através do atributo `onreadystatechange`:
 
 ```
 var xhr = new XMLHttpRequest();
@@ -80,7 +80,7 @@ xhr.open('GET', '/ajax.php', 'true');
 xhr.send(null);
 ```
 
-Ao usar jQuery, os "callbacks" são especificados de maneira diferente dependendo de qual método [AJAX](http://api.jquery.com/category/ajax) você quer usar; métodos como [jQuery.get](http://api.jquery.com/jQuery.get), [jQuery.post](http://api.jquery.com/jQuery.post), [jQuery.getJSON](http://api.jquery.com/jQuery.getJSON) aceitam apenas um "callback" de sucesso, passado à função como parâmetro. [jQuery.ajax](http://api.jquery.com/jQuery.ajax) por sua vez, permite que [múltiplos "callbacks" separados](http://api.jquery.com/jQuery.ajax/#jQuery-ajax-settings) sejam especificados como pares chave:valor no objeto passado como último parâmetro.
+Ao usar jQuery, os "callbacks" são especificados de maneira diferente dependendo de qual método [AJAX](http://api.jquery.com/category/ajax) você quer usar; métodos como [jQuery.get](http://api.jquery.com/jQuery.get), [jQuery.post](http://api.jquery.com/jQuery.post), [jQuery.getJSON](http://api.jquery.com/jQuery.getJSON) aceitam apenas um "callback" de sucesso, passado à função como parâmetro. [jQuery.ajax](http://api.jquery.com/jQuery.ajax) por sua vez, permite que [múltiplos "callbacks" separados](http://api.jquery.com/jQuery.ajax/#jQuery-ajax-settings) sejam especificados como pares `chave:valor` no objeto passado como último parâmetro.
 
 ```
 jQuery.get('/ajax.php', function (response) {
@@ -95,7 +95,7 @@ jQuery.ajax('/ajax.php', {
 })
 ```
 
-A introdução de "callbacks" faz o fluxo de execução ficar parecido com isso:
+A introdução de *callbacks* faz o fluxo de execução ficar parecido com isso:
 
 ```
 var xhr = new XMLHttpRequest(); // O tratamento de múltiplos browsers foi omitido por brevidade
@@ -124,7 +124,7 @@ xhr.send(null);
 // Ponto 3
 ```
 
-Os pontos 1, 2 e 3 serão executados uma única vez em ordem crescente, imediatamente. A execução do ponto 4 ocorrerá depois de um tempo, quando o estado da requisição HTTP progredir. O ponto 4 será executado múltiplas vezes até que a requisição HTTP alcance o estado final (readyState == 4), quando o fluxo de execução chega ao ponto 5. O ponto 6 será executado se a requisição HTTP completar-se com sucesso. O mesmo fluxo de execução pode ser visto no código jQuery seguinte:
+Os pontos 1, 2 e 3 serão executados uma única vez em ordem crescente, imediatamente. A execução do ponto 4 ocorrerá *depois de um tempo*, quando o estado da requisição HTTP progredir. O ponto 4 será executado múltiplas vezes até que a requisição HTTP alcance o estado final (`readyState == 4`), quando o fluxo de execução chega ao ponto 5. O ponto 6 será executado se a requisição HTTP completar-se com sucesso. O mesmo fluxo de execução pode ser visto no código jQuery seguinte:
 ```
 // Ponto 1
 
@@ -135,4 +135,4 @@ jQuery.get('/ajax.php', function (result) {
 // Ponto 3
 ```
 
-É uma prática comum mostrar algum indicador de progresso no ponto 3. Geralmente alguma coisa simples como um [spinner](http://ajaxload.info/), para indicar que há uma chamada HTTP assíncrona em progresso. Seria ideal mostrar atualizações de progresso no ponto 4, porém os valores observados no readyState [não são úteis o suficiente para isso](http://stackoverflow.com/questions/632774/what-do-the-different-readystates-in-xmlhttprequest-mean-and-how-can-i-use-them). No ponto 5, a chamada HTTP terminou, então o "spinner" pode ser removido, e uma mensagem de sucesso ou de erro pode ser mostrada, dependendo se o status é um [código de erro HTTP de sucesso ou erro](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
+É uma prática comum mostrar algum indicador de progresso no ponto 3. Geralmente alguma coisa simples como um [spinner](http://ajaxload.info/), para indicar que há uma chamada HTTP assíncrona em progresso. Seria ideal mostrar atualizações de progresso no ponto 4, porém os valores observados no `readyState` [não são úteis o suficiente para isso](http://stackoverflow.com/questions/632774/what-do-the-different-readystates-in-xmlhttprequest-mean-and-how-can-i-use-them). No ponto 5, a chamada HTTP terminou, então o "spinner" pode ser removido, e uma mensagem de sucesso ou de erro pode ser mostrada, dependendo se o *status* é um [código de erro HTTP de sucesso ou erro](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
