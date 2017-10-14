@@ -80,7 +80,7 @@ xhr.open('GET', '/ajax.php', 'true');
 xhr.send(null);
 ```
 
-Ao usar jQuery, os "callbacks" são especificados de maneira diferente dependendo de qual método [AJAX](http://api.jquery.com/category/ajax) você quer usar; métodos como [jQuery.get](http://api.jquery.com/jQuery.get), [jQuery.post](http://api.jquery.com/jQuery.post), [jQuery.getJSON](http://api.jquery.com/jQuery.getJSON) aceitam apenas um "callback" de sucesso, passado à função como parâmetro. [jQuery.ajax](http://api.jquery.com/jQuery.ajax) por sua vez, permite que [múltiplos "callbacks" separados](http://api.jquery.com/jQuery.ajax/#jQuery-ajax-settings) sejam especificados como pares `chave:valor` no objeto passado como último parâmetro.
+Ao usar jQuery, os *callbacks* são especificados de maneira diferente dependendo de qual método [AJAX](http://api.jquery.com/category/ajax) você quer usar; métodos como [jQuery.get](http://api.jquery.com/jQuery.get), [jQuery.post](http://api.jquery.com/jQuery.post), [jQuery.getJSON](http://api.jquery.com/jQuery.getJSON) aceitam apenas um "callback" de sucesso, passado à função como parâmetro. [jQuery.ajax](http://api.jquery.com/jQuery.ajax) por sua vez, permite que [múltiplos "callbacks" separados](http://api.jquery.com/jQuery.ajax/#jQuery-ajax-settings) sejam especificados como pares `chave:valor` no objeto passado como último parâmetro.
 
 ```
 jQuery.get('/ajax.php', function (response) {
