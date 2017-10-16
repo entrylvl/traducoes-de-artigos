@@ -32,6 +32,7 @@ Dê uma olhada na [seção de contribuição](CONTRIBUTING.md) para ter mais det
 
 * [JavaScript](#javascript)
 * [Git](#git)
+* [CSS](#css)
 
 ### Javascript
 
@@ -42,6 +43,10 @@ Dê uma olhada na [seção de contribuição](CONTRIBUTING.md) para ter mais det
 ### Git
 
 * [O que é Git?](git/o-que-e-git.md)
+
+### CSS
+
+* [Um guia de iniciantes para imagens em puro CSS](css/um-guia-de-iniciantes-para-imagens-em-puro-css.md)
 
 ## Licença
 [MIT License](https://github.com/entrylvl/traducoes-de-artigos//blob/master/LICENSE)
