@@ -38,6 +38,7 @@ Dê uma olhada na [seção de contribuição](CONTRIBUTING.md) para ter mais det
 * [Como ser* um compilador - Faça um compilador com JavaScript](javascript/como-ser-um-compilador--faca-um-compilador-com-javascript.md)
 * [A promessa de uma festa do hambúrguer](javascript/promessa-festa-hamburguer.md)
 * [Javascript para gatos](javascript/javascript-para-gatos.md)
+* [Vale a pena aprender Vanilla JS? Claro!](javascript/vale-a-pena-aprender-vanillajs--com-certeza.md)
 
 ### Git
 
