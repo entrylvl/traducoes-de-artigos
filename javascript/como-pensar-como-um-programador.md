@@ -1,6 +1,6 @@
 # Como pensar como um programador
 
-[](https://cdn-images-1.medium.com/max/1000/1*otgsthXHixWZ8Xs_a4cl_g.jpeg)
+[Homem jogando xadrez](https://cdn-images-1.medium.com/max/1000/1*otgsthXHixWZ8Xs_a4cl_g.jpeg)
 
 "Eu não entendo JavaScript. Eu não consigo criar componentes do zero. Minha mente dá um branco quando eu vejo um arquivo JavaScript em branco. Eu acho que isso ocorrer porque eu não sei pensar como um programador."
 
@@ -39,7 +39,7 @@ Aqui está o que a maioria das pessoas responderiam:
 
 Problema resolvido.
 
-[](https://cdn-images-1.medium.com/max/800/0*PGDaDsFOBO6-NdQv.jpg)
+[Elefante espremido em uma geladeira](https://cdn-images-1.medium.com/max/800/0*PGDaDsFOBO6-NdQv.jpg)
 
 Essa resposta é o melhor exemplo do porque você está fica travado quando se depara com um arquivo JavaScript em branco. Está pulando passos.
 
