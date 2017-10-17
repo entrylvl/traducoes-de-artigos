@@ -29,7 +29,7 @@ Superar este bloqueio é muito simples. Você pode seguir estes passos:
 
 Vamos olhar mais de perto cada um destes passos.
 
-## Passo 1: Quebre o problema em outros pequenos problemas.
+## Passo 01: Quebre o problema em outros pequenos problemas.
 
 Como você coloca um elefante dentro de uma geladeira?
 
@@ -54,3 +54,20 @@ Se você pensar de forma lógica sobre a questão, irá perceber que há alguns 
 5. Como irá transportar o elefante até sua geladeira?
 
 Quando está programando, você precisa responder toda pequena questão que imaginar. É por isso que o primeiro passo é quebra seu problema em peças menores.
+
+## Passo 02: Encontrando soluções para seus pequenos problemas.
+
+O segundo passo é encontrar a solução para cada um de seus problemas. Neste passo, é importante que você seja o mais detalhado possível.
+
+1. Qual geladeira? — a geladeira que fica em sua cozinha.
+2. Qual tipo de elefante? — o elefante da floresta africana.
+3. E se o elefante for muito grande? — Pegue uma arma encolhedora (🔫) para encolher o elefante (😎).
+4. Onde você encontra o elefante? — África
+5. Como transportar o elefante? — Coloque em sua mala depois de encolhido e então pegue um avião de volta para casa.
+
+Algumas vezes, você precisa se aprofundar mais para ter a resposta que precisa. Por exemplo, nós podemos nos aprofundar nas questões 3 e 4.
+
+1. Onde você encontra uma arma encolhedora? — Pedir emprestado ao cientista maluco ao lado.
+2. Em que lugar na África você irá encontrar seu elefante? —  Addo Elephant Park na África do Sul.
+
+Uma vez que você já tenha as respostas dos seus pequenos problemas prontas, poderá uni-las para resolver seu grande problema.
