@@ -71,3 +71,22 @@ Algumas vezes, você precisa se aprofundar mais para ter a resposta que precisa.
 2. Em que lugar na África você irá encontrar seu elefante? —  Addo Elephant Park na África do Sul.
 
 Uma vez que você já tenha as respostas dos seus pequenos problemas prontas, poderá uni-las para resolver seu grande problema.
+
+## Passo 03: Reunir as soluções de forma coerente.
+
+Então, no exemplo colocar-um-elefante-em-uma-geladeira, você provavelmente seguiu os seguintes passos:
+
+1. Pedir emprestado a arma encolhedora do cientista maluco ao lado.
+2. Viajou até a África do Sul.
+3. Foi até o Addo Elephant Park.
+4. Encontrou um elefante na reserva.
+5. Atirou no elefante com a arma encolhedora.
+6. Guardou o elefante em sua mala.
+7. Viajou de volta ao aeroporto.
+8. Voou até o seu pais.
+9. Voltou para sua casa.
+10. Colocou o elefante em sua geladeira.
+
+Problema resolvido.
+
+Por mais interessante que seja, você provavelmente não poderia capturar elefantes e por em geladeiras com JavaScript.
