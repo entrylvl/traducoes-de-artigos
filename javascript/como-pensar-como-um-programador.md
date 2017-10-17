@@ -95,5 +95,4 @@ Por mais interessante que seja, você provavelmente não poderia capturar elefan
 
 Digamos que você queira criar um butão que, quando pressionado, mostre um sidebar.
 
-<p data-height="265" data-theme-id="0" data-slug-hash="zdqmLe" data-default-tab="css,result" data-user="zellwk" data-embed-version="2" data-pen-title="Sidebar for Thinking like a programmer article" class="codepen">See the Pen <a href="https://codepen.io/zellwk/pen/zdqmLe/">Sidebar for Thinking like a programmer article</a> by Zell Liew (<a href="https://codepen.io/zellwk">@zellwk</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<p data-height="265" data-theme-id="0" data-slug-hash="zdqmLe" data-default-tab="css,result" data-user="zellwk" data-embed-version="2" data-pen-title="Sidebar for Thinking like a programmer article" class="codepen">Veja o Pen <a href="https://codepen.io/zellwk/pen/zdqmLe/">Sidebar for Thinking like a programmer article</a> por Zell Liew (<a href="https://codepen.io/zellwk">@zellwk</a>) no <a href="https://codepen.io">CodePen</a>.</p>
