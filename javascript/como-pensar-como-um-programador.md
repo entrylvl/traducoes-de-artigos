@@ -90,3 +90,10 @@ Então, no exemplo colocar-um-elefante-em-uma-geladeira, você provavelmente seg
 Problema resolvido.
 
 Por mais interessante que seja, você provavelmente não poderia capturar elefantes e por em geladeiras com JavaScript.
+
+## Vamos a um exemplo real.
+
+Digamos que você queira criar um butão que, quando pressionado, mostre um sidebar.
+
+<p data-height="265" data-theme-id="0" data-slug-hash="zdqmLe" data-default-tab="css,result" data-user="zellwk" data-embed-version="2" data-pen-title="Sidebar for Thinking like a programmer article" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/zellwk/pen/zdqmLe/">Sidebar for Thinking like a programmer article</a> by Zell Liew (<a href="https://codepen.io/zellwk">@zellwk</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
