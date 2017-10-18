@@ -4,17 +4,17 @@
 
 ![](https://cdn-images-1.medium.com/max/1000/1*otgsthXHixWZ8Xs_a4cl_g.jpeg)
 
-"Eu não entendo JavaScript. Eu não consigo criar componentes do zero. Minha mente dá um branco quando eu vejo um arquivo JavaScript em branco. Eu acho que isso ocorrer porque eu não sei pensar como um programador."
+"Eu não entendo JavaScript. Eu não consigo criar componentes do zero. Minha mente dá um branco quando eu vejo um arquivo JavaScript em branco. Eu acho que isso ocorre porque eu não sei pensar como um programador."
 
 Isso parece familiar para você? Saiba que você não está sozinho, meu amigo. Muitas pessoas que escolhem JavaScript como sua primeira linguagem de programação enfrentam o mesmo problema.
 
 Nossa, até mesmo desenvolvedores que já programam em outra linguagem também se deparam com este mesmo problema. Então ao invés de "Eu não consigo pensar como um programador", eles dizem "Eu não consigo pensar em JavaScript".
 
-Mas não mais. Então hoje iremos aprender a como pensar como um programador.
+Mas não mais. Hoje iremos aprender a pensar como um programador.
 
 ## Você já pode pensar como um programador.
 
-Já experimentou exercicios simples em plataformas como freeCodeCamp, Code Academy ou Code Wars?
+Já experimentou exercícios simples em plataformas como freeCodeCamp, Code Academy ou Code Wars?
 
 Se sim, você já sabe como pensar como um programador.
 
@@ -53,7 +53,7 @@ Se você pensar de forma lógica sobre a questão, irá perceber que há alguns 
 4. Onde você encontrou um elefante em primeiro lugar?
 5. Como irá transportar o elefante até sua geladeira?
 
-Quando está programando, você precisa responder toda pequena questão que imaginar. É por isso que o primeiro passo é quebra seu problema em peças menores.
+Quando está programando, você precisa responder toda pequena questão que imaginar. É por isso que o primeiro passo é quebrar seu problema em peças menores.
 
 ## Passo 02: Encontrando soluções para seus pequenos problemas.
 
@@ -83,7 +83,7 @@ Então, no exemplo colocar-um-elefante-em-uma-geladeira, você provavelmente seg
 5. Atirou no elefante com a arma encolhedora.
 6. Guardou o elefante em sua mala.
 7. Viajou de volta ao aeroporto.
-8. Voou até o seu pais.
+8. Voou até o seu país.
 9. Voltou para sua casa.
 10. Colocou o elefante em sua geladeira.
 
@@ -107,10 +107,10 @@ Divida o componente em pequenos pedaços. Aqui estão alguns problemas que você
 4. O que acontece quando este botão é clicado novamente?
 5. O que acontece quando este botão é clicado uma terceira vez?
 6. Qual é a marcação HTML desta barra lateral?
-7. Como o barra lateral se parece quando visível?
-8. Como o barra lateral se parece quando oculta?
-9. Como o barra lateral aparece?
-10. Como o barra lateral desaparece?
+7. Como a barra lateral se parece quando visível?
+8. Como a barra lateral se parece quando oculta?
+9. Como a barra lateral aparece?
+10. Como a barra lateral desaparece?
 11. A barra lateria deveria aparecer quando a página é carregada?
 
 ## O segundo passo — criando soluções para o problema.
@@ -163,9 +163,9 @@ A barra lateral deve aparecer quando o botão é clicado uma vez. Está barra la
 
 ### Como o barra lateral se parece quando visível?
 
-A barra lateral deve ser colocada a direita da janela do navegador. Está precisa ser realocado para estar visível ao usuário. Deverá ter uma largura de 300px.
+A barra lateral deve ser colocada a direita da janela do navegador. Esta precisa ser realocada para estar visível ao usuário. Deverá ter uma largura de 300px.
 
-Quando você terminar de resolver o problema, você pode terminar com um CSS smiliar a este:
+Quando você terminar de resolver o problema, você pode terminar com um CSS similar a este:
 
 <pre>
   .sidebar {
@@ -198,9 +198,9 @@ Quando você terminar de resolver o problema, você pode terminar com um CSS smi
   }
 </pre>
 
-### Como o barra lateral se parece quando oculta?
+### Como a barra lateral se parece quando oculta?
 
-A barra lateral deve ser realocada a 300px para direita, assim então estando fora da tela.
+A barra lateral deve ser realocada a 300px para direita, estando assim fora da tela.
 
 Quando você responder está questão, poderá ter mais outras duas questões em mente:
 
@@ -223,9 +223,9 @@ Nós usaremos <strong>translateX</strong> para deslocar a barra lateral 300px pa
   }
 </pre>
 
-### Como o barra lateral aparece?
+### Como a barra lateral aparece?
 
-A barra lateral não pode aparecer imediatamente. Está precisa se mover da direita, quando oculta, para a esquerda, quando visível.
+A barra lateral não pode aparecer imediatamente. Esta precisa se mover da direita, quando oculta, para a esquerda, quando visível.
 
 Se você sabe CSS, você poderá utilizar a propriedade <strong>transition</strong>. Se não, você pode procurar por uma resposta através do Google.
 
@@ -238,9 +238,9 @@ Se você sabe CSS, você poderá utilizar a propriedade <strong>transition</stro
 
 ### Como o barra lateral desaparece?
 
-Ela deve desaparecer da mesma forma que aparece, na direção oposto. Com isto, você não tem de escrever nenhum código CSS adicional.
+Ela deve desaparecer da mesma forma que aparece, na direção oposta. Com isto, você não tem de escrever nenhum código CSS adicional.
 
-### A barra lateria deveria aparecer quando a página é carregada?
+### A barra lateral deveria aparecer quando a página é carregada?
 
 Não. Neste caso, nós podemos adicionar uma classe <strong>is-hidden</strong> na marcação da barra lateral e ela deve permanecer oculta.
 
@@ -272,7 +272,7 @@ Antes de você adicionar um ouvinte de eventos, você precisa encontrar a marca�
 
 ### O que acontece quando o botão é clicado uma vez?
 
-Quando o botão for clicado uma vez, nós devemos remover a classe <strong>is-hidden</strong> e então mostra-lo. Para remover uma classe em JavaScript, nós usamos <strong>Element.classList.remove</strong>. Isso significa que nós precisamos selecionar a barra lateral primeiro.
+Quando o botão for clicado uma vez, nós devemos remover a classe <strong>is-hidden</strong> e então mostrá-lo. Para remover uma classe em JavaScript, nós usamos <strong>Element.classList.remove</strong>. Isso significa que nós precisamos selecionar a barra lateral primeiro.
 
 <pre>
   const button = document.querySelector('.btn')
@@ -287,7 +287,7 @@ Quando o botão for clicado uma vez, nós devemos remover a classe <strong>is-hi
 
 Quando o botão é clicado novamente, nós devemos adicionar a classe <strong>is-hidden</strong> de volta a barra lateral para que então ela desapareça.
 
-Infelizmente, nós não podemos detectar quantas vezes o botão foi clicado com um "event listener". A melhor forma, então, é checkar se a classe <strong>is-hidden</strong> está presente na barra lateral. Se sim, nós a removemos. Se não, nós a adicionamos.
+Infelizmente, nós não podemos detectar quantas vezes o botão foi clicado com um "event listener". A melhor forma, então, é checar se a classe <strong>is-hidden</strong> está presente na barra lateral. Se sim, nós a removemos. Se não, nós a adicionamos.
 
 <pre>
   const button = document.querySelector('.btn')
@@ -308,7 +308,7 @@ Com isso, você tem uma protótipo inicial de um componente.
 
 ## O quarto passo — refatorando e melhorando.
 
-Nós incorporamos o terceiro passo, assimilamos nossas soluções e organizamos de forma coerente, ao londo do caminho. O passo final é refatorar e melhorar seu código. Você pode não compreender este passo naturalmente por enquanto. Leva tempo de prática e muito esforça antes de você ter seu código melhorado.
+Nós incorporamos o terceiro passo, assimilamos nossas soluções e organizamos de forma coerente, ao londo do caminho. O passo final é refatorar e melhorar seu código. Você pode não compreender este passo naturalmente por enquanto. Leva tempo de prática e muito esforço antes de você ter seu código melhorado.
 
 Então uma vez que os três passos estejam completos, dê uma pausa e trabalhe em outra coisa. Quando estiver conhecendo melhor JavaScript, você pode notar que deixou escapar alguns poucos detalhes quando voltar.
 
