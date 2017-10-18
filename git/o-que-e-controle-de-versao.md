@@ -15,7 +15,7 @@ Equipes de software que não usam qualquer forma de controle de versão frequent
 
 O software de controle de versão tem um papel essencial na rotina dos times de software modernos. Desenvolvedores de software independentes acostumados a trabalhar com um sistema de controle de versão eficiente em seus times, normalmente reconhecem o incrível valor que o controle de versão oferece mesmo em pequenos projetos pessoais. Uma vez acostumados aos eficazes benefícios dos sistemas de controle de versão, muitos desenvolvedores não considerariam trabalhar sem ele, mesmo em projetos não relacionados a software.
 
-#Benefícios dos sistemas de controle de versão
+## Benefícios dos sistemas de controle de versão
 
 Developing software without using version control is risky, like not having backups. Version control can also enable developers to move faster and it allows software teams to preserve efficiency and agility as the team scales to include more developers.
 
