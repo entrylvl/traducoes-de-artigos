@@ -123,7 +123,7 @@ Então vamos responder cada uma das questões:
 
 ### Qual é a marcação HTML deste botão?
 
-A marcação é uma tag &lt;a&gt; com uma classe <strong>.button<strong>.
+A marcação é uma tag &lt;a&gt; com uma classe <strong>.button</strong>.
 
 <pre>&lt;a href="#" class="button"&gt;Click me&lt;/a&gt;</pre>
 
