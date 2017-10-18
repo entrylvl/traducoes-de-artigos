@@ -31,7 +31,7 @@ JavaScript é especial, e desempenha um papel crítico em qualquer grande aplica
 
 Aqui estão algumas questões que irá ajudar você a explorar o que realmente importa:
 
-### Você pode nomear dois paradigmas de programação imporatantes para desenvolvedores JavaScript?
+### 1. Você pode nomear dois paradigmas de programação imporatantes para desenvolvedores JavaScript?
 
 JavaScript é uma linguagem multi-paradigma, suportanto programação *imperativa/procedural* junto com POO (Programação Orientada a Objetos) e *programação funcional*. JavaScript suporta POO com *herança prototipada*.
 
@@ -49,7 +49,7 @@ JavaScript é uma linguagem multi-paradigma, suportanto programação *imperativ
 * [The Two Pillars of JavaScript Part 1](https://medium.com/javascript-scene/the-two-pillars-of-javascript-ee6f3281e7f3) — OO Prototipada.
 * [The Two Pillars of JavaScript Part 2](https://medium.com/javascript-scene/the-two-pillars-of-javascript-pt-2-functional-programming-a63aa53a41a4) — Programação Funcional.
 
-### O que é Programação Funcional?
+### 2. O que é Programação Funcional?
 
 Programação funcional produz programas compostos de funções matemáticas e evita compartilhar estados vazios e dados mutavéis. Lisp (especificada em 1958) era uma das primeiras linguagens que suportavam programação funcional, e era fortemente inspirada por cálculos lambda. Lisp e muitas linguagens da família Lisp ainda tem seu uso comum hoje em dia.
 
