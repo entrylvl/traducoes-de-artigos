@@ -93,6 +93,215 @@ Por mais interessante que seja, você provavelmente não poderia capturar elefan
 
 ## Vamos a um exemplo real.
 
-Digamos que você queira criar um butão que, quando pressionado, mostre um sidebar.
+Digamos que você queira criar um butão que, quando pressionado, mostre uma barra lateral.
 
 <p data-height="265" data-theme-id="0" data-slug-hash="zdqmLe" data-default-tab="css,result" data-user="zellwk" data-embed-version="2" data-pen-title="Sidebar for Thinking like a programmer article" class="codepen">Veja o Pen <a href="https://codepen.io/zellwk/pen/zdqmLe/">Sidebar for Thinking like a programmer article</a> por Zell Liew (<a href="https://codepen.io/zellwk">@zellwk</a>) no <a href="https://codepen.io">CodePen</a>.</p>
+
+## O primeiro passo — dividir em pequenos pedaços.
+
+Divida o componente em pequenos pedaços. Aqui estão alguns problemas que você pode indentificar:
+
+1. Qual é a marcação HTML deste botão?
+2. Como este botão deveria se parecer?
+3. O que acontece quando este botão é clicado uma vez?
+4. O que acontece quando este botão é clicado novamente?
+5. O que acontece quando este botão é clicado uma terceira vez?
+6. Qual é a marcação HTML desta barra lateral?
+7. Como o barra lateral se parece quando visível?
+8. Como o barra lateral se parece quando oculta?
+9. Como o barra lateral aparece?
+10. Como o barra lateral desaparece?
+11. A barra lateria deveria aparecer quando a página é carregada?
+
+## O segundo passo — criando soluções para o problema.
+
+Para criar soluções, você precisa ter um conhecimento sobre oque está criando. Em nosso caso, você precisa ter um conhecimento suficiente sobre HTML, CSS e JavaScript.
+
+Não se preocupe caso você não saiba responder a nenhuma uma dessas perguntas. Se você os dividiu o suficiente, você deve encontrar uma respostas através do Google em cinco minutos.
+
+Então vamos responder cada uma das questões:
+
+#### Qual é a marcação HTML deste botão?
+
+A marcação é uma tag &lt;a&gt; com uma classe <strong>.button<strong>.
+
+<pre>&lt;a href="#" class="button"&gt;Click me&lt;/a&gt;</pre>
+
+#### Como este botão deveria se parecer?
+
+Este botão deve ter o seguinte CSS:
+
+<pre>
+  .btn {
+    display: inline-block;
+    font-size: 2em;
+    padding: 0.75em 1em;
+    background-color: #1ce;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+</pre>
+
+#### O que acontece quando este botão é clicado uma vez? Duas? Três vezes?
+
+A barra lateral deve aparecer quando o botão é clicado uma vez. Está barra lateral então deveria ser ocultada quando o botão é clicado uma outra vez. Está deveria ser visível quando o botão é clicado novamente.
+
+#### Qual é a marcação HTML desta barra lateral?
+
+<pre>
+  &lt;div class="sidebar"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link 5&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+</pre>
+
+#### Como o barra lateral se parece quando visível?
+
+A barra lateral deve ser colocada a direita da janela do navegador. Está precisa ser realocado para estar visível ao usuário. Deverá ter uma largura de 300px.
+
+Quando você terminar de resolver o problema, você pode terminar com um CSS smiliar a este:
+
+<pre>
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    background-color: #333;
+  }
+
+  .sidebar ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .sidebar li {
+    list-style: none;
+  }
+
+  .sidebar li + li {
+    border-top: 1px solid white;
+  }
+
+  .sidebar a {
+    display: block;
+    padding: 1em 1.5em;
+    color: #fff;
+    text-decoration: none;
+  }
+</pre>
+
+#### Como o barra lateral se parece quando oculta?
+
+A barra lateral deve ser realocada a 300px para direita, assim então estando fora da tela.
+
+Quando você responder está questão, poderá ter mais outras duas questões em mente:
+
+1. Como saberá se a barra lateral está a visível ou oculta?
+2. Como você estiliza a barra lateral oculta?
+
+Então iremos responder elas.
+
+#### Como saberá se a barra lateral está a visível ou oculta?
+
+Se a barra lateral tiver uma classe <strong>.is-hidden</strong>, a barra lateral deve estar oculta. Caso contrário, ela deve estar visível.
+
+#### Como você estiliza a barra lateral oculta?
+
+Nós usaremos <strong>translateX</strong> para deslocar a barra lateral 300px para a direita uma vez que a propriedade <strong>transform</strong> é uma das melhores para animação. Seu estilo então será este:
+
+<pre>
+  .sidebar.is-hidden {
+    transform: translateX(300px);
+  }
+</pre>
+
+#### Como o barra lateral aparece?
+
+A barra lateral não pode aparecer imediatamente. Está precisa se mover da direita, quando oculta, para a esquerda, quando visível.
+
+Se você sabe CSS, você poderá utilizar a propriedade <strong>transition</strong>. Se não, você pode procurar por uma resposta através do Google.
+
+<pre>
+  .sidebar {
+    /* other properties */
+    transition: transform 0.3s ease-out;
+  }
+</pre>
+
+#### Como o barra lateral desaparece?
+
+Ela deve desaparecer da mesma forma que aparece, na direção oposto. Com isto, você não tem de escrever nenhum código CSS adicional.
+
+#### A barra lateria deveria aparecer quando a página é carregada?
+
+Não. Neste caso, nós podemos adicionar uma classe <strong>is-hidden</strong> na marcação da barra lateral e ela deve permanecer oculta.
+
+<pre>
+  &lt;div class="sidebar is-hidden"&gt;
+    &lt;!-- links --&gt;
+  &lt;/div&gt;
+</pre>
+
+#### Agora, nós já respondemos quase tudo, exceto uma coisa — o que acontece quando o botão é clicado uma vez? Duas? Três vezes?
+
+Nossa resposta acima foi muito vaga. Nós sabemos que a barra lateral deve aparecer quando você clica nele, mas como? A barra lateral deve desaparecer quando você clica novamente, mas como?
+
+Este é o ponto, nós podemos responder está questão novamente e com mais detalhes. Mas antes disso, como saber quando você clicou em um botão?
+
+#### Como saber quando você clicou em um botão.
+
+Se você conhece JavaScript, você sabe que podemos adicionar um "event listener" para o botão e ouvir por um evento <strong>click</strong>. Se você não sabe, você pode usar o Google para conhecer.
+
+Antes de você adicionar um ouvinte de eventos, você precisa encontrar a marcação do botão com um <strong>querySelector</strong>.
+
+<pre>
+  const button = document.querySelector('.btn')
+
+  button.addEventListener('click', function() {
+    console.log('button is clicked!')
+  })
+</pre>
+
+#### O que acontece quando o botão é clicado uma vez?
+
+Quando o botão for clicado uma vez, nós devemos remover a classe <strong>is-hidden</strong> e então mostra-lo. Para remover uma classe em JavaScript, nós usamos <strong>Element.classList.remove</strong>. Isso significa que nós precisamos selecionar a barra lateral primeiro.
+
+<pre>
+  const button = document.querySelector('.btn')
+  const sidebar = document.querySelector('.sidebar')
+
+  button.addEventListener('click', function() {
+    sidebar.classList.remove('is-hidden')
+  })
+</pre>
+
+#### O que acontece quando o botão é clicado uma segunda vez?
+
+Quando o botão é clicado novamente, nós devemos adicionar a classe <strong>is-hidden</strong> de volta a barra lateral para que então ela desapareça.
+
+Infelizmente, nós não podemos detectar quantas vezes o botão foi clicado com um "event listener". A melhor forma, então, é checkar se a classe <strong>is-hidden</strong> está presente na barra lateral. Se sim, nós a removemos. Se não, nós a adicionamos.
+
+<pre>
+  const button = document.querySelector('.btn')
+  const sidebar = document.querySelector('.sidebar')
+
+  button.addEventListener('click', function() {
+    if (sidebar.classList.contains('is-hidden')) {
+      sidebar.classList.remove('is-hidden')
+    } else {
+      sidebar.classList.add('is-hidden')
+    }
+  })
+</pre>
+
+Com isso, você tem uma protótipo inicial de um componente.
+
+[](ttps://codepen.io/zellwk/pen/zdqmLe/)
