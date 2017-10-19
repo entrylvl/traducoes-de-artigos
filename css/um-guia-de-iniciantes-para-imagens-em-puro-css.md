@@ -27,3 +27,107 @@ Por essa razão, vou criar um tutorial de como criar sua primeira imagem em CSS 
 4. Amplicar a curiosidade sobre desenvolvimento front-end para ilustradores de imagens vetoriais
 5. Fornecer um template básico para criar mais imagens em puro CSS
 
+**O HTML**
+
+**Nota: **Para adicionar o cabelo à nossa imagem do coala, vamos usar o método *clip-path*. Esse método é suportado pelo Chrome, Safari e Opera. Se você está usando o Firefox, mude para um dos navegadores suportados, preferencialmente Chrome, para programar durante este guia.
+
+Normalmente, eu trabalho inserindo uma única `div` que servirá como uma forma, estilizo esta forma no CSS e, então, sigo com a inserção da próxima `div`.
+
+No entanto, para fins educacionais, vamos dar uma olhada no HTML como um todo e, então, observar cada seção.
+
+```html
+<body>
+ <!-- Begin Image -->
+ <!-- Invisible Box-->
+ <div class="box">
+   
+    <!-- Circular Head-->
+    <div class="head">  
+      
+      <!-- Circular Head Copy -->
+      <div class="head-copy"></div>
+      
+       <!-- Left Ear ~ Light Gray-->
+      <div class="ear-left">
+        
+       <!-- Inner ear ~ Dark Gray -->
+      <div class="inner-ear"></div>
+      </div>
+      
+      <!-- Right Ear ~ Light Gray-->
+       <div class="ear-right">
+      <!-- Inner Ear ~ Dark Gray-->
+        <div class="inner-ear"></div>
+      </div>
+      
+      <!-- Left Outer Eye ~ White -->
+      <div class="eye-left">
+        <!-- Pupil ~ Black -->
+        <div class="pupil">
+        </div>
+      </div>
+      
+      <!-- Right Outer Eye ~ White -->
+      <div class="eye-right">
+        <!-- Pupil ~ Black -->
+        <div class="pupil">
+        </div>
+      </div>
+      
+       <!-- Nose ~ Brown -->
+       <div class="nose">
+       </div>
+      
+       <!-- Hair ~ Light Gray -->
+      <div class="hair-left"></div>
+      <div class="hair-right"></div>
+      
+    <!-- End Head -->
+    </div>
+ <!-- End Invisible Box -->
+ </div>
+</body>
+```
+
+É essencial notar que algumas `div`s estão aninhadas entre outras `div`s. Por exemplo, vamos dar uma olhada na nossa `div` da orelha direita:
+
+```html
+<!-- Right Ear ~ Light Gray-->
+       <div class="ear-right">
+      <!-- Inner Ear ~ Dark Gray-->
+        <div class="inner-ear"></div>
+      </div>
+```
+
+Há a tag inicial `<div class=”ear-right”>`, que contém a `<div
+class=”inner-ear></div> ` antes de sua tag de fechamento. A `ear-right` é a `div` *pai*, e a `inner-ear` é a `div` *filha*.
+
+O motivo pelo qual isso é importante é porque as formas receberão localizações, larguras e alturas fixas, que são baseadas em porcentagem. A porcentagem se aplica à `div` pai.
+
+Por exemplo, vamos supor que temos uma `div` que está aninhada entre o `body`, e o `body` está definido com 100% de altura e 100% de largura:
+
+![](https://cdn-images-1.medium.com/max/800/1*513-zBMmioexAKNCHLOxFA.png)
+
+A classe `some-div` atribui uma posição fixa que é 10% do topo. Como `some-div` está aninhada entre o `body`, que tem 100% de altura e 100% de largura, a `div` será 10% abaixo do topo da tela.
+
+![](https://cdn-images-1.medium.com/max/800/1*hmEKdNbC5v1uT5SFbuI6Bw.png)
+
+Agora vamos aninhar outra `div` entre `some-div` e, então, atribuir a ela uma posição absoluta de 10% a partir do topo.
+
+![](https://cdn-images-1.medium.com/max/800/1*a9hVkK1yanv0WFcRv9Vesw.png)
+
+Nós teremos uma posição completamente diferente, como você pode ver:
+
+![](https://cdn-images-1.medium.com/max/800/1*j5PZQ9ZVkiZnUO3l_X10Xw.png)
+
+Nesse exemplo, `another-div` (quadrado azul) está 10% abaixo da `some-div` (quadrado vermelho).
+
+Agora vamos remover `another-div` de estar dentro de `some-div`, aninhe-a sob o `body` e mude a porcentagem do topo para 30%. 
+
+![](https://cdn-images-1.medium.com/max/800/1*B7bU3rTbVG2yqanq1dHeMQ.png)
+
+Agora `another-div` (quadrado azul) está 30% abaixo to topo da tela, e não 30% abaixo de `some-div` (quadrado vermelho).
+
+![](https://cdn-images-1.medium.com/max/800/1*0abRFQKPM8o7YbzCIpMrRA.png)
+
+Com isso em mente, vamos para a estilização em CSS.
