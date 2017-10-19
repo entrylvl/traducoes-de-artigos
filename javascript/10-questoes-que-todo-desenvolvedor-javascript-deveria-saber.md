@@ -13,7 +13,7 @@ Como Marcus Lemonis diz, foco nos 3 P's:
 
 > Pessoas, Processos, Produto
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/37rMZSA6oLk" frameborder="0" allowfullscreen></iframe>
+[The profit Principles With Marcus Lemonis | The Profit](https://www.youtube.com/embed/37rMZSA6oLk) (Video).
 
 Suas primeiras contratações devem ser sólidas, com candidatos sêniores. Pessoas que podem contratar e mentorar outros desenvolvedores, e ajudar desenvolvedores pleno e júnior que você eventualmente irá contratar durante o caminho.
 
@@ -33,14 +33,14 @@ Aqui estão algumas questões que irá ajudar você a explorar o que realmente i
 
 ### 1. Você pode nomear dois paradigmas de programação imporatantes para desenvolvedores JavaScript?
 
-JavaScript é uma linguagem multi-paradigma, suportanto programação *imperativa/procedural* junto com POO (Programação Orientada a Objetos) e *programação funcional*. JavaScript suporta POO com *herança prototipada*.
+JavaScript é uma linguagem multi-paradigma, suportanto programação **imperativa/procedural** junto com POO (Programação Orientada a Objetos) e **programação funcional**. JavaScript suporta POO com **herança de protótipo**.
 
 #### Boas respostas:
 
-* Herança prototipada (como: prototypes, OLOO).
+* Herança de protótipo (como: prototypes, OLOO).
 * Programação funcional (como: closures, funções de primeira classe, lambdas)
 
-#### Sinal vermelho:
+#### Alerta vermelho:
 
 * Não faz ideia do que é um paradigma, não menciona OO prototipada ou programação funcional.
 
@@ -62,7 +62,7 @@ Programação funcional é um conceito essencial em JavaScript (um dos dois pila
 * Exemplos de linguagens funcionais: Lisp, ML, Haskell, Erlang, Clojure, Elm, FSharp, OCaml, etc...
 * Menção de características suportadas pela programação funcional: funções de primeira classe, funções de ordem superior, funções como argumentos/valores.
 
-#### Sinal vermelho:
+#### Alerta vermelho:
 
 * Não mencionar funções puras / previnir efeitos colaterais.
 * Incapaz de prover exemplos de linguagens de programação funcional.
@@ -74,3 +74,27 @@ Programação funcional é um conceito essencial em JavaScript (um dos dois pila
 * [The Dao of Immutability](https://medium.com/javascript-scene/the-dao-of-immutability-9f91a70c88cd).
 * [Composing Software](https://medium.com/javascript-scene/composing-software-an-introduction-27b72500d6ea).
 * [The Haskell School of Music](http://haskell.cs.yale.edu/wp-content/uploads/2015/03/HSoM.pdf).
+
+### 3. Qual a diferença entre herança de classe e herança de protótipo?
+
+Herança de classe: as instâncias herdam de classes (como um diagrama — uma descrição da classe), e cria um parentesco como subclasse : taxonomias hierárquicas de classe. As instâncias são geralmente instanciadas via funções contrutoras como a palavra-chave `new`. A herança de classe pode ou não usar a palavra-chave `class` no ES6.
+
+Herança de protótipo: as instâncias herdam diretamente dos outros objetos. As instâncias são geralmente instanciadas via funções factory ou `Object.create()`. As instâncias podem ser compostas por variados objetos, permitindo uma herança seletiva fácil.
+
+> In javaScript, hherança de protótipo é simples e mais flexivél que herança de classe.
+
+#### Boas respostas:
+
+* Classes: criar acoplamentos precisos ou hierárquias/taxonomias.
+* Protótipos: menciona herança concatenada, delegação de protótipo, herança funcional, composição de objeto.
+
+#### Alerta vermelho
+
+* Nenhuma preferência por herança de protótipo e composição sobre herança de classe.
+
+#### Saiba mais:
+
+* [The Two Pillars of JavaScript Part 1](https://medium.com/javascript-scene/the-two-pillars-of-javascript-ee6f3281e7f3)— Prototypal OO.
+* [Common Misconceptions About Inheritance in JavaScript](https://medium.com/javascript-scene/common-misconceptions-about-inheritance-in-javascript-d5d9bab29b0a).
+
+[Classical Inheritance is Obsolete - How to Think in Prototypal OO](https://vimeo.com/69255635) (Video).
