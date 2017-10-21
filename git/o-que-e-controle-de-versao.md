@@ -21,7 +21,8 @@ Developing software without using version control is risky, like not having back
 
 É arriscado desenvolver software sem controle de versão, é o mesmo que não ter backups. O controle de versão pode permitir aos desenvolvedores serem rápidos e aos times de software se manterem eficientes e agéis à medida que a equipe aumenta com a entrada de mais desenvolvedores.
 
-Version Control Systems (VCS) have seen great improvements over the past few decades and some are better than others. VCS are sometimes known as SCM (Source Code Management) tools or RCS (Revision Control System). One of the most popular VCS tools in use today is called Git. Git is a Distributed VCS, a category known as DVCS, more on that later. Like many of the most popular VCS systems available today, Git is free and open source. Regardless of what they are called, or which system is used, the primary benefits you should expect from version control are as follows.
+Sistemas de controle de versão (do inglês VCS ou Version Control Systems) tiveram grandes melhorias nas últimas décadas e algumas são melhores do que outras. VCS algumas vezes são conhecidos como ferramentas de gerenciamento de código, ou SCM (do inglês Source Code Management) ou ainda sistema de controle de revisão, ou RCS (do inglês Revision Control System). Uma das mais populares ferramentas de VCS em uso se chama Git. O Git é um VCS distribuido (ou DVCS), falaremos disso mais tarde. Como muitos do sistemas de VCS disponíveis atualmente, o Git é gratuito e de código aberto. Independentemente do nome que eles recebem, ou qual sistema é usado, os principais benefícios que você deve esperar do controle de versão são os seguintes.
+
 
 
 
@@ -33,4 +34,4 @@ Version Control Systems (VCS) have seen great improvements over the past few dec
 
 While it is possible to develop software without using any version control, doing so subjects the project to a huge risk that no professional team would be advised to accept. So the question is not whether to use version control but which version control system to use.
 
-There are many choices, but here we are going to focus on just one, Git.
+Há muitas escolhas, mas aqui nos concentraremos em apenas um, Git.
