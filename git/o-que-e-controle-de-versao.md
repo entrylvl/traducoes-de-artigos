@@ -17,8 +17,6 @@ O software de controle de versão tem um papel essencial na rotina dos times de 
 
 ## Benefícios dos sistemas de controle de versão
 
-Developing software without using version control is risky, like not having backups. Version control can also enable developers to move faster and it allows software teams to preserve efficiency and agility as the team scales to include more developers.
-
 É arriscado desenvolver software sem controle de versão, é o mesmo que não ter backups. O controle de versão pode permitir aos desenvolvedores serem rápidos e aos times de software se manterem eficientes e agéis à medida que a equipe aumenta com a entrada de mais desenvolvedores.
 
 Sistemas de controle de versão (do inglês VCS ou Version Control Systems) tiveram grandes melhorias nas últimas décadas e algumas são melhores do que outras. VCS algumas vezes são conhecidos como ferramentas de gerenciamento de código, ou SCM (do inglês Source Code Management) ou ainda sistema de controle de revisão, ou RCS (do inglês Revision Control System). Uma das mais populares ferramentas de VCS em uso se chama Git. O Git é um VCS <i>Distribuído</i> (ou DVCS), falaremos disso mais tarde. Como muitos do sistemas de VCS disponíveis atualmente, o Git é gratuito e de código aberto. Independentemente do nome que eles recebem, ou qual sistema é usado, os principais benefícios que você deve esperar do controle de versão são os seguintes.
