@@ -32,10 +32,13 @@ Um histórico completo e delongo prazo das mudanças de cada arquivo. Isso envol
 Ramificar e mesclar (do inglês branching e merging). Ter membros da equipe trabalhando simultaneamente é unanimidade, mas mesmo pessoas trabalhando por conta própria podem se beneficiar da capacidade de fluxos independentes de mudanças. Criar um "branch" nas ferramentas VCS mantém os fluxos de trabalho independentes um do outro, ao mesmo tempo que fornece a facilidade para "mergear" o trabalho de volta, permitindo aos desenvolvedores verificar que as mudanças de cada branch não conflitam. Muitas equipes de software adotam uma prática de branching para cada funcionalidade ou talvez um branching para cada versão, ou ambos. Existem muitos fluxos de trabalho diferentes que as equipes pode escolher quando decidem como fazer uso das facilidades de branching e merging no VCS.
 </li>
 
+<br>
 
-<li>Traceability. Being able to trace each change made to the software and connect it to project management and bug tracking software such as Jira, and being able to annotate each change with a message describing the purpose and intent of the change can help not only with root cause analysis and other forensics. Having the annotated history of the code at your fingertips when you are reading the code, trying to understand what it is doing and why it is so designed can enable developers to make correct and harmonious changes that are in accord with the intended long-term design of the system. This can be especially important for working effectively with legacy code and is crucial in enabling developers to estimate future work with any accuracy.</li>
+<li>
+Rastreabilidade. Ser capaz de rastrear cada mudança feita no software e conectá-lo ao gerenciador de projetos e ao software de rastreio de bugs como Jira, e poder comentar cada mudança com uma mensagem descrevendo o propósito e a intenção da mudança pode ajudar na análise dos motivos de problemas e outras investigações. Ter o histórico comentado do código ao alcance de seus dedos quando você está lendo o código, tentando entender o que aquilo está fazendo e por que houve tanto esforço pode permitir que os desenvolvedores façam melhores mudanças que estejam de acordo com o objetivo previsto para o sistema. Isso pode ser especialmente importante para trabalhar com eficiência em código legado e é crucial para permitir que os desenvolvedores estimem trabalho futuro com alguma precisão.
+</li>
 </ol>
 
-While it is possible to develop software without using any version control, doing so subjects the project to a huge risk that no professional team would be advised to accept. So the question is not whether to use version control but which version control system to use.
+Embora seja possível desenvolver software sem usar nenhum controle de versão, fazer isso expõe o projeto a enormes riscos que nenhum time profissional seria aconselhado a aceitar. Portanto, a questão não é se vão ou não usar o controle de versão, mas qual sistema de controle de versão será usado.
 
-Há muitas escolhas, mas aqui nos concentraremos em apenas um, Git.
+Há muitas escolhas, mas aqui nos concentraremos em apenas uma, Git.
