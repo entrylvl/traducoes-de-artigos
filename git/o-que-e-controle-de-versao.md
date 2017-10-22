@@ -23,22 +23,22 @@ Sistemas de controle de versão (do inglês VCS ou Version Control Systems) tive
 
 <ol>
 <li>
-Um histórico completo e delongo prazo das mudanças de cada arquivo. Isso envolve todas as mudanças feitas por várias pessoas ao longo dos anos.As mudanças incluem a criação e exclusão de arquivos, bem como edições feitas em seus conteúdos. As diferentes ferramentas de VCS diferem em quão bem elas controlam o renomeamento e mudança de local dos arquivos. Este histórico deve também incluir o autor, data e as anotações sobre a finalidade de cada alteração. Ter o histórico completo permite voltar a versões anteriores para ajudar na análise do motivo dos bugs e é essencial quando se precisa corrigir erros em verses anteriores do software.
+Um histórico completo e de longo prazo das mudanças de cada arquivo. Isso envolve todas as mudanças feitas por várias pessoas ao longo dos anos. As mudanças incluem a criação e exclusão de arquivos, bem como edições feitas em seus conteúdos. As diferentes ferramentas de VCS diferem em quão bem elas controlam o renomeamento e mudança de local dos arquivos. Este histórico deve também incluir o autor, data e os comentários sobre a finalidade de cada alteração. Ter o histórico completo permite voltar a versões anteriores para ajudar na análise do motivo dos bugs e é essencial quando se precisa corrigir erros em versões anteriores do software.
 </li>
     
 <br>
 
 <li>
-Ramificar e mesclar (do inglês branching e merging). Ter membros da equipe trabalhando simultaneamente é unanimidade, mas mesmo pessoas trabalhando por conta própria podem se beneficiar da capacidade de fluxos independentes de mudanças. Criar um "branch" nas ferramentas VCS mantém os fluxos de trabalho independentes um do outro, ao mesmo tempo que fornece a facilidade para "mergear" o trabalho de volta, permitindo aos desenvolvedores verificar que as mudanças de cada branch não conflitam. Muitas equipes de software adotam uma prática de branching para cada funcionalidade ou talvez um branching para cada versão, ou ambos. Existem muitos fluxos de trabalho diferentes que as equipes pode escolher quando decidem como fazer uso das facilidades de branching e merging no VCS.
+Ramificar e mesclar (do inglês branching e merging). É muito comum ter membros da equipe trabalhando simultaneamente, mas mesmo pessoas trabalhando por conta própria podem se beneficiar dos benefícios de fluxos independentes. Criar um "branch" nas ferramentas VCS mantém os fluxos de trabalho independentes um do outro, ao mesmo tempo que fornece a facilidade para "mergear" o trabalho de volta, permitindo aos desenvolvedores verificar que as mudanças de cada branch não conflitam. Muitas equipes de software adotam uma prática de branching para cada funcionalidade ou talvez um branching para cada versão, ou ambos. Existem muitos fluxos de trabalho diferentes que as equipes podem escolher quando decidem como fazer uso das facilidades de branching e merging no VCS.
 </li>
 
 <br>
 
 <li>
-Rastreabilidade. Ser capaz de rastrear cada mudança feita no software e conectá-lo ao gerenciador de projetos e ao software de rastreio de bugs como Jira, e poder comentar cada mudança com uma mensagem descrevendo o propósito e a intenção da mudança pode ajudar na análise dos motivos de problemas e outras investigações. Ter o histórico comentado do código ao alcance de seus dedos quando você está lendo o código, tentando entender o que aquilo está fazendo e por que houve tanto esforço pode permitir que os desenvolvedores façam melhores mudanças que estejam de acordo com o objetivo previsto para o sistema. Isso pode ser especialmente importante para trabalhar com eficiência em código legado e é crucial para permitir que os desenvolvedores estimem trabalho futuro com alguma precisão.
+Rastreabilidade. Ser capaz de rastrear cada mudança feita no software e conectá-lo ao gerenciador de projetos e a softwares de rastreio de bugs, como o Jira, e poder comentar cada mudança com uma mensagem descrevendo o propósito e a intenção da mudança pode ajudar na análise das causas de problemas e em outras investigações. Ter o histórico comentado do código ao alcance de seus dedos quando você está lendo o código, tentando entender o que aquilo está fazendo e por que houve tanto esforço pode permitir que os desenvolvedores façam melhores mudanças, que estejam de acordo com o objetivo previsto para o sistema. Isso pode ser especialmente importante para se trabalhar com eficiência em código legado e é crucial para permitir que os desenvolvedores estimem com alguma precisão o trabalho futuro.
 </li>
 </ol>
 
-Embora seja possível desenvolver software sem usar nenhum controle de versão, fazer isso expõe o projeto a enormes riscos que nenhum time profissional seria aconselhado a aceitar. Portanto, a questão não é se vão ou não usar o controle de versão, mas qual sistema de controle de versão será usado.
+Embora seja possível desenvolver software sem usar nenhum controle de versão, fazer isso expõe o projeto a enormes riscos que nenhuma equipe profissional seria aconselhada a aceitar. Portanto, a questão não é se vão ou não usar o controle de versão, mas qual sistema de controle de versão será usado.
 
 Há muitas escolhas, mas aqui nos concentraremos em apenas uma, Git.
