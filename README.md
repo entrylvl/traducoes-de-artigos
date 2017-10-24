@@ -6,6 +6,7 @@
 - [Como contribuir](#como-contribuir)
 - [Tópicos](#tópicos)
   - [JavaScript](#javascript)
+  - [Git](#git)
 - [Licença](#licença)
 
 ## Projeto
