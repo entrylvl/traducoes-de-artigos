@@ -29,9 +29,57 @@ Caique
 
 Caique
 
-## Pattern matching
+# Pattern matching
 
-Ricardo
+Antes de implementarmos nosso aplicativo, precisamos falar sobre pattern matching. O operador = no Elixir é um pouco diferente do que vemos em outros idiomas:
+
+```
+iex> x = 1
+1
+iex> x
+1
+```
+
+Até aqui tudo bem, o que acontece se invertermos os operadores?
+
+```
+iex> 1 = x
+1
+```
+
+Funcionou! Isso porque Elixir tenta combinar o lado direito contra o lado esquerdo. Já que ambos são 1, ele funciona. Vamos tentar outra coisa:
+
+```
+iex> 2 = x
+** (MatchError) no match of right hand side value: 1
+```
+
+Agora, os lados não combinaram, por isso recebemos um erro. Usamos Pattern Matching no Elixir para combinar estruturas de dados também. Por exemplo, podemos usar `[head|tail]` para extrair a cabeça (o primeiro elemento) e a cauda (os restantes) de uma lista:
+
+```
+iex> [head|tail] = [1, 2, 3]
+[1, 2, 3]
+iex> head
+1
+iex> tail
+[2, 3]
+```
+
+Comparando uma lista vazia com `[head|tail]` causa um erro de comparação:
+
+```
+iex> [head|tail] = []
+** (MatchError) no match of right hand side value: []
+```
+
+Finalmente, também podemos usar a expressão `[head|tail]` para adicionar elementos à cabeça de uma lista:
+
+```
+iex> list = [1, 2, 3]
+[1, 2, 3]
+iex> [0|list]
+[0, 1, 2, 3]
+```
 
 ## Modeling portal doors with Agents
 
