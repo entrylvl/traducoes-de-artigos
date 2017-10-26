@@ -36,8 +36,8 @@ Dê uma olhada na [seção de contribuição](CONTRIBUTING.md) para ter mais det
 
 ### Javascript
 
-* [Como ser* um compilador - Faça um compilador com JavaScript](javascript/como-ser-um-compilador--faca-um-compilador-com-javascript.md)
-* [A promessa de uma festa do hambúrguer](javascript/promessa-festa-hamburguer.md)
+* [Como ser* um compilador - Faça um compilador com JavaScript](javascript/como-ser-um-compilador--faca-um-compilador-com-javascript/artigo.md)
+* [A promessa de uma festa do hambúrguer](javascript/promessa-festa-hamburguer/artigo.md)
 * [Javascript para gatos](javascript/javascript-para-gatos.md)
 * [Vale a pena aprender Vanilla JS? Claro!](javascript/vale-a-pena-aprender-vanillajs--com-certeza.md)
 * [Tratando uma resposta AJAX em Javascript (com ou sem jQuery)](javascript/tratando-respostas-ajax-com-ou-sem-jquery.md)

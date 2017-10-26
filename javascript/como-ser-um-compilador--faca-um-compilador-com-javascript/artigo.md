@@ -11,7 +11,7 @@ Me avise caso você faça um tradução para outra língua, para ela poder ser a
 
 Um maravilhoso domingo em Bushwick, Brooklyn. Eu achei um livro chamado ["Design by Number"(Desenhe através de números) por John Maeda](https://mitpress.mit.edu/books/design-numbers) na minha livraria local. Nele havia instruções passo a passo da [linguagem de programação DBN](http://dbn.media.mit.edu/) - uma linguagem de programação feita no fim dos anos 90 no laboratório de mídia do MIT, feita para introduzir programação de computadores com conceitos visuais.
 
-![](http://i.imgur.com/ur3ls5B.png)
+![](imagens/1.png)
 *Exemplo de código DNB http://dbn.media.mit.edu/introduction.html*
 
 Eu imediatamente pensei em fazer SVG através do DBN e rodar no browser, seria um projeto interessante em 2016, melhor que instalar o ambiente Java para executar o código fonte original do DBN.
@@ -48,20 +48,20 @@ Vamos ver o que acabou de acontecer na nossa cabeça como um compilador.
 
 A primeira coisa que nós fizemos foi separar cada palavra chave (chamadas de tokens) por um espaço em branco. Enquanto separávamos as palavras, nós também associamos tipos primitivos a cada token, como "palavra" ou "número".
 
-![](http://i.imgur.com/Od8BBR6.png)
+![](imagens/2.png)
 
 ### 2. Parseamento (Análise Sintática)
 
 Quando o bloco de texto é separado em tokens, nós analizamos cada um e tentamos encontrar a relação entre eles.
 Nesse caso, nós agrupamos os números associados com os tokens de comando. Fazendo isso, nós começamos a ver a estrutura do código.
 
-![](http://i.imgur.com/vqrhG77.png)
+![](imagens/3.png)
 
 ### 3. Transformação
 
 Quando nós analisamos a sintaxe pelo parseamento, nós transformamos a estrutura em algo apropriado para o resultado final. Nesse caso, nós vamos desenhar a imagem, então nós estamos transformando isso em instruções passo a passo para seres humanos.
 
-![](http://i.imgur.com/gMKP9rL.png)
+![](imagens/4.png)
 
 ### 4. Geração de código
 
