@@ -85,9 +85,93 @@ iex> [0|list]
 
 Caique
 
-## Portal transfers
+# Transferência de Portais
 
-Ricardo
+Nossos portais estão prontos por isso é hora de começar a trabalhar em transferências de portal! Para armazenar os dados do portal, vamos criar uma struct chamada `Portal`. Vamos dar uma chance de tentar no IEx antes de avançar:
+
+```
+iex> defmodule User do
+...>   defstruct [:name, :age]
+...> end
+iex> user = %User{name: "john doe", age: 27}
+%User{name: "john doe", age: 27}
+iex> user.name
+"john doe"
+iex> %User{age: age} = user
+%User{name: "john doe", age: 27}
+iex> age
+27
+```
+
+Uma `struct` é definida dentro de um módulo e tem o mesmo nome que o módulo. Depois que a `struct` é definida, podemos usar a sintaxe `%User{...}` para definir novas estruturas ou combiná-las.
+
+Vamos abrir `lib/portal.ex` e adicionar algum código ao módulo `Portal`. Observe que o módulo atual do Portal já possui uma função chamada `hello/0`. Você pode remover esta função e, em seguida, adicionar os novos conteúdos dentro do módulo `Portal`:
+
+```
+defstruct [:left, :right]
+
+@doc """
+Starts transfering `data` from `left` to `right`.
+"""
+def transfer(left, right, data) do
+  # First add all data to the portal on the left
+  for item <- data do
+    Portal.Door.push(left, item)
+  end
+
+  # Returns a portal struct we will use next
+  %Portal{left: left, right: right}
+end
+
+@doc """
+Pushes data to the right in the given `portal`.
+"""
+def push_right(portal) do
+  # See if we can pop data from left. If so, push the
+  # popped data to the right. Otherwise, do nothing.
+  case Portal.Door.pop(portal.left) do
+    :error   -> :ok
+    {:ok, h} -> Portal.Door.push(portal.right, h)
+  end
+
+  # Let's return the portal itself
+  portal
+end
+```
+
+Nós definimos nossa estrutura `Portal` e uma função `Portal.transfer/3` (o `/3` indica que a função espera três argumentos). Vamos dar essa tentativa de transferência. Inicie outro shell com `iex -S mix` para que nossas mudanças sejam compiladas e digite:
+
+```
+# Start doors
+iex> Portal.Door.start_link(:orange)
+{:ok, #PID<0.59.0>}
+iex> Portal.Door.start_link(:blue)
+{:ok, #PID<0.61.0>}
+
+# Start transfer
+iex> portal = Portal.transfer(:orange, :blue, [1, 2, 3])
+%Portal{left: :orange, right: :blue}
+
+# Check there is data on the orange/left door
+iex> Portal.Door.get(:orange)
+[3, 2, 1]
+
+# Push right once
+iex> Portal.push_right(portal)
+%Portal{left: :orange, right: :blue}
+
+# See changes
+iex> Portal.Door.get(:orange)
+[2, 1]
+iex> Portal.Door.get(:blue)
+[3]
+```
+
+Nossa transferência de portal parece funcionar como esperado. Observe que os dados estão na ordem inversa na porta esquerda/laranja no exemplo acima. Isso é esperado porque queremos o fim da lista (neste caso o número 3) para ser o primeiro dado inserida para a porta direita/azul.
+
+Uma diferença no trecho acima, em comparação com a que vimos no início deste tutorial, é que nosso portal está sendo impresso como uma estrutura: `%Portal {left: :orange, right: :blue}`. Seria bom se tivéssemos uma representação impressa da transferência do portal, permitindo-nos ver o processo do portal à medida que empurra dados.
+
+É o que faremos a seguir.
 
 ## Inspecting portals with Protocols
 
