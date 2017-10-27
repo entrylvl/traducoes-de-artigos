@@ -56,4 +56,4 @@ Desempenho é o grande topico abordado. Nossos amigos no Google incluem métrica
 
 Caso contrário, imagine um dia em que você adicione outro recurso ao seu site e o leva para além de uma métrica de desempenho — de repente sua PWA deixa de ser uma "PWA"! Isto pode ser benéfico para encorajar melhores experiências, mas eu também acho que isto poderia ser confuso para nossa definição e duvido que todos os navegadores desejem ter os mesmos critérios.
 
-
+## Mito 2: PWA's são somente *"buzzphrases"* para o que já temos.
