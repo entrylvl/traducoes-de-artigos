@@ -24,12 +24,12 @@ Superar este bloqueio é muito simples. Você pode seguir estes passos:
 
 1. Quebre o problema em outros pequenos problemas.
 2. Procure soluções para estes problemas pequenos.
-3. Reúna suas soluções em um todo coerente.
+3. Reúna suas soluções de uma forma coerente.
 4. Refatore e melhore.
 
 Vamos olhar mais de perto cada um destes passos.
 
-## Passo 01: Quebre o problema em outros pequenos problemas.
+## Passo 01: Quebre o problema em problemas menores.
 
 Como você coloca um elefante dentro de uma geladeira?
 
@@ -43,7 +43,7 @@ Problema resolvido.
 
 ![](https://cdn-images-1.medium.com/max/800/0*PGDaDsFOBO6-NdQv.jpg)
 
-Essa resposta é o melhor exemplo do porque você está fica travado quando se depara com um arquivo JavaScript em branco. Está pulando passos.
+Essa resposta é o melhor exemplo do porquê você está fica travado quando se depara com um arquivo JavaScript em branco. Está pulando passos.
 
 Se você pensar de forma lógica sobre a questão, irá perceber que há alguns problemas que permanecem sem respostas.
 
@@ -93,7 +93,7 @@ Por mais interessante que seja, você provavelmente não poderia capturar elefan
 
 ## Vamos a um exemplo real.
 
-Digamos que você queira criar um butão que, quando pressionado, mostre uma barra lateral.
+Digamos que você queira criar um botão que, quando pressionado, mostre uma barra lateral.
 
 <p data-height="265" data-theme-id="0" data-slug-hash="zdqmLe" data-default-tab="css,result" data-user="zellwk" data-embed-version="2" data-pen-title="Sidebar for Thinking like a programmer article" class="codepen">Veja o Pen <a href="https://codepen.io/zellwk/pen/zdqmLe/">Sidebar for Thinking like a programmer article</a> por Zell Liew (<a href="https://codepen.io/zellwk">@zellwk</a>) no <a href="https://codepen.io">CodePen</a>.</p>
 
@@ -111,27 +111,27 @@ Divida o componente em pequenos pedaços. Aqui estão alguns problemas que você
 8. Como a barra lateral se parece quando oculta?
 9. Como a barra lateral aparece?
 10. Como a barra lateral desaparece?
-11. A barra lateria deveria aparecer quando a página é carregada?
+11. A barra lateral deveria aparecer quando a página é carregada?
 
 ## O segundo passo — criando soluções para o problema.
 
-Para criar soluções, você precisa ter um conhecimento sobre oque está criando. Em nosso caso, você precisa ter um conhecimento suficiente sobre HTML, CSS e JavaScript.
+Para criar soluções, você precisa ter um conhecimento sobre o que está criando. Em nosso caso, você precisa ter um conhecimento suficiente sobre HTML, CSS e JavaScript.
 
-Não se preocupe caso você não saiba responder a nenhuma uma dessas perguntas. Se você os dividiu o suficiente, você deve encontrar uma respostas através do Google em cinco minutos.
+Não se preocupe caso você não saiba responder a nenhuma dessas perguntas. Se você os dividiu o suficiente, você deve encontrar uma resposta através do Google em cinco minutos.
 
 Então vamos responder cada uma das questões:
 
 ### Qual é a marcação HTML deste botão?
 
-A marcação é uma tag &lt;a&gt; com uma classe <strong>.button</strong>.
+A marcação é uma tag &lt;a&gt; com uma classe **.button**.
 
-<pre>&lt;a href="#" class="button"&gt;Click me&lt;/a&gt;</pre>
+```&lt;a href="#" class="button"&gt;Click me&lt;/a&gt;```
 
 ### Como este botão deveria se parecer?
 
 Este botão deve ter o seguinte CSS:
 
-<pre>
+```
   .btn {
     display: inline-block;
     font-size: 2em;
@@ -141,15 +141,15 @@ Este botão deve ter o seguinte CSS:
     text-transform: uppercase;
     text-decoration: none;
   }
-</pre>
+```
 
 ### O que acontece quando este botão é clicado uma vez? Duas? Três vezes?
 
-A barra lateral deve aparecer quando o botão é clicado uma vez. Está barra lateral então deveria ser ocultada quando o botão é clicado uma outra vez. Está deveria ser visível quando o botão é clicado novamente.
+A barra lateral deve aparecer quando o botão é clicado uma vez. Esta barra lateral então deveria ser ocultada quando o botão é clicado uma outra vez. Está deveria ser visível quando o botão é clicado novamente.
 
 ### Qual é a marcação HTML desta barra lateral?
 
-<pre>
+```
   &lt;div class="sidebar"&gt;
     &lt;ul&gt;
       &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
@@ -159,7 +159,7 @@ A barra lateral deve aparecer quando o botão é clicado uma vez. Está barra la
       &lt;li&gt;&lt;a href="#"&gt;Link 5&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/div&gt;
-</pre>
+```
 
 ### Como o barra lateral se parece quando visível?
 
@@ -167,7 +167,7 @@ A barra lateral deve ser colocada a direita da janela do navegador. Esta precisa
 
 Quando você terminar de resolver o problema, você pode terminar com um CSS similar a este:
 
-<pre>
+```
   .sidebar {
     position: fixed;
     top: 0;
@@ -196,45 +196,45 @@ Quando você terminar de resolver o problema, você pode terminar com um CSS sim
     color: #fff;
     text-decoration: none;
   }
-</pre>
+```
 
 ### Como a barra lateral se parece quando oculta?
 
 A barra lateral deve ser realocada a 300px para direita, estando assim fora da tela.
 
-Quando você responder está questão, poderá ter mais outras duas questões em mente:
+Quando você responder esta questão, poderá ter mais outras duas questões em mente:
 
 1. Como saberá se a barra lateral está a visível ou oculta?
 2. Como você estiliza a barra lateral oculta?
 
 Então iremos responder elas.
 
-### Como saberá se a barra lateral está a visível ou oculta?
+### Como saberá se a barra lateral está visível ou oculta?
 
-Se a barra lateral tiver uma classe <strong>.is-hidden</strong>, a barra lateral deve estar oculta. Caso contrário, ela deve estar visível.
+Se a barra lateral possuir uma classe <strong>.is-hidden</strong>, a barra lateral deve estar oculta. Caso contrário, ela deve estar visível.
 
 ### Como você estiliza a barra lateral oculta?
 
 Nós usaremos <strong>translateX</strong> para deslocar a barra lateral 300px para a direita uma vez que a propriedade <strong>transform</strong> é uma das melhores para animação. Seu estilo então será este:
 
-<pre>
+```
   .sidebar.is-hidden {
     transform: translateX(300px);
   }
-</pre>
+```
 
 ### Como a barra lateral aparece?
 
 A barra lateral não pode aparecer imediatamente. Esta precisa se mover da direita, quando oculta, para a esquerda, quando visível.
 
-Se você sabe CSS, você poderá utilizar a propriedade <strong>transition</strong>. Se não, você pode procurar por uma resposta através do Google.
+Se você sabe CSS, você poderá utilizar a propriedade <strong>transition</strong>. Se não, você pode procurar no Google.
 
-<pre>
+```
   .sidebar {
     /* other properties */
     transition: transform 0.3s ease-out;
   }
-</pre>
+```
 
 ### Como o barra lateral desaparece?
 
@@ -244,44 +244,44 @@ Ela deve desaparecer da mesma forma que aparece, na direção oposta. Com isto, 
 
 Não. Neste caso, nós podemos adicionar uma classe <strong>is-hidden</strong> na marcação da barra lateral e ela deve permanecer oculta.
 
-<pre>
+```
   &lt;div class="sidebar is-hidden"&gt;
     &lt;!-- links --&gt;
   &lt;/div&gt;
-</pre>
+```
 
-### Agora, nós já respondemos quase tudo, exceto uma coisa — o que acontece quando o botão é clicado uma vez? Duas? Três vezes?
+### Agora nós já respondemos quase tudo, exceto uma coisa — o que acontece quando o botão é clicado uma vez? Duas? Três vezes?
 
 Nossa resposta acima foi muito vaga. Nós sabemos que a barra lateral deve aparecer quando você clica nele, mas como? A barra lateral deve desaparecer quando você clica novamente, mas como?
 
-Este é o ponto, nós podemos responder está questão novamente e com mais detalhes. Mas antes disso, como saber quando você clicou em um botão?
+Este é o ponto, nós podemos responder esta questão novamente e com mais detalhes. Mas antes disso, como saber quando você clicou em um botão?
 
 ### Como saber quando você clicou em um botão.
 
-Se você conhece JavaScript, você sabe que podemos adicionar um "event listener" para o botão e ouvir por um evento <strong>click</strong>. Se você não sabe, você pode usar o Google para conhecer.
+Se você conhece JavaScript, você sabe que podemos adicionar um "event listener" para o botão e ouvir por um evento <strong>click</strong>. Se você não conhece Javascript, você pode usar o Google.
 
 Antes de você adicionar um ouvinte de eventos, você precisa encontrar a marcação do botão com um <strong>querySelector</strong>.
 
-<pre>
+```
   const button = document.querySelector('.btn')
 
   button.addEventListener('click', function() {
     console.log('button is clicked!')
   })
-</pre>
+```
 
 ### O que acontece quando o botão é clicado uma vez?
 
 Quando o botão for clicado uma vez, nós devemos remover a classe <strong>is-hidden</strong> e então mostrá-lo. Para remover uma classe em JavaScript, nós usamos <strong>Element.classList.remove</strong>. Isso significa que nós precisamos selecionar a barra lateral primeiro.
 
-<pre>
+```
   const button = document.querySelector('.btn')
   const sidebar = document.querySelector('.sidebar')
 
   button.addEventListener('click', function() {
     sidebar.classList.remove('is-hidden')
   })
-</pre>
+```
 
 ### O que acontece quando o botão é clicado uma segunda vez?
 
@@ -289,7 +289,7 @@ Quando o botão é clicado novamente, nós devemos adicionar a classe <strong>is
 
 Infelizmente, nós não podemos detectar quantas vezes o botão foi clicado com um "event listener". A melhor forma, então, é checar se a classe <strong>is-hidden</strong> está presente na barra lateral. Se sim, nós a removemos. Se não, nós a adicionamos.
 
-<pre>
+```
   const button = document.querySelector('.btn')
   const sidebar = document.querySelector('.sidebar')
 
@@ -300,34 +300,34 @@ Infelizmente, nós não podemos detectar quantas vezes o botão foi clicado com 
       sidebar.classList.add('is-hidden')
     }
   })
-</pre>
+```
 
-Com isso, você tem uma protótipo inicial de um componente.
+Com isso, você tem um protótipo inicial de um componente.
 
 [](https://codepen.io/zellwk/pen/zdqmLe/)
 
 ## O quarto passo — refatorando e melhorando.
 
-Nós incorporamos o terceiro passo, assimilamos nossas soluções e organizamos de forma coerente, ao londo do caminho. O passo final é refatorar e melhorar seu código. Você pode não compreender este passo naturalmente por enquanto. Leva tempo de prática e muito esforço antes de você ter seu código melhorado.
+Nós incorporamos o terceiro passo, assimilamos nossas soluções e organizamos de forma coerente, ao longo do caminho. O passo final é refatorar e melhorar seu código. Você pode não compreender este passo naturalmente por enquanto. Leva tempo de prática e muito esforço antes de você ter seu código melhorado.
 
 Então uma vez que os três passos estejam completos, dê uma pausa e trabalhe em outra coisa. Quando estiver conhecendo melhor JavaScript, você pode notar que deixou escapar alguns poucos detalhes quando voltar.
 
 Neste exemplo acima, você pode se questionar um pouco mais?
 
 1. Como fazer o componente desta barra lateral acessível para usuários com deficiência visual?
-2. Como fazer está barra lateral um componente facilmente utilizável por pessoas através do teclado?
+2. Como fazer esta barra lateral um componente facilmente utilizável por pessoas através do teclado?
 3. Você pode melhorar o código de alguma forma?
 
-Para este terceiro ponto, se você pesquisou um pouco mais, você pode ter notado que há um método <strong>toogle</strong> que remove uma classe se presente. Se a classe não estiver presente, o método <strong>toogle</strong> a adiciona para nós:
+Para este terceiro ponto, se você pesquisou um pouco mais, você pode ter notado que há um método **toogle** que remove uma classe se presente. Se a classe não estiver presente, o método **toogle** a adiciona para nós:
 
-<pre>
+```
   const button = document.querySelector('.btn')
   const sidebar = document.querySelector('.sidebar')
 
   button.addEventListener('click', function() {
     sidebar.classList.toggle('is-hidden')
   })
-</pre>
+```
 
 ## Resumindo
 
@@ -335,6 +335,6 @@ Pensar como um programador é simples. O segredo é saber como dividir o problem
 
 Quando você terminar de dividir o problema, encontre soluções para estes pequenos problemas e escreva o código para eles. Ao longo do caminho, você irá descobrir mais problemas que não havia pensado antes. Resolva eles também.
 
-Quando terminar de responder cada problema, você terá a resposta seu problema inteiro. Algumas vezes, você pode precisar juntar os passos para resolver seus pequenos problemas também.
+Quando terminar de responder cada problema, você terá a resposta do seu problema inteiro. Algumas vezes, você pode precisar juntar os passos para resolver seus pequenos problemas também.
 
 Finalmente, o trabalho não está pronto quando você cria sua primeira solução. Há sempre algo para ir melhorando. No entanto, você poderá não enxergar essas melhorias por agora. Dê um tempo, trabalhe em outra coisa e volte mais tarde. Você poderá fazer perguntas ainda melhores.
