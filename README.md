@@ -1,3 +1,14 @@
+# Traduções de artigos
+
+- [Projeto](#projeto)
+- [Motivação](#motivação)
+- [Comunidade](#comunidade)
+- [Como contribuir](#como-contribuir)
+- [Tópicos](#tópicos)
+  - [JavaScript](#javascript)
+  - [Git](#git)
+- [Licença](#licença)
+
 ## Projeto
 
 O propósito deste repositório é ter artigos sobre a área de desenvolvimento de software traduzidos para o português. O conteúdo destes é focado para pessoas que estão começando suas aventuras nesta área.
@@ -16,29 +27,27 @@ Já para quem vai consumir o conteúdo, a medida que essa pessoa começar a sent
 
 ## Como contribuir
 
-1. Crie uma issue utilizando a tag sugestões-de-artigos nos contando um artigo que você gostaria de ler em português.
-
-2. Se você encontrar um PR aberto com um artigo sendo traduzido, nos ajude a traduzir uma seção ou nos ajude a revisar a tradução já feita. 
-
-3. Compartilhe com os seus amigos e chame todos para contribuir.
-
-## Dicas para contribuintes
-
-* Separe seu texto em parágrafos
-* Quando for abrir um PR, faça para uma branch separada
-* Cada PR deve conter um artigo inteiro, então só faça merge quando o artigo estiver completo.
-* Ao terminar a tradução de artigo, avise no PR e marque pessoas para ajudarem na revisão.
-* Tente não ficar com o seu PR aberto por mais de 1 semana se o artigo não for muito grande. Você não precisa traduzir um artigo inteiro, divida por seções e chame outras pessoas para ajudar na tradução.
-* Um PR pode ter commits de diferentes pessoas.
-* Se você quer começar a traduzir um artigo primeiro olhe se não existem PRs abertos, é melhor ajudar a finalizar uma tradução do que começar uma nova, deixando outras pendentes.
+Dê uma olhada na [seção de contribuição](CONTRIBUTING.md) para ter mais detalhes sobre como abrir issues, criar pull requests e etc.
 
 ## Tópicos
 
 * [JavaScript](#javascript)
+* [Git](#git)
 
 ### Javascript
 
-* [Como ser* um compilador - Faça um compilador com JavaScript](javascript/como-ser-um-compilador--faca-um-compilador-com-javascript.md)
-* [A promessa de uma festa do hambúrguer](javascript/promessa-festa-hamburguer.md)
+* [Como ser* um compilador - Faça um compilador com JavaScript](javascript/como-ser-um-compilador--faca-um-compilador-com-javascript/artigo.md)
+* [A promessa de uma festa do hambúrguer](javascript/promessa-festa-hamburguer/artigo.md)
 * [Javascript para gatos](javascript/javascript-para-gatos.md)
 * [Como JavaScript Funciona: Uma visão geral da engine, do runtime e da pilha de chamadas](javascript/como-javascript-funciona.md)
+* [Vale a pena aprender Vanilla JS? Claro!](javascript/vale-a-pena-aprender-vanillajs--com-certeza.md)
+* [Tratando uma resposta AJAX em Javascript (com ou sem jQuery)](javascript/tratando-respostas-ajax-com-ou-sem-jquery.md)
+
+### Git
+
+* [O que é Git?](git/o-que-e-git.md)
+* [O que é controle de versão](/git/o-que-e-controle-de-versao.md)
+
+## Licença
+[MIT License](https://github.com/entrylvl/traducoes-de-artigos//blob/master/LICENSE)
+
