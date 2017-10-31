@@ -119,4 +119,28 @@ Rodar código em uma única `thread` pode ser bem simples, porque você não pre
 
 Mas rodar em `single-tread` é limitante. Já que JavaScript tem apenas uma pilha de chamadas, ** o que acontece se as coisas ficam lentas ?**
 
-## Concurrency & the Event Loop
+## Concorrência & o Event Loop
+
+O que acontece quando você tem chamadas de função na Pilha de Chamadas que leva uma grande quantidade de tempo para ser processada? Por exemplo, imagine que você quer fazer alguma transformação de imagem complexa com Javascript no navegador.
+
+Podem perguntar - Por que isso, ainda assim, é um problema? O problema é que enquanto a pilha de chamadas tem funções para executar, o navegador não pode de fato fazer nada mais. - está sendo bloqueado. Isso significa que o navegador não pode renderizar, não pode rodar nenhum outro código, está simplesmente preso. E isso cria problemas se você quer bons UIs flexíveis no seu app.
+
+E isso não é único problema. Uma vez que seu navegador começa processar tantas tarefas na pilha de chamadas, pode interromper a responsividade por um longo tempo. E muitos navegadores agem gerando um erro, perguntando se você quer fechar a página.
+
+
+![](https://cdn-images-1.medium.com/max/1600/1*WlMXK3rs_scqKTRV41au7g.jpeg)
+
+
+Agora, isso não é a melhor experiência de usuário que existe, é?
+
+Então, como nós podemos executar códigos complexos sem bloquear o UI e tornar o navegador não responsivo? Bom, a solução são os **`callbacks` assíncronos**.
+
+Isso será explicado com mais detalhes na **Parte 2** de "Como Javascript realmente funciona" tutorial: ["Dentro da engine v8 + 5 dicas de como escrever códigos otimizados"](https://blog.sessionstack.com/how-javascript-works-inside-the-v8-engine-5-tips-on-how-to-write-optimized-code-ac089e62b12e).
+
+Nesse meio tempo, se você está tendo um tempo difícil, reproduzindo e entendendo problemas nos seus apps Javascript, de uma olhada em [`SessionStack`](https://www.sessionstack.com/). `SessionStack` grava tudo no seu aplicativo web: todas mudanças no DOM, interações de usuários, exceções Javascript, rastreamento em pilha, falhas nas requisições de rede e mensagens de `debug`.
+
+Com `SessionStack`, você pode repetir problemas nos seus aplicativos web como um vídeo, e ver tudo que acontece com seu usuário.
+
+Existe um plano que permite que você [comece de graça](https://www.sessionstack.com/signup/).
+
+![](https://cdn-images-1.medium.com/max/1600/1*kEQmoMuNBDfZKNSBh0tvRA.png)
