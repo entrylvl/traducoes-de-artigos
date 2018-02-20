@@ -8,7 +8,7 @@ Eu escrevi códigos baseados em promises várias vezes, mas de alguma maneira as
 
 Se você me conhece do twitter, eu sou uma pessoa visual que desenha [conceitos de código](http://https://twitter.com/kosamari/status/806941856777011200) como uma [metáfora física](http://https://twitter.com/kosamari/status/807303762188574720). É como eu consigo lidar com uma dupla camada de abstração (linguagem de programação e inglês como uma segunda língua). Então, naturalmente eu também precisei desenhar dessa vez.
 
-![](http://i.imgur.com/HWoFZiE.png)
+![](imagens/1.png)
 
 Aqui está um pedaço dó código que iremos olhar nessa história.
 
@@ -56,7 +56,7 @@ Bem-vindo ao Promise Square Park, casa da hamburgueria JakeShack. Os hambúrguer
 
 Para ser possível anotar pedidos no menor tempo possível, JakeShack utiliza um sistema de pagers. Quando um cliente faz um pedido no caixa, o atendente lhe entrega uma bandeja e um pager.
 
-![](http://i.imgur.com/Uu27RRU.png)
+![](imagens/2.png)
 
 A bandeja é uma promessa da hamburgueria de que eles irão colocar seu delicioso hambúrger nela quando estiver pronto, e o pager é um indicator do estado do pedido. Quando o pager não está vibrando, isso significa que o pedido está **pendente** - o pessoal da cozinha está ocupado preparando o seu pedido. Quando o pager fica vermelho e vibra, significa que o seu pedido está **resolvido**.
 
@@ -64,13 +64,13 @@ Uma observação: **resolvido** aqui não quer dizer "pronto". Quer dizer que o 
 
 Vamos dar uma olhada no código que temos até agora. Quando você chama a função pedido, ela "retorna uma promessa" (lhe entregando uma bandeja e um pager. Um valor de retorno (um hambúrguer) deve aparecer na bandeja assim que a promessa (promise) for cumprida e a função de callback chamada. Vejamos mais na próxima seção!
 
-![](http://i.imgur.com/cypH6gC.png)
+![](imagens/3.png)
 
 ## Adicionar manipulador de promises
 
 Parece que o pager está apitando, vamos para o balcão pegar o pedido. Existem 2 cenários possíveis que podemos esperar nesse estágio.
 
-![](http://i.imgur.com/bIV4nE5.png)
+![](imagens/4.png)
 
 ## 1. Pedido completada
 
@@ -82,7 +82,7 @@ Parece que a cozinha está sem hambúrguers, a promessa de um hambúrguer foi re
 
 Aqui é como você pode preparar seu código para essas 2 situações.
 
-![](https://i.imgur.com/zA01ke5.png)
+![](imagens/5.png)
 
 .then() recebe outra função como segundo argumento que pode ser também usado como um manipulador de rejeição. Para o bem da simplicidade, eu apenas uso .catch() para rejeitar nesse artigo. Se você quiser saber mais sobre a diferença, você pode checar [esse artigo](https://developers.google.com/web/fundamentals/getting-started/primers/promises#error_handling).
 
@@ -90,11 +90,11 @@ Aqui é como você pode preparar seu código para essas 2 situações.
 
 Vamos dizer que seu pedido foi completado, mas você percebeu que para ter uma super festa do hambúrguer, você também precisa de milkshake... então você vai até a fila-C (uma fila especial para bebidas, algo real no ShakeShack para otimizar a fila). Quando você pede um milkshake no balcão, o atendende do caixa lhe dá uma nova bandeja e um outro pager. Já que milkshakes ficam prontos super rápidos, o atendente irá lhe entregar o milkshake também. Não é preciso esperar pelo pager apitar (já está apitando).
 
-![](http://i.imgur.com/AH8SIfb.png)
+![](imagens/6.png)
 
 Vamos olhar como esse código funciona. Encadear promessas é tão fácil quanto adicionar um .then() no seu código. O retorno de uma .then() é sempre uma promise. Apenas lembre que cada .then() retorna uma bandeja e um pager, e um valor de retorno efetivo é passado como argumento para o callback.
 
-![](https://i.imgur.com/vi7VZAS.png)
+![](imagens/7.png)
 
 Agora que você tem um hambúrguer e um milkshake, você está pronto para a FESTA DO HAMBÚRGUER.
 
