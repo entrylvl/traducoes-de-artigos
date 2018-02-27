@@ -64,6 +64,35 @@ Mas antes de começar a programar, vamos dividir as formas específicas que faze
 
 Nota: Se você prefere vídeo pode acessar um vídeo tutorial com esse conteúdo em nosso [curso gratuito em vídeo de imagens em puro CSS](https://coding-artist.teachable.com/p/how-to-make-pure-css-images).
 
+**Composição de formas**
+Primeiro, a imagem completa do Coala será construída em cima do canvas quadrado invisível (não é a terminologia oficial). Essa caixa invisível será centralizada com o corpo do HTML e a cabeça será centralizada com a caixa. Eu pessoalmente acho essa abordagem uma boa prática, pois ela simplifica o design responsivo, o que vou descrever no final desse post.
+
+Agora mantenha em mente que existirá uma caixa retangular invisível, a qual eu defino abaixo: 
+
+![](https://cdn-images-1.medium.com/max/800/1*MYy6c239bE6lHyMr1jKQBQ.png)
+
+Segundo, temos um círculo no centro da página web que irá criar a cabeça.
+
+![](https://cdn-images-1.medium.com/max/800/1*lnsXWnA0vpb08LifeeeSYw.png)
+
+A seguir, orelhas ficarão em cada lado da cabeça. Cada orelha é composta por dois diferentes círculos coloridos sobrepostos, com um círculo levemente menor que o outro. Nós vamos distinguir entre a div de orelha e a div da parte interna da orelha.
+
+![](https://cdn-images-1.medium.com/max/800/1*wNGTBnkVJdDa3B-iCJM7Tg.png)
+
+Adicionalmente, teremos dois olhos que também são dois círculos sobrepostos entre si. Vamos distinguir entre olho, círculo branco maior, pupila, e círculo preto menor.
+
+![](https://cdn-images-1.medium.com/max/800/1*uAVtlWSWEBhL3pn8LaPm2Q.png)
+
+A seguir, criaremos o nariz, que será um retângulo marrom arredondado logo abaixo dos olhos.
+
+![](https://cdn-images-1.medium.com/max/800/1*yscTJSYtWzIRa5Qw5kSY0Q.png)
+
+Por último, teremos dois pedaços de cabelo cinza que serão dois triângulos em locais diferentes no topo da cabeça.
+
+![](https://cdn-images-1.medium.com/max/800/1*ybfg2A_os8zi1Bu-posqDA.png)
+
+Outra coisa que é importante mencionar é a presença de diferentes camadas nesta imagem. As orelhas ficarão atrás da cabeça, o nariz será na frente dos olhos, etc. Isso será explicado conforme estilizamos o CSS.
+
 **O HTML**
 
 **Nota: **Para adicionar o cabelo à nossa imagem do coala, vamos usar o método *clip-path*. Esse método é suportado pelo Chrome, Safari e Opera. Se você está usando o Firefox, mude para um dos navegadores suportados, preferencialmente Chrome, para programar durante este guia.
