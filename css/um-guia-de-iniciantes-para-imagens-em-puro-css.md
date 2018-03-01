@@ -197,3 +197,113 @@ Agora `another-div` (quadrado azul) está 30% abaixo to topo da tela, e não 30%
 ![](https://cdn-images-1.medium.com/max/800/1*0abRFQKPM8o7YbzCIpMrRA.png)
 
 Com isso em mente, vamos para a estilização em CSS.
+
+## Estilização em CSS
+
+**Body**
+Para começar a estilização, vamos dar uma cor de fundo, um azul estilo Twitter, para a tag body.
+
+```html
+body{
+  background: #25A9FC;
+}
+```
+
+**Box/Caixa**
+A seguir, vamos estilizar a caixa invisível. A caixa invisível será centralizada horizontalmente pois o código a seguir é o que permite que ela seja centralizada horizontalmente (nota: se você está seguindo para ver como a posição da caixa muda é possível alterar a cor de fundo da caixa ou adicionar uma borda sólida):
+
+```html
+.box{
+  position: relative;
+  margin: auto;
+  display: block;
+
+  //fundo ou borda opcional
+
+  background: white;
+  border: solid 4px red;
+
+  //adicionar mais código aqui
+}
+```
+
+A posição relativa (*position: relative*) significa que o elemento está posicionado de forma relativa a sua posição normal, o que seria o extremo topo do canto esquerdo, pois essa é a primeira div na tag body.
+
+![](https://cdn-images-1.medium.com/max/800/1*qQlKbG2wHVzUP1NXNfv9_A.png)
+
+Quando a posição está definida como relativa, utilizando display: block; e margin: auto; o centro da caixa será automaticamente centralizado horizontalmente.
+
+Agora podemos adicionar o seguinte código para fazer a caixa ser 8% mais baixa, definir a altura (height) e largura (width) com as dimensões mostradas na imagem abaixo, e por último atribuir um fundo.
+
+```html
+.box{
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 8%;
+  width: 600px;
+  height: 420px;
+  background: none;
+}
+```
+
+Uma coisa para lembrar é que usamos *margin-top: 8%* para abaixar a caixa em 8%. Como especificamente ajustamos a margem do topo (*margin-top*), isso não irá afetar o atributo *margin: auto* que utilizamos para centralizar a caixa. Se tivessemos utilizado *margin: 8%* o atributo *margin: auto* seria sobrescrito.
+
+Agora que nossa caixa está definida, todas as outras divs precisam ser aninhadas com a caixa. Isso é importante, pois iremos atribuir posições absolutas (topo, direita, esquerda, ou inferior) em porcentagem que irão posicionar a div na mesma porcentagem em relação a caixa e não do corpo (body). O mesmo conceito será aplicado com as porcentagens de altura e largura.
+
+**Recomendação**
+
+Se você puder, eu altamente recomendo colocar a imagem em desenvolvimento em um monitor externo. Isso pode ser feito se você hospedar a imagem localmente ou tiver uma [conta pro no Codepen](https://codepen.io/pro), onde é possível modificar a visualização atual para "Live view" e ver sua pen em largura completa com atualizações instantâneas. Caso você não possa, terá que fazer funcionar.
+
+**Head/Cabeça**
+
+Vamos observar o código para a div da cabeça e então quebrá-lo pedaço por pedaço.
+
+```html
+.head{
+  position: absolute;
+  top: 16.5%;
+  left: 25%;
+  width: 50%;
+  height: 67%;
+  background: #A6BECF;
+  border-radius: 50%;
+}
+```
+
+As porcentagens para o topo (top) e esquerda (left) significam que a div estará 15% distante do topo da caixa e 25% distante da esquerda da caixa.
+
+A largura da div é de 50% e a altura de 67%. Mais uma vez, isso significa que a largura é 50% e a altura é 57% do tamanho da caixa.
+
+Depois disso iremos definir a cor de fundo em um cinza claro.
+
+Então, usaremos *border-radius: 50%*. Se você não utilizar o atributo *border-radius*, a div sempre ficaria na forma de um retângulo (ou quadrado). A *border-radius* é o que deixa a forma curva. Se você é familiar com Illustrator, adicionar um *border-radius* é como puxar o canto de um quadrado para arredondá-lo. Para transformá-lo em um círculo, sempre usamos a porcentagem de 50%.
+
+*Border-radius* pode ser utilizado não só para fazer círculos, mas para arredondar qualquer forma, como um retângulo arredondado que faremos ao estilizar a div de nariz.
+
+Agora, antes de prosseguirmos, você pode estar pensando onde no mundo que eu consigo essas porcentagens para o topo, esquerda, largura e altura. Vamos pensar sobre isso.
+
+Definimos a caixa com a largura de 600px, então uma largura de 50% resulta em 300px. Considerando que a caixa tinha somente 400px de altura, a porcentagem de altura para a cabeça terá que ser maior.
+
+Agora é a parte onde você talvez espere que eu te dê uma fórmula muito precisa para determinar como eu encontrei a altura, mas para ser honesto, eu normalmente chuto um valor com a boa e velha técnica de testar e errar.
+
+Quanto mais você faz images em puro CSS, você melhor estima valores. Mas tudo que você realmente precisa pensar é saber a altura e largura da div pai e quando tamanho a atual div filha precisa ter em relação a div pai.
+
+Agora, para as porcentagens de posições quando você quer **centralizar de forma absoluta** é mais fácil calcular. Aqui está a fórmula:
+
+```html
+left = (100 - width) / 2
+top = (100 - height) / 2
+
+//em nosso caso
+(100 - 67)/2 = top: 16.5%;
+(100-50)/2 = left: 25%;
+```
+
+Agora isso funciona para nossa div de cabeça pois queremos ela absolutamente no centro. Contudo, não queremos centralizar absolutamente as orelhas, por exemplo. Vamos falar sobre isso logo, o que também vai explicar quando utilizar os atributos inferior e direita em vez de topo e esquerda.
+
+Uma última coisa para mencionar nessa seção é que toda div a seguir será aninhada embaixo da div cabeça pois cada forma que será adicionada ficará no topo da cabeça.
+
+Aqui é o que devemos ter neste ponto: 
+
+![](https://cdn-images-1.medium.com/max/800/1*-W0GNk73U_FGj-ebnPJ3xg.png)
