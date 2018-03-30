@@ -344,7 +344,7 @@ Eu não trabalharia muito se isso for confuso, mas se você quiser pode remover 
 
 Nesse caso não deveriámos ver nenhuma mudança, e ainda teriámos a seguinte imagem:
 
-![](CODIGOIMG) - antes do EARS
+![](https://cdn-images-1.medium.com/max/800/1*-W0GNk73U_FGj-ebnPJ3xg.png)
 
 **Orelhas**
 Conforme discutido no início, quando dividimos nossas formas, uma orelha para cada lado que consistirá em círculos no topo. Dois maiores, círculos cinza claros (ear-left e ear-right) e dois menores, círculos cinza escuros no topo de cada orelha, respectivamente (inner-ear).
@@ -426,7 +426,7 @@ Aqui estão as posições e tamanhos para as orelhas, agora que tudo já foi exp
 
 Por último, adicionamos *z-index: 1;*, para as orelhas ficarem atrás da cabeça. Devemos ter agora:
 
-![](CODIGOIMG) - antes do EYES
+![](https://cdn-images-1.medium.com/max/800/1*UsQlYpazeGUm8ursUQ2Ciw.png)
 
 **Olhos**
 
@@ -504,7 +504,7 @@ z-index: 3;
 
 Agora devemos ter a seguinte imagem:
 
-![](CODIGOIMG) - antes do NOSE
+![](https://cdn-images-1.medium.com/max/800/1*40C5Cbg-MoLiUwZbROPSlg.png)
 
 **Nariz**
 
@@ -536,7 +536,7 @@ Também utilizamos *border-radius: 50px;*, o que irá arredondar as bordas do re
 
 Agora devemos ver a seguinte imagem:
 
-![](CODIGOIMG) - antes do HAIR
+![](https://cdn-images-1.medium.com/max/800/1*cgWumddIezW-p1sFkLPq_A.png)
 
 
 **Cabelo**
@@ -579,11 +579,11 @@ Para qualquer forma que não é um quadrado, retângulo e círculo, é mais fác
 
 Agora, isso pode parecer confuso, mas felizmente, tem uma ótima ferramente que vai automaticamente nos fornecer o *clip-path* para formas diferentes.
 
-Abra essa ferramenta chamada [Clippy]() em uma nova aba.
+Abra essa ferramenta chamada [Clippy](http://bennettfeely.com/clippy/) em uma nova aba.
 
 Você vai ver do lado direito que é possível selecionar várias formas diferentes:
 
-![](CODIGOIMG) - do Clippy
+![](https://cdn-images-1.medium.com/max/800/1*vG4Omfuea52pj0nrI3Zlzg.png)
 
 Na imagem acima, a forma de triângulo é selecionada e você pode copiar e colar o *clip-path* na parte inferior e colar na classe CSS referente ao cabelo.
 
@@ -593,7 +593,7 @@ As posições do topo serão negativas, pois queremos os dois pedaços de cabelo
 
 Nosso Koala agora é uma imagem completa.
 
-![](CODIGOIMG) - antes do final CSS
+![](https://cdn-images-1.medium.com/max/800/1*zaYeChAMif3__eVsrIWciw.png)
 
 **CSS Final**
 
