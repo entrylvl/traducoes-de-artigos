@@ -212,7 +212,7 @@ body{
 **Box/Caixa**
 A seguir, vamos estilizar a caixa invisível. A caixa invisível será centralizada horizontalmente pois o código a seguir é o que permite que ela seja centralizada horizontalmente (nota: se você está seguindo para ver como a posição da caixa muda é possível alterar a cor de fundo da caixa ou adicionar uma borda sólida):
 
-```html
+```css
 .box{
   position: relative;
   margin: auto;
@@ -235,8 +235,8 @@ Quando a posição está definida como relativa, utilizando display: block; e ma
 
 Agora podemos adicionar o seguinte código para fazer a caixa ser 8% mais baixa, definir a altura (height) e largura (width) com as dimensões mostradas na imagem abaixo, e por último atribuir um fundo.
 
-```html
-.box{
+```css
+.box {
   position: relative;
   margin: auto;
   display: block;
@@ -259,8 +259,8 @@ Se você puder, eu altamente recomendo colocar a imagem em desenvolvimento em um
 
 Vamos observar o código para a div da cabeça e então quebrá-lo pedaço por pedaço.
 
-```html
-.head{
+```css
+.head {
   position: absolute;
   top: 16.5%;
   left: 25%;
@@ -291,7 +291,7 @@ Quanto mais você faz images em puro CSS, você melhor estima valores. Mas tudo 
 
 Agora, para as porcentagens de posições quando você quer **centralizar de forma absoluta** é mais fácil calcular. Aqui está a fórmula:
 
-```html
+```css
 left = (100 - width) / 2
 top = (100 - height) / 2
 
@@ -307,3 +307,439 @@ Uma última coisa para mencionar nessa seção é que toda div a seguir será an
 Aqui é o que devemos ter neste ponto: 
 
 ![](https://cdn-images-1.medium.com/max/800/1*-W0GNk73U_FGj-ebnPJ3xg.png)
+
+**Pausa no aprendizado**
+Eu sei que isso é bastante conteúdo de uma vez só, mas vamos continuar e ver como as coisas vão se encaixando. Se você precisar de uma pausa, sinta-se a vontade para adicionar aos favoritos esse post ou utilizar Pocket para salvar para depois.
+
+**Cópia da cabeça/head**
+
+```css
+.head-copy {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #A6BECF;
+  border-radius: 50%;
+  z-index: 2;
+}
+```
+
+A div de cópia da cabeça (head-copy) é somente para o propósito de permitir que as orelhas apareçam atrás da cabeça. Isso é controlado utilizando o z-index.
+
+A última linha de nosso estilo é o seguinte:
+
+```css
+z-index: 2;
+```
+
+Z-index é utilizado para indicar a profundidade de uma div. Se você costuma ilustrar isso fará muito mais sentido se você pensar na forma de camadas funcionam.
+
+Nossa imagem final terá os olhos na frente da div da cabeça, o nariz na frente dos olhos, etc. Isso será controlado pelo z-index. Quanto maior for o z-index, mais próxima do topo está a div.
+
+Então, no caso de duas divs, *z-index: 1* seria como sua camada inferior e *z-index: 2* seria sua camada superior.
+
+Como nossa camada inferior será as orelhas, vamos estabelecer o *z-index: 1*. Se tivéssemos omitido a div cópia da cabeça, e dado a div da cabeça (head) o valor de *z-index: 2* as orelhas não estariam atrás da cabeça. Contudo, quando adicionamos a cópia da cabeça e definimos o valor *z-index: 2*, as orelhas ficarão atrás da cabeça.
+
+Eu não trabalharia muito se isso for confuso, mas se você quiser pode remover a div cópia da cabeça quando adicionarmos as orelhas para ver por conta própria.
+
+Nesse caso não deveriámos ver nenhuma mudança, e ainda teriámos a seguinte imagem:
+
+![](CODIGOIMG) - antes do EARS
+
+**Orelhas**
+Conforme discutido no início, quando dividimos nossas formas, uma orelha para cada lado que consistirá em círculos no topo. Dois maiores, círculos cinza claros (ear-left e ear-right) e dois menores, círculos cinza escuros no topo de cada orelha, respectivamente (inner-ear).
+
+
+```css
+.ear-left {
+  position: absolute;
+  width: 60%;
+  height: 65%;
+  left: -20%;
+  top: 5%;
+  background: #A6BECF;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.ear-right {
+  position: absolute;
+  width: 60%;
+  height: 65%;
+  right: -20%;
+  top: 5%;
+  background: #A6BECF;
+  border-radius: 50%;
+  z-index: 1;
+}
+.inner-ear {
+  position: absolute;
+  border-radius: 50%;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  background: #819CAF;
+}
+```
+
+Para cada classe CSS, usamos *border-radius: 50%* pois são todos círculos, e depois adicionamos uma cor utilizando *background*.
+
+Como você pode ver, há estilização para duas orelhas separadas, mas somente uma para orelha interna. Isso fará sentido enquanto explicamos o posicionamento.
+
+A div pai de ear-left e ear-right é a div cabeça/head. Portanto, deve ser posicionada com porcentagens relativas a cabeça, assim como sua altura e largura.
+
+A altura e largura podem ser estimadas pois queremos orelhas grandes, mas ainda assim menores do que a cabeça. Isso nos dá a largura de *width: 60%;* e a altura de *height: 65%*;.
+
+A orelha interna está aninhada abaixo da orelha esquerda (ear-left) e da orelha direita (ear-right). Nós sabemos que queremos que elas sejam levemente menores, por isso, definimos uma altura e largura de 80%. Também sabemos que queremos a orelha interna (inner-ear) centralizada perfeitamente **relacionada as orelhas**, então podemos usar a fórmula mais uma vez.
+
+```css
+left = (100 - width) / 2
+top = (100 - height) / 2
+
+//em nosso caso
+(100 - 80)/2 = top: 10%;
+(100-80)/2 = left: 10%;
+```
+
+Como nosso topo e esquerda são relativos as orelhas, podemos usar o mesmo estilo tanto para orelha esquerda (ear-left) quando para a direita (ear-right). Essa é a razão para existir somente uma div da orelha interna (inner-ear). Nós temos que usar duas divs separadas para as orelhas pois elas terão valores diferentes em suas posições de esquerda e direita pois são posicionadas **relativas a cabeça**.
+
+Queremos que as duas orelhas se destaquem saindo dos lados esquerdo e direito da cabeça, de acordo com seus nomes. Portanto, usamos porcentagens negativas, *left: -20%* e *right: -20%*. O que significa que cada orelha irá se mover 20% da largura da cabeça na direção especificada.
+
+Isso é provavelmente óbvio, mas eu nunca gosto de assumir isso. Toda vez que existirem divs de esquerda e direita como estas, você pode posicionar um lado, como *left: -20%;*. Depois copiar e colocar o estilo para aquela div, renomear a classe para o outro lado, e então mudar somente o atributo left para right ou vice-versa.
+
+Aqui estão as posições e tamanhos para as orelhas, agora que tudo já foi explicado e feito:
+
+```css
+//orelha esquerda
+  width: 60%;
+  height: 65%;
+  left: -20%;
+  top: 5%;
+
+//orelha direita
+  width: 60%;
+  height: 65%;
+  right: -20%;
+  top: 5%;
+```
+
+Por último, adicionamos *z-index: 1;*, para as orelhas ficarem atrás da cabeça. Devemos ter agora:
+
+![](CODIGOIMG) - antes do EYES
+
+**Olhos**
+
+```css
+.eye-left {
+  position: absolute;
+  background: white;
+  width: 30%;
+  height: 33%;
+  top: 25%;
+  left: 21%;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.eye-right {
+  position: absolute;
+  background: white;
+  width: 30%;
+  height: 33%;
+  top: 25%;
+  right: 21%;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.pupil {
+  position: absolute;
+  width: 28%;
+  height: 30%;
+  top: 35%;
+  left: 36%;
+  border-radius: 50%;
+  background: #27354A;
+}
+```
+
+Agora podemos ver que os olhos são similares as orelhas. Temos dois grandes círculos brancos (eye-left e eye-right) e uma pupila (pupil).
+
+Para todos eles usamos *border-radius: 50%;*, pois são círculos e usamos background para definir as cores apropriadas.
+
+Temos somente uma pupila pois está aninhada abaixo de cada olho. Nós estimamos/chutamos a altura e largura da pupila e depois centralizamos perfeitamente, o que fica definido como:
+
+```css
+width: 28%;
+height: 30%;
+top: 35%;
+left: 36%;
+```
+
+Para o olho esquerdo (eye-left) você pode tanto usar tentativa e erro para as posições do topo e esquerda, como também pode usar a fórmula para centralizar perfeitamente e ajustar os valores dependendo das distâncias a partir do centro. Enquanto isso, a largura e altura foram estimadas até encontrar um valor correto.
+
+```css
+//olho esquerdo  
+width: 30%;
+height: 33%;
+top: 25%;
+left: 21%;
+
+//olho direito
+width: 30%;
+height: 33%;
+top: 25%;
+right: 21%;
+```
+Para o z-index, os seguintes valores permitem que o nariz esteja no topo dos olhos:
+
+```css
+//olho esquerdo 
+z-index: 3;
+
+//olho direito
+ z-index: 2;
+```
+
+Agora devemos ter a seguinte imagem:
+
+![](CODIGOIMG) - antes do NOSE
+
+**Nariz**
+
+```css
+.nose{
+  position: absolute;
+  background: #BE845F;
+  width: 25%;
+  height: 42.5%;
+  left: 37%;
+  top: 45%;
+  border-radius: 50px;
+  z-index: 4;
+}
+```
+
+Agora para o nariz, estimamos/chutamos a altura e largura relativa a cabeça. Uma vez que isso é conhecido, podemos estimar ou alinhar perfeitamente e ajustar de acordo. Os valores a seguir fornecem um bom tamanho e localização:
+
+```css
+width: 25%;
+height: 42.5%;
+left: 37%;
+top: 45%;
+```
+
+Novamente estilizamos a cor marrom usando o atributo *background* e especificamos a profundidade usando *z-index: 4;*, dessa forma o nariz fica na frente dos olhos.
+
+Também utilizamos *border-radius: 50px;*, o que irá arredondar as bordas do retângulo conforme necessário. Quando queremos arredondar levemente é mais fácil arredondar usando um número em px do que uma porcentagem.
+
+Agora devemos ver a seguinte imagem:
+
+![](CODIGOIMG) - antes do HAIR
+
+
+**Cabelo**
+Quase pronto! O último passo é adicionar estilo aos dois pedaços de cabelo, hair-left e hair-right, o que nos fornecerá uma imagem completa do Koala.
+
+```css
+.hair-left {
+  position: absolute;
+  top: -8%;
+  left: 30%;
+  width: 20%;
+  height: 20%;
+  background:  #A6BECF;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.hair-right {
+  position: absolute;
+  top: -4%;
+  left: 48%;
+  width: 20%;
+  height: 20%;
+  background:  #A6BECF;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+```
+
+Como você pode ver, não há *border-radius*, mas temoso que adicionar essa linha de *clip-path*:
+
+```css
+-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+```
+
+Para qualquer forma que não é um quadrado, retângulo e círculo, é mais fácil usar um clip-path.
+
+**Nota:** Esse método é suportado pelo Safari, Chrome e Opera, mas não pelo Firefox. Enquanto isso pode ser desanimador será o método mais fácil para aprender como criar formas usando somente CSS.
+
+Agora, isso pode parecer confuso, mas felizmente, tem uma ótima ferramente que vai automaticamente nos fornecer o *clip-path* para formas diferentes.
+
+Abra essa ferramenta chamada [Clippy]() em uma nova aba.
+
+Você vai ver do lado direito que é possível selecionar várias formas diferentes:
+
+![](CODIGOIMG) - do Clippy
+
+Na imagem acima, a forma de triângulo é selecionada e você pode copiar e colar o *clip-path* na parte inferior e colar na classe CSS referente ao cabelo.
+
+Mais uma vez vamos colocar a cor usando *background* e estimar a altura e largura com 20% para cada. Definimos que a parte esquerda do cabelo (hair-left) terá um valor para esquerda de 30%, e a parte direita um valor de 48% para a esquerda. Isso nos traz um bom exemplo pra discutir se usamos o atributo left ou o right. Vamos dizer que queremos a div hair-right 5% a mais para a direita, poderiámos adicionar 5% aos 48% e ficar com *left: 53%*. Contudo, uma boa regra é toda vez que passar de 50% é melhor trocar para o atributo *right*. Então, *left: 53%* seria o equivalente a *right: 48%*. Para esse exemplo, vamos manter em *left: 48%* e continuar.
+
+As posições do topo serão negativas, pois queremos os dois pedaços de cabelo se destacando acima da cabeça. A div hair-left se destacará um pouco mais então definimos *top: -8%;* e a hair-right um pouco mais baixa, com *top: 4%;*
+
+Nosso Koala agora é uma imagem completa.
+
+![](CODIGOIMG) - antes do final CSS
+
+**CSS Final**
+
+```css
+body {
+  background: #25A9FC;
+}
+
+.box {
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 8%;
+  width: 600px;
+  height: 420px;
+  background: none;
+}
+
+.head {
+  position: absolute;
+  top:16.5%;
+  left: 25%;
+  width: 50%;
+  height: 67%;
+  background: #A6BECF;
+  border-radius: 50%;
+}
+
+.head-copy {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #A6BECF;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.ear-left {
+  position: absolute;
+  width: 60%;
+  height: 65%;
+  left: -20%;
+  top: 5%;
+  background: #A6BECF;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.ear-right {
+  position: absolute;
+  width: 60%;
+  height: 65%;
+  right: -20%;
+  top: 5%;
+  background: #A6BECF;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.inner-ear {
+  position: absolute;
+  border-radius: 50%;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  background: #819CAF;
+}
+
+.eye-left {
+  position: absolute;
+  background: white;
+  width: 30%;
+  height: 33%;
+  top: 25%;
+  left: 21%;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.eye-right {
+  position: absolute;
+  background: white;
+  width: 30%;
+  height: 33%;
+  top: 25%;
+  right: 21%;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.pupil {
+  position: absolute;
+  width: 28%;
+  height: 30%;
+  top: 35%;
+  left: 36%;
+  border-radius: 50%;
+  background: #27354A;
+}
+
+.nose {
+  position: absolute;
+  background: #BE845F;
+  width: 25%;
+  height: 42.5%;
+  left: 37%;
+  top: 45%;
+  border-radius: 50px;
+  z-index: 4;
+}
+
+.hair-left {
+  position: absolute;
+  top: -8%;
+  left: 30%;
+  width: 20%;
+  height: 20%;
+  background:  #A6BECF;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.hair-right {
+  position: absolute;
+  top: -4%;
+  left: 48%;
+  width: 20%;
+  height: 20%;
+  background:  #A6BECF;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+```
+
+**Continuando a prática**
+Espero que esse post te forneça um bom conceito de como imagens em puro CSS funcionam e tenha te inspirado a aprender mais. Adicionalmente, você deve ter um bom template para mexer e adquirir mais prática.
+
+Aqui estão algumas fontes 100% gratuitas que criei para uma prática estruturada:
+
+1. ***Pure CSS Images Video Course:*** In this video course, I go over everything you need to know about pure CSS images.
+
+2. ***Daily CSS Images Challenge:*** 50-day email challenge where you will receive a prompt to make a CSS image every weekday. Each week will have a fun theme, making this an engaging challenge.
+
+Até mais,
+Mike Mangialardi
+
+
+
