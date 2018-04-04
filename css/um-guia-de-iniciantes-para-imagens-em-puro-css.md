@@ -13,11 +13,11 @@ No que você está se envolvendo: uma leitura de 17 minutos. Uma explicação de
 
 O que suponho que você sabe: Meu método de ensino é não supor que você já sabe os princípios básicos. A não ser que você seja um completo iniciante com HTML e CSS, eu não faço nenhuma suposição.
 
-Se você não é inicianete: Eu vou repetir os princípios básicos frequentemente. Pule as partes que são muito fáceis para você e entenda que isso foi feito para ajudar pessoas com todos os níveis de conhecimentos.
+Se você não é iniciante: Eu vou repetir os princípios básicos frequentemente. Pule as partes que são muito fáceis para você e entenda que isso foi feito para ajudar pessoas com todos os níveis de conhecimentos.
 
 ## Introdução
 
-Uma linha é frequentemente traçada entre um artista/designer que trabalha com vetores e um desenvolvedor front-end. Isso acontece pois muitas empresas possuem mãos-de-obra e trabalhos suficientes para realizar essa separação de forma produtiva. Outro fator relevante é a vontade de algumas pessoas em focar somente no desenvolvimento front-end, enquanto outras querem ser extremamente específicas em ilustrações. Mesmo nas duas áreas, existem determinados nichos que podem ser escolhidos como foco para desenvolver um conjunto de habilidades muito valioso e bom.
+Uma linha é frequentemente traçada entre um artista/designer que trabalha com vetores e um desenvolvedor front-end. Isso acontece pois muitas empresas possuem mão-de-obra e trabalhos suficientes para realizar essa separação de forma produtiva. Outro fator relevante é a vontade de algumas pessoas em focar somente no desenvolvimento front-end, enquanto outras querem ser extremamente específicas em ilustrações. Mesmo nas duas áreas, existem determinados nichos que podem ser escolhidos como foco para desenvolver um conjunto de habilidades muito valioso e bom.
 
 Sem dúvida essa separação é sensata, porém, eu acho que um desenvolvedor front-end poderia se beneficiar imensamente trabalhando com ilustrações, mesmo se esse não for seu foco principal. 
 
@@ -27,7 +27,7 @@ Aprender como fazer vetores gráficos ensina sobre layouts, paleta de cores, man
 
 Provavelmente eu deveria continuar essa discussão sobre os benefícios da ilustração com vetores para desenvolvedores front-end. Comentei sobre esse tópico pois imagens em puro CSS são exemplos de quando a intersecção entre ilustradores de vetores e desenvolvedores front-end é muito próxima.
 
-Criar uma imagem em puro CSS é essencialmente criar um vetor gráfico, mas ao invés de utilizar softwares de ilustração com vetor (ex: Illustrador, Affinity Designer, Sketch) são utilizados códigos CSS no lugar da barra de ferramenta.
+Criar uma imagem em puro CSS é essencialmente criar um vetor gráfico, mas ao invés de utilizar softwares de ilustração com vetor (ex: Illustrador, Affinity Designer, Sketch) são utilizados códigos CSS no lugar da barra de ferramentas.
 
 Apesar da próxima intersecção, acredito que ilustradores de imagens vetoriais podem ver toneladas de código CSS para criar uma imagem como algo intimidador, e os desenvolvedores front-end também podem considerar criar imagens com código algo tão assustador quanto.
 
@@ -36,15 +36,15 @@ Por essa razão, vou criar um tutorial de como criar sua primeira imagem em puro
 1. Aumentar a confiança para criar imagens em puro CSS
 2. Fornecer melhor entendimento sobre como imagens em puro CSS funcionam
 3. Ampliar a curiosidade sobre ilustração com vetores para desenvolvedores front-end
-4. Amplicar a curiosidade sobre desenvolvimento front-end para ilustradores de imagens vetoriais
+4. Ampliar a curiosidade sobre desenvolvimento front-end para ilustradores de imagens vetoriais
 5. Fornecer um template básico para criar mais imagens em puro CSS
 
-##Os componentes de uma imagem em puro CSS
+## Os componentes de uma imagem em puro CSS
 Primeiro vamos explicar o que exatamente "puro CSS" significa?
 
 O termo "puro CSS" se refere a criação de uma imagem simplesmente adicionando estilos a várias divs em HTML via CSS.
 
-Por exemplo, podemos criar um quadrado com somente uma div HTML e estilizá-la aplicando uma classe CSS.
+Por exemplo, podemos criar um quadrado com somente uma `div` HTML e estilizá-la aplicando uma classe CSS.
 
 [Quadrado com somente uma div](https://codepen.io/mikemang/pen/53eeb0ec060d1b4a263f0ca47f6d9e3e)
 
@@ -62,7 +62,7 @@ Aqui está a imagem final em puro CSS que vamos criar e contém somente os compo
 
 Mas antes de começar a programar, vamos dividir as formas específicas que fazem essa imagem do Coala.
 
-Nota: Se você prefere vídeo pode acessar um vídeo tutorial com esse conteúdo em nosso [curso gratuito em vídeo de imagens em puro CSS](https://coding-artist.teachable.com/p/how-to-make-pure-css-images).
+**Nota:** Se você prefere vídeo pode acessar um vídeo tutorial com esse conteúdo em nosso [curso gratuito em vídeo de imagens em puro CSS](https://coding-artist.teachable.com/p/how-to-make-pure-css-images).
 
 **Composição de formas**
 Primeiro, a imagem completa do Coala será construída em cima do canvas quadrado invisível (não é a terminologia oficial). Essa caixa invisível será centralizada com o corpo do HTML e a cabeça será centralizada com a caixa. Eu pessoalmente acho essa abordagem uma boa prática, pois ela simplifica o design responsivo, o que vou descrever no final desse post.
@@ -75,7 +75,7 @@ Segundo, temos um círculo no centro da página web que irá criar a cabeça.
 
 ![](https://cdn-images-1.medium.com/max/800/1*lnsXWnA0vpb08LifeeeSYw.png)
 
-A seguir, orelhas ficarão em cada lado da cabeça. Cada orelha é composta por dois diferentes círculos coloridos sobrepostos, com um círculo levemente menor que o outro. Nós vamos distinguir entre a div de orelha e a div da parte interna da orelha.
+A seguir, orelhas ficarão em cada lado da cabeça. Cada orelha é composta por dois diferentes círculos coloridos sobrepostos, com um círculo levemente menor que o outro. Nós vamos distinguir entre a `div` de orelha e a div da parte interna da orelha.
 
 ![](https://cdn-images-1.medium.com/max/800/1*wNGTBnkVJdDa3B-iCJM7Tg.png)
 
@@ -95,7 +95,7 @@ Outra coisa que é importante mencionar é a presença de diferentes camadas nes
 
 **O HTML**
 
-**Nota: **Para adicionar o cabelo à nossa imagem do coala, vamos usar o método *clip-path*. Esse método é suportado pelo Chrome, Safari e Opera. Se você está usando o Firefox, mude para um dos navegadores suportados, preferencialmente Chrome, para programar durante este guia.
+**Nota:** Para adicionar o cabelo à nossa imagem do coala, vamos usar o método *clip-path*. Esse método é suportado pelo Chrome, Safari e Opera. Se você está usando o Firefox, mude para um dos navegadores suportados, preferencialmente Chrome, para programar durante este guia.
 
 Normalmente, eu trabalho inserindo uma única `div` que servirá como uma forma, estilizo esta forma no CSS e, então, sigo com a inserção da próxima `div`.
 
@@ -200,7 +200,8 @@ Com isso em mente, vamos para a estilização em CSS.
 
 ## Estilização em CSS
 
-**Body**
+**Body/Corpo**
+
 Para começar a estilização, vamos dar uma cor de fundo, um azul estilo Twitter, para a tag body.
 
 ```html
@@ -210,6 +211,7 @@ body{
 ```
 
 **Box/Caixa**
+
 A seguir, vamos estilizar a caixa invisível. A caixa invisível será centralizada horizontalmente pois o código a seguir é o que permite que ela seja centralizada horizontalmente (nota: se você está seguindo para ver como a posição da caixa muda é possível alterar a cor de fundo da caixa ou adicionar uma borda sólida):
 
 ```css
@@ -227,11 +229,11 @@ A seguir, vamos estilizar a caixa invisível. A caixa invisível será centraliz
 }
 ```
 
-A posição relativa (*position: relative*) significa que o elemento está posicionado de forma relativa a sua posição normal, o que seria o extremo topo do canto esquerdo, pois essa é a primeira div na tag body.
+A posição relativa (`position: relative`) significa que o elemento está posicionado de forma relativa a sua posição normal, o que seria o extremo topo do canto esquerdo, pois essa é a primeira `div` na tag `body`.
 
 ![](https://cdn-images-1.medium.com/max/800/1*qQlKbG2wHVzUP1NXNfv9_A.png)
 
-Quando a posição está definida como relativa, utilizando display: block; e margin: auto; o centro da caixa será automaticamente centralizado horizontalmente.
+Quando a posição está definida como relativa, utilizando `display: block;` e `margin: auto;` o centro da caixa será automaticamente centralizado horizontalmente.
 
 Agora podemos adicionar o seguinte código para fazer a caixa ser 8% mais baixa, definir a altura (height) e largura (width) com as dimensões mostradas na imagem abaixo, e por último atribuir um fundo.
 
@@ -247,17 +249,17 @@ Agora podemos adicionar o seguinte código para fazer a caixa ser 8% mais baixa,
 }
 ```
 
-Uma coisa para lembrar é que usamos *margin-top: 8%* para abaixar a caixa em 8%. Como especificamente ajustamos a margem do topo (*margin-top*), isso não irá afetar o atributo *margin: auto* que utilizamos para centralizar a caixa. Se tivessemos utilizado *margin: 8%* o atributo *margin: auto* seria sobrescrito.
+Uma coisa para lembrar é que usamos `margin-top: 8%` para abaixar a caixa em 8%. Como especificamente ajustamos a margem do topo (`margin-top`), isso não irá afetar o atributo `margin: auto` que utilizamos para centralizar a caixa. Se tivessemos utilizado `margin: 8%` o atributo `margin: auto` seria sobrescrito.
 
-Agora que nossa caixa está definida, todas as outras divs precisam ser aninhadas com a caixa. Isso é importante, pois iremos atribuir posições absolutas (topo, direita, esquerda, ou inferior) em porcentagem que irão posicionar a div na mesma porcentagem em relação a caixa e não do corpo (body). O mesmo conceito será aplicado com as porcentagens de altura e largura.
+Agora que nossa caixa está definida, todas as outras divs precisam ser aninhadas com a caixa. Isso é importante, pois iremos atribuir posições absolutas (topo, direita, esquerda, ou inferior) em porcentagem que irão posicionar a `div` na mesma porcentagem em relação a caixa e não do corpo (`body`). O mesmo conceito será aplicado com as porcentagens de altura e largura.
 
 **Recomendação**
 
-Se você puder, eu altamente recomendo colocar a imagem em desenvolvimento em um monitor externo. Isso pode ser feito se você hospedar a imagem localmente ou tiver uma [conta pro no Codepen](https://codepen.io/pro), onde é possível modificar a visualização atual para "Live view" e ver sua pen em largura completa com atualizações instantâneas. Caso você não possa, terá que fazer funcionar.
+Se você puder, eu altamente recomendo colocar a imagem em desenvolvimento em um monitor externo. Isso pode ser feito se você hospedar a imagem localmente ou tiver uma [conta *pro* no Codepen](https://codepen.io/pro), onde é possível modificar a visualização atual para "Live view" e ver sua pen em largura completa com atualizações instantâneas. Caso você não possa, terá que fazer funcionar.
 
 **Head/Cabeça**
 
-Vamos observar o código para a div da cabeça e então quebrá-lo pedaço por pedaço.
+Vamos observar o código para a `div` da cabeça e então quebrá-lo pedaço por pedaço.
 
 ```css
 .head {
@@ -271,15 +273,15 @@ Vamos observar o código para a div da cabeça e então quebrá-lo pedaço por p
 }
 ```
 
-As porcentagens para o topo (top) e esquerda (left) significam que a div estará 15% distante do topo da caixa e 25% distante da esquerda da caixa.
+As porcentagens para o topo (top) e esquerda (left) significam que a `div` estará 15% distante do topo da caixa e 25% distante da esquerda da caixa.
 
-A largura da div é de 50% e a altura de 67%. Mais uma vez, isso significa que a largura é 50% e a altura é 57% do tamanho da caixa.
+A largura da `div` é de 50% e a altura de 67%. Mais uma vez, isso significa que a largura é 50% e a altura é 57% do tamanho da caixa.
 
 Depois disso iremos definir a cor de fundo em um cinza claro.
 
-Então, usaremos *border-radius: 50%*. Se você não utilizar o atributo *border-radius*, a div sempre ficaria na forma de um retângulo (ou quadrado). A *border-radius* é o que deixa a forma curva. Se você é familiar com Illustrator, adicionar um *border-radius* é como puxar o canto de um quadrado para arredondá-lo. Para transformá-lo em um círculo, sempre usamos a porcentagem de 50%.
+Então, usaremos `border-radius: 50%`. Se você não utilizar o atributo `border-radius`, a `div` sempre ficaria na forma de um retângulo (ou quadrado). A `border-radius` é o que deixa a forma curva. Se você é familiar com Illustrator, adicionar um `border-radius` é como puxar o canto de um quadrado para arredondá-lo. Para transformá-lo em um círculo, sempre usamos a porcentagem de 50%.
 
-*Border-radius* pode ser utilizado não só para fazer círculos, mas para arredondar qualquer forma, como um retângulo arredondado que faremos ao estilizar a div de nariz.
+`Border-radius` pode ser utilizado não só para fazer círculos, mas para arredondar qualquer forma, como um retângulo arredondado que faremos ao estilizar a `div` de nariz.
 
 Agora, antes de prosseguirmos, você pode estar pensando onde no mundo que eu consigo essas porcentagens para o topo, esquerda, largura e altura. Vamos pensar sobre isso.
 
@@ -287,7 +289,7 @@ Definimos a caixa com a largura de 600px, então uma largura de 50% resulta em 3
 
 Agora é a parte onde você talvez espere que eu te dê uma fórmula muito precisa para determinar como eu encontrei a altura, mas para ser honesto, eu normalmente chuto um valor com a boa e velha técnica de testar e errar.
 
-Quanto mais você faz images em puro CSS, você melhor estima valores. Mas tudo que você realmente precisa pensar é saber a altura e largura da div pai e quando tamanho a atual div filha precisa ter em relação a div pai.
+Quanto mais você faz imagens em puro CSS, você melhor estima valores. Mas tudo que você realmente precisa pensar é saber a altura e largura da `div` pai e quando tamanho a atual `div` filha precisa ter em relação a `div` pai.
 
 Agora, para as porcentagens de posições quando você quer **centralizar de forma absoluta** é mais fácil calcular. Aqui está a fórmula:
 
@@ -300,15 +302,16 @@ top = (100 - height) / 2
 (100-50)/2 = left: 25%;
 ```
 
-Agora isso funciona para nossa div de cabeça pois queremos ela absolutamente no centro. Contudo, não queremos centralizar absolutamente as orelhas, por exemplo. Vamos falar sobre isso logo, o que também vai explicar quando utilizar os atributos inferior e direita em vez de topo e esquerda.
+Agora isso funciona para nossa `div` de cabeça pois queremos ela absolutamente no centro. Contudo, não queremos centralizar absolutamente as orelhas, por exemplo. Vamos falar sobre isso logo, o que também vai explicar quando utilizar os atributos inferior e direita em vez de topo e esquerda.
 
-Uma última coisa para mencionar nessa seção é que toda div a seguir será aninhada embaixo da div cabeça pois cada forma que será adicionada ficará no topo da cabeça.
+Uma última coisa para mencionar nessa seção é que toda `div` a seguir será aninhada embaixo da `div` cabeça pois cada forma que será adicionada ficará no topo da cabeça.
 
 Aqui é o que devemos ter neste ponto: 
 
 ![](https://cdn-images-1.medium.com/max/800/1*-W0GNk73U_FGj-ebnPJ3xg.png)
 
 **Pausa no aprendizado**
+
 Eu sei que isso é bastante conteúdo de uma vez só, mas vamos continuar e ver como as coisas vão se encaixando. Se você precisar de uma pausa, sinta-se a vontade para adicionar aos favoritos esse post ou utilizar Pocket para salvar para depois.
 
 **Cópia da cabeça/head**
@@ -324,7 +327,7 @@ Eu sei que isso é bastante conteúdo de uma vez só, mas vamos continuar e ver 
 }
 ```
 
-A div de cópia da cabeça (head-copy) é somente para o propósito de permitir que as orelhas apareçam atrás da cabeça. Isso é controlado utilizando o z-index.
+A `div` de cópia da cabeça (`head-copy`) é somente para o propósito de permitir que as orelhas apareçam atrás da cabeça. Isso é controlado utilizando o `z-index`.
 
 A última linha de nosso estilo é o seguinte:
 
@@ -332,22 +335,23 @@ A última linha de nosso estilo é o seguinte:
 z-index: 2;
 ```
 
-Z-index é utilizado para indicar a profundidade de uma div. Se você costuma ilustrar isso fará muito mais sentido se você pensar na forma de camadas funcionam.
+`Z-index` é utilizado para indicar a profundidade de uma `div`. Se você costuma ilustrar isso fará muito mais sentido se você pensar na forma de camadas funcionam.
 
-Nossa imagem final terá os olhos na frente da div da cabeça, o nariz na frente dos olhos, etc. Isso será controlado pelo z-index. Quanto maior for o z-index, mais próxima do topo está a div.
+Nossa imagem final terá os olhos na frente da `div` da cabeça, o nariz na frente dos olhos, etc. Isso será controlado pelo `z-index`. Quanto maior for o `z-index`, mais próxima do topo está a `div`.
 
-Então, no caso de duas divs, *z-index: 1* seria como sua camada inferior e *z-index: 2* seria sua camada superior.
+Então, no caso de duas divs, `z-index: 1;` seria como sua camada inferior e `z-index: 2;` seria sua camada superior.
 
-Como nossa camada inferior será as orelhas, vamos estabelecer o *z-index: 1*. Se tivéssemos omitido a div cópia da cabeça, e dado a div da cabeça (head) o valor de *z-index: 2* as orelhas não estariam atrás da cabeça. Contudo, quando adicionamos a cópia da cabeça e definimos o valor *z-index: 2*, as orelhas ficarão atrás da cabeça.
+Como nossa camada inferior será as orelhas, vamos estabelecer o `z-index: 1;`. Se tivéssemos omitido a `div` cópia da cabeça, e dado a `div` da cabeça (head) o valor de `z-index: 2;` as orelhas não estariam atrás da cabeça. Contudo, quando adicionamos a cópia da cabeça e definimos o valor `z-index: 2`, as orelhas ficarão atrás da cabeça.
 
-Eu não trabalharia muito se isso for confuso, mas se você quiser pode remover a div cópia da cabeça quando adicionarmos as orelhas para ver por conta própria.
+Eu não trabalharia muito se isso for confuso, mas se você quiser pode remover a `div` cópia da cabeça quando adicionarmos as orelhas para ver por conta própria.
 
 Nesse caso não deveriámos ver nenhuma mudança, e ainda teriámos a seguinte imagem:
 
 ![](https://cdn-images-1.medium.com/max/800/1*-W0GNk73U_FGj-ebnPJ3xg.png)
 
 **Orelhas**
-Conforme discutido no início, quando dividimos nossas formas, uma orelha para cada lado que consistirá em círculos no topo. Dois maiores, círculos cinza claros (ear-left e ear-right) e dois menores, círculos cinza escuros no topo de cada orelha, respectivamente (inner-ear).
+
+Conforme discutido no início, quando dividimos nossas formas, uma orelha para cada lado que consistirá em círculos no topo. Dois maiores, círculos cinza claros (`ear-left` e `ear-right`) e dois menores, círculos cinza escuros no topo de cada orelha, respectivamente (`inner-ear`).
 
 
 ```css
@@ -383,15 +387,15 @@ Conforme discutido no início, quando dividimos nossas formas, uma orelha para c
 }
 ```
 
-Para cada classe CSS, usamos *border-radius: 50%* pois são todos círculos, e depois adicionamos uma cor utilizando *background*.
+Para cada classe CSS, usamos `border-radius: 50%` pois são todos círculos, e depois adicionamos uma cor utilizando `background`.
 
 Como você pode ver, há estilização para duas orelhas separadas, mas somente uma para orelha interna. Isso fará sentido enquanto explicamos o posicionamento.
 
-A div pai de ear-left e ear-right é a div cabeça/head. Portanto, deve ser posicionada com porcentagens relativas a cabeça, assim como sua altura e largura.
+A `div` pai de `ear-left` e `ear-right` é a `div` cabeça/head. Portanto, deve ser posicionada com porcentagens relativas a cabeça, assim como sua altura e largura.
 
-A altura e largura podem ser estimadas pois queremos orelhas grandes, mas ainda assim menores do que a cabeça. Isso nos dá a largura de *width: 60%;* e a altura de *height: 65%*;.
+A altura e largura podem ser estimadas pois queremos orelhas grandes, mas ainda assim menores do que a cabeça. Isso nos dá a largura de `width: 60%;` e a altura de `height: 65%;`.
 
-A orelha interna está aninhada abaixo da orelha esquerda (ear-left) e da orelha direita (ear-right). Nós sabemos que queremos que elas sejam levemente menores, por isso, definimos uma altura e largura de 80%. Também sabemos que queremos a orelha interna (inner-ear) centralizada perfeitamente **relacionada as orelhas**, então podemos usar a fórmula mais uma vez.
+A orelha interna está aninhada abaixo da orelha esquerda (`ear-left`) e da orelha direita (`ear-right`). Nós sabemos que queremos que elas sejam levemente menores, por isso, definimos uma altura e largura de 80%. Também sabemos que queremos a orelha interna (`inner-ear`) centralizada perfeitamente **relacionada as orelhas**, então podemos usar a fórmula mais uma vez.
 
 ```css
 left = (100 - width) / 2
@@ -402,11 +406,11 @@ top = (100 - height) / 2
 (100-80)/2 = left: 10%;
 ```
 
-Como nosso topo e esquerda são relativos as orelhas, podemos usar o mesmo estilo tanto para orelha esquerda (ear-left) quando para a direita (ear-right). Essa é a razão para existir somente uma div da orelha interna (inner-ear). Nós temos que usar duas divs separadas para as orelhas pois elas terão valores diferentes em suas posições de esquerda e direita pois são posicionadas **relativas a cabeça**.
+Como nosso topo e esquerda são relativos as orelhas, podemos usar o mesmo estilo tanto para orelha esquerda (`ear-left`) quando para a direita (`ear-right`). Essa é a razão para existir somente uma div da orelha interna (`inner-ear`). Nós temos que usar duas divs separadas para as orelhas pois elas terão valores diferentes em suas posições de esquerda e direita pois são posicionadas **relativas a cabeça**.
 
-Queremos que as duas orelhas se destaquem saindo dos lados esquerdo e direito da cabeça, de acordo com seus nomes. Portanto, usamos porcentagens negativas, *left: -20%* e *right: -20%*. O que significa que cada orelha irá se mover 20% da largura da cabeça na direção especificada.
+Queremos que as duas orelhas se destaquem saindo dos lados esquerdo e direito da cabeça, de acordo com seus nomes. Portanto, usamos porcentagens negativas, `left: -20%` e `right: -20%`. O que significa que cada orelha irá se mover 20% da largura da cabeça na direção especificada.
 
-Isso é provavelmente óbvio, mas eu nunca gosto de assumir isso. Toda vez que existirem divs de esquerda e direita como estas, você pode posicionar um lado, como *left: -20%;*. Depois copiar e colocar o estilo para aquela div, renomear a classe para o outro lado, e então mudar somente o atributo left para right ou vice-versa.
+Isso é provavelmente óbvio, mas eu nunca gosto de assumir isso. Toda vez que existirem divs de esquerda e direita como estas, você pode posicionar um lado, como `left: -20%;`. Depois copiar e colocar o estilo para aquela `div`, renomear a classe para o outro lado, e então mudar somente o atributo `left` para `right` ou vice-versa.
 
 Aqui estão as posições e tamanhos para as orelhas, agora que tudo já foi explicado e feito:
 
@@ -424,7 +428,7 @@ Aqui estão as posições e tamanhos para as orelhas, agora que tudo já foi exp
   top: 5%;
 ```
 
-Por último, adicionamos *z-index: 1;*, para as orelhas ficarem atrás da cabeça. Devemos ter agora:
+Por último, adicionamos `z-index: 1;`, para as orelhas ficarem atrás da cabeça. Devemos ter agora:
 
 ![](https://cdn-images-1.medium.com/max/800/1*UsQlYpazeGUm8ursUQ2Ciw.png)
 
@@ -464,9 +468,9 @@ Por último, adicionamos *z-index: 1;*, para as orelhas ficarem atrás da cabeç
 }
 ```
 
-Agora podemos ver que os olhos são similares as orelhas. Temos dois grandes círculos brancos (eye-left e eye-right) e uma pupila (pupil).
+Agora podemos ver que os olhos são similares as orelhas. Temos dois grandes círculos brancos (`eye-left` e `eye-right`) e uma pupila (`pupil`).
 
-Para todos eles usamos *border-radius: 50%;*, pois são círculos e usamos background para definir as cores apropriadas.
+Para todos eles usamos `border-radius: 50%;`, pois são círculos e usamos background para definir as cores apropriadas.
 
 Temos somente uma pupila pois está aninhada abaixo de cada olho. Nós estimamos/chutamos a altura e largura da pupila e depois centralizamos perfeitamente, o que fica definido como:
 
@@ -477,7 +481,7 @@ top: 35%;
 left: 36%;
 ```
 
-Para o olho esquerdo (eye-left) você pode tanto usar tentativa e erro para as posições do topo e esquerda, como também pode usar a fórmula para centralizar perfeitamente e ajustar os valores dependendo das distâncias a partir do centro. Enquanto isso, a largura e altura foram estimadas até encontrar um valor correto.
+Para o olho esquerdo (`eye-left`) você pode tanto usar tentativa e erro para as posições do topo e esquerda, como também pode usar a fórmula para centralizar perfeitamente e ajustar os valores dependendo das distâncias a partir do centro. Enquanto isso, a largura e altura foram estimadas até encontrar um valor correto.
 
 ```css
 //olho esquerdo  
@@ -492,7 +496,7 @@ height: 33%;
 top: 25%;
 right: 21%;
 ```
-Para o z-index, os seguintes valores permitem que o nariz esteja no topo dos olhos:
+Para o `z-index`, os seguintes valores permitem que o nariz esteja no topo dos olhos:
 
 ```css
 //olho esquerdo 
@@ -530,9 +534,9 @@ left: 37%;
 top: 45%;
 ```
 
-Novamente estilizamos a cor marrom usando o atributo *background* e especificamos a profundidade usando *z-index: 4;*, dessa forma o nariz fica na frente dos olhos.
+Novamente estilizamos a cor marrom usando o atributo `background` e especificamos a profundidade usando `z-index: 4;`, dessa forma o nariz fica na frente dos olhos.
 
-Também utilizamos *border-radius: 50px;*, o que irá arredondar as bordas do retângulo conforme necessário. Quando queremos arredondar levemente é mais fácil arredondar usando um número em px do que uma porcentagem.
+Também utilizamos `border-radius: 50px;`, o que irá arredondar as bordas do retângulo conforme necessário. Quando queremos arredondar levemente é mais fácil arredondar usando um número em px do que uma porcentagem.
 
 Agora devemos ver a seguinte imagem:
 
@@ -540,7 +544,8 @@ Agora devemos ver a seguinte imagem:
 
 
 **Cabelo**
-Quase pronto! O último passo é adicionar estilo aos dois pedaços de cabelo, hair-left e hair-right, o que nos fornecerá uma imagem completa do Koala.
+
+Quase pronto! O último passo é adicionar estilo aos dois pedaços de cabelo, `hair-left` e `hair-right`, o que nos fornecerá uma imagem completa do Coala.
 
 ```css
 .hair-left {
@@ -566,18 +571,18 @@ Quase pronto! O último passo é adicionar estilo aos dois pedaços de cabelo, h
 }
 ```
 
-Como você pode ver, não há *border-radius*, mas temoso que adicionar essa linha de *clip-path*:
+Como você pode ver, não há `border-radius`, mas temos que adicionar essa linha de `clip-path`:
 
 ```css
 -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 ```
 
-Para qualquer forma que não é um quadrado, retângulo e círculo, é mais fácil usar um clip-path.
+Para qualquer forma que não é um quadrado, retângulo e círculo, é mais fácil usar um `clip-path`.
 
 **Nota:** Esse método é suportado pelo Safari, Chrome e Opera, mas não pelo Firefox. Enquanto isso pode ser desanimador será o método mais fácil para aprender como criar formas usando somente CSS.
 
-Agora, isso pode parecer confuso, mas felizmente, tem uma ótima ferramente que vai automaticamente nos fornecer o *clip-path* para formas diferentes.
+Agora, isso pode parecer confuso, mas felizmente, tem uma ótima ferramente que vai automaticamente nos fornecer o `clip-path` para formas diferentes.
 
 Abra essa ferramenta chamada [Clippy](http://bennettfeely.com/clippy/) em uma nova aba.
 
@@ -585,13 +590,13 @@ Você vai ver do lado direito que é possível selecionar várias formas diferen
 
 ![](https://cdn-images-1.medium.com/max/800/1*vG4Omfuea52pj0nrI3Zlzg.png)
 
-Na imagem acima, a forma de triângulo é selecionada e você pode copiar e colar o *clip-path* na parte inferior e colar na classe CSS referente ao cabelo.
+Na imagem acima, a forma de triângulo é selecionada e você pode copiar e colar o `clip-path` na parte inferior e colar na classe CSS referente ao cabelo.
 
-Mais uma vez vamos colocar a cor usando *background* e estimar a altura e largura com 20% para cada. Definimos que a parte esquerda do cabelo (hair-left) terá um valor para esquerda de 30%, e a parte direita um valor de 48% para a esquerda. Isso nos traz um bom exemplo pra discutir se usamos o atributo left ou o right. Vamos dizer que queremos a div hair-right 5% a mais para a direita, poderiámos adicionar 5% aos 48% e ficar com *left: 53%*. Contudo, uma boa regra é toda vez que passar de 50% é melhor trocar para o atributo *right*. Então, *left: 53%* seria o equivalente a *right: 48%*. Para esse exemplo, vamos manter em *left: 48%* e continuar.
+Mais uma vez vamos colocar a cor usando `background` e estimar a altura e largura com 20% para cada. Definimos que a parte esquerda do cabelo (`hair-left`) terá um valor para esquerda de 30%, e a parte direita um valor de 48% para a esquerda. Isso nos traz um bom exemplo pra discutir se usamos o atributo `left` ou o `right`. Vamos dizer que queremos a `div` `hair-right` 5% a mais para a direita, poderiámos adicionar 5% aos 48% e ficar com `left: 53%`. Contudo, uma boa regra é toda vez que passar de 50% é melhor trocar para o atributo `right`. Então, `left: 53%` seria o equivalente a `right: 48%`. Para esse exemplo, vamos manter em `left: 48%` e continuar.
 
-As posições do topo serão negativas, pois queremos os dois pedaços de cabelo se destacando acima da cabeça. A div hair-left se destacará um pouco mais então definimos *top: -8%;* e a hair-right um pouco mais baixa, com *top: 4%;*
+As posições do topo serão negativas, pois queremos os dois pedaços de cabelo se destacando acima da cabeça. A `div` `hair-left` se destacará um pouco mais então definimos `top: -8%;` e a `hair-right` um pouco mais baixa, com `top: 4%;`
 
-Nosso Koala agora é uma imagem completa.
+Nosso Coala agora é uma imagem completa.
 
 ![](https://cdn-images-1.medium.com/max/800/1*zaYeChAMif3__eVsrIWciw.png)
 
@@ -730,16 +735,15 @@ body {
 ```
 
 **Continuando a prática**
+
 Espero que esse post te forneça um bom conceito de como imagens em puro CSS funcionam e tenha te inspirado a aprender mais. Adicionalmente, você deve ter um bom template para mexer e adquirir mais prática.
 
 Aqui estão algumas fontes 100% gratuitas que criei para uma prática estruturada:
 
-1. ***Pure CSS Images Video Course:*** In this video course, I go over everything you need to know about pure CSS images.
+1. ***[Pure CSS Images Video Course](https://coding-artist.teachable.com/p/how-to-make-pure-css-images):*** In this video course, I go over everything you need to know about pure CSS images.
 
-2. ***Daily CSS Images Challenge:*** 50-day email challenge where you will receive a prompt to make a CSS image every weekday. Each week will have a fun theme, making this an engaging challenge.
+2. ***[Daily CSS Images Challenge](http://challenges.codingartist.io/daily-css-images/):*** 50-day email challenge where you will receive a prompt to make a CSS image every weekday. Each week will have a fun theme, making this an engaging challenge.
 
 Até mais,
+
 Mike Mangialardi
-
-
-
