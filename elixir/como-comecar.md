@@ -167,7 +167,107 @@ iex> [0|list]
 
 ## Modelando portais com agentes
 
+As estruturas de data do Elixir são imutáveis. Nos exemplos acima, nós nunca mudamos a lista. Nós podemos quebrar uma lista à parte ou adicionar novos elementos na cabeça, mas a lista original nunca é modificada.
 
+Dito isso, quando nós precisamos guardar algum tipo de estado, como os dados transferidos pelo portal, nós precisamos usar uma abstração que irá armazenar esse estado para nós. Uma dessas abstrações em Elixir é chamada de agente. Antes de usarmos agentes, nós precisamos conversar um pouco sobre funções anônimas:
+
+```
+iex> adder = fn a, b -> a + b end
+#Function<12.90072148/2 in :erl_eval.expr/5>
+iex> adder.(1, 2)
+3
+```
+Uma função anônima é delimitada pelas palavras `fn` e `end` e uma seta `->` é usada para separar os argumentos do corpo da função anônima. Nós usamos funções anônimas para inicializar, pegar e armazenar o estado do agente:
+
+```
+iex> {:ok, agent} = Agent.start_link(fn -> [] end)
+{:ok, #PID<0.61.0>}
+iex> Agent.get(agent, fn list -> list end)
+[]
+iex> Agent.update(agent, fn list -> [0|list] end)
+:ok
+iex> Agent.get(agent, fn list -> list end)
+[0]
+```
+Nota: vocẽ provavelmente terá valores `#PID<...>` diferentes dos que mostramos durante o tutorial. Não se preocupe, isso é esperado!
+
+No exemplo acima, nós criamos um novo agente, passando uma função que retorna o estado inicial de uma lista vazia. O agente returnou `{:ok, #PID<0.61.0>}`.
+
+Chaves em Elixir especifica uma tupla; a tupla abaixo contém o atom `:ok` e um identificador de processo (PID). Nós usamos atoms no Elxir como se fossem tags. No exemplo acima, nós estamos marcando o agente como iniciado com sucesso.
+
+O `#PID<...>` é um identificador de processo para o agente. Quando dizemos processos no Elixir, não queremos dizer processos do Sistema Operacional, mas sim Processos Elixir, que são leves e isolados, permitindo que rodemos centenas de milhares deles na mesma máquina.
+
+Nós usaremos agentes para implementar nossos portais. Crie um novo arquivo chamado `lib/portal/door.ex` com o seguinte conteúdo:
+
+```
+defmodule Portal.Door do
+  @doc """
+  Starts a door with the given `color`.
+
+  The color is given as a name so we can identify
+  the door by color name instead of using a PID.
+  """
+  def start_link(color) do
+    Agent.start_link(fn -> [] end, name: color)
+  end
+
+  @doc """
+  Get the data currently in the `door`.
+  """
+  def get(door) do
+    Agent.get(door, fn list -> list end)
+  end
+
+  @doc """
+  Pushes `value` into the door.
+  """
+  def push(door, value) do
+    Agent.update(door, fn list -> [value|list] end)
+  end
+
+  @doc """
+  Pops a value from the `door`.
+
+  Returns `{:ok, value}` if there is a value
+  or `:error` if the hole is currently empty.
+  """
+  def pop(door) do
+    Agent.get_and_update(door, fn
+      []    -> {:error, []}
+      [h|t] -> {{:ok, h}, t}
+    end)
+  end
+end
+```
+
+Em Elixir nós definimos códigos dentro de módulos, que são basicamente um grupo de funções. Nós temos definidas quatro funções acima, todas devidamente documentadas.
+
+Vamos dar uma chance a nossa implementação. Inicie um novo shell com `iex -S mix`.Quando o shell iniciar, nosso novo arquivo será automaticamente compilado, então podemos usá-lo diretamente:
+
+```
+iex> Portal.Door.start_link(:pink)
+{:ok, #PID<0.68.0>}
+iex> Portal.Door.get(:pink)
+[]
+iex> Portal.Door.push(:pink, 1)
+:ok
+iex> Portal.Door.get(:pink)
+[1]
+iex> Portal.Door.pop(:pink)
+{:ok, 1}
+iex> Portal.Door.get(:pink)
+[]
+iex> Portal.Door.pop(:pink)
+:error
+```
+
+Excelente!
+
+Um dos aspectos interessantes do Elixir é que essa documentação é tratada como um cidadão de primeira-classe. Uma vez que tenhamos documentado nosso código `Portal.Door`, agora podemos acessar facilmente sua documentação pelo terminal. Tente digitar:
+
+```
+iex> h Portal.Door.start_link
+```
 
 # Transferência de Portais
 
