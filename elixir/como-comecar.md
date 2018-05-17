@@ -82,7 +82,36 @@ Ele parece uma belezinha, né?
 
 ## Nosso primeiro projeto
 
+Elixir possui uma ferramenta chamada Mix. Mix é o que os desenvolvedores Elixir usam para criar, compilar e testar novos projetos. Vamos criar um projeto chamado ```portal``` com ```mix```. Ao criar o projeto, nós também passaremos a opção ```--sup``` que vai criar uma árvore de supervisão. Nós vamos explorar o que a árvore de supervisão faz em sessões futuras. Por ora, apenas escreva:
 
+```
+$ mix new portal --sup
+```
+
+O comando acima criou um novo diretório chamado ```portal``` com alguns arquivos dentro dele. Mude o seu diretório de trabalho para o ```portal``` e rode ```mix test``` para rodar os testes do projeto:
+
+```
+$ cd portal
+$ mix test
+```
+
+Excelente, nós já temos um projeto rodando com um ambiente de testes configurado.
+
+Vamos explorar o projeto gerado usando um editor de texto. Eu pessoalmente não presto muita atenção em editores de texto, normalmente uso o [Sublime Text 3](http://www.sublimetext.com/3) mas você pode achar [suporte Elixir para diferentes editores de texto no site](http://elixir-lang.org/) na sessão "Code Editor Support".
+
+Com o seu editor de aberto, explore os seguintes diretórios:
+
+`_build` - onde Mix guarda os artefatos de compilação
+`config` - onde configuramos nosso projeto e suas dependências
+`lib` - onde colocamos nosso código
+`mix.exs` - onde definimos nome, versão e dependências do nosso projeto
+`test` - onde definimos nossos testes
+
+Agora nós podemos começar uma sessão ```iex``` dentro do nosso projeto também. Apenas rode:
+
+```
+$ iex -S mix
+```
 
 # Pattern matching
 
