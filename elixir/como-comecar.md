@@ -404,9 +404,139 @@ iex> portal = Portal.transfer(:orange, :blue, [1, 2, 3])
 >
 ```
 
-## Shooting supervised doors
+## Atirando em acessos supervisionados
 
-Caique
+Nós ouvimos com frequência que Erlang VM, a máquina virtual que roda o Elixir, juntamente com o ecossistema Erlang é boa para fazer aplicações tolerantes a falhas. Uma das razões para isso são as chamadas árvores de supervisão.
+
+Nosso código até então não foi supervisionado. Vamos ver o que acontece quando nós desligamos explicitamente um dos agentes da porta:
+
+```
+# Inicia os acessos e transferência
+iex> Portal.Door.start_link(:orange)
+{:ok, #PID<0.59.0>}
+iex> Portal.Door.start_link(:blue)
+{:ok, #PID<0.61.0>}
+iex> portal = Portal.transfer(:orange, :blue, [1, 2, 3])
+
+# Primeiro desconecta a porta do shell para evitar que o shell quebre
+iex> Process.unlink(Process.whereis(:blue))
+true
+# Envia um sinal de desligamento para o agente blue
+iex> Process.exit(Process.whereis(:blue), :shutdown)
+true
+
+# Tenta mover os dados
+iex> Portal.push_right(portal)
+** (exit) exited in: :gen_server.call(:blue, ..., 5000)
+    ** (EXIT) no process
+    (stdlib) gen_server.erl:190: :gen_server.call/3
+    (portal) lib/portal.ex:25: Portal.push_right/1
+```
+
+Nós recebemos uma mensagem de erro porque a porta `:blue` não existe. Você pode ver a mensagem `** (EXIT) no process` depois da nossa chamada da função. Para concertar a situação, nós vamos configurar um supervisor que será responsável por reiniciar um acesso do portal sempre que ele quebrar.
+
+Lembra de quando nós passamos a flag `--sup` ao criarmos o nosso projeto `portal`? Nós passamos aquela flag porque os supervisores normalmente rodam dentro de árvores de supervisão e árvores de supervisão normalmente são iniciadas como parte da aplicação. Tudo que a flag `--sup` faz é criar uma estrutura supervisionada por padrão que nós podemos ver no nosso módulo `Portal.Application` em `lib/portal/application.ex`:
+
+```
+defmodule Portal.Application do
+  # See http://elixir-lang.org/docs/stable/elixir/Application.html
+  # for more information on OTP Applications
+  @moduledoc false
+
+  use Application
+
+  def start(_type, _args) do
+    import Supervisor.Spec, warn: false
+
+    children = [
+      # Define workers and child supervisors to be supervised
+      # worker(Portal.Worker, [arg1, arg2, arg3])
+    ]
+
+    # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
+    # for other strategies and supported options
+    opts = [strategy: :one_for_one, name: Portal.Supervisor]
+    Supervisor.start_link(children, opts)
+  end
+end
+```
+
+O código acima torna o módulo `Portal` uma aplicação de callback. A aplicação de callback deve prover uma função chamada `start/2`, que nós podemos ver acima, e essa função precisa iniciar um supervisor representando a raíz da nossa árvore de supervisão. Normalmente nosso supervisor não tem filhos e isso é exatamente o que mudaremos agora.
+
+Substitua a função `start/20` acima por:
+
+```
+def start(_type, _args) do
+  import Supervisor.Spec, warn: false
+
+  children = [
+    worker(Portal.Door, [])
+  ]
+
+  opts = [strategy: :simple_one_for_one, name: Portal.Supervisor]
+  Supervisor.start_link(children, opts)
+end
+```
+
+Nós fizemos duas coisas:
+
+  - Adicionamos uma especificação de filho no supervisor, do tipo `worker`, e o filho é representado pelo módulo `Portal.Door`. Nós não passamos argumentos para o worker, apenas uma lista vazia `[]`, como a cor será especificada depois.
+  - Mudamos a estratégia de `one_for_one` para `:simple_one_for_one`. Supervisores fornecem estratégias diferentes e `:simple_one_for_one` é útil quando queremos criar os filhos dinamicamente, muitas vezes com argumentos diferentes. Isso é exatamente  caso dos nossos acessos do portal, onde queremos gerar múltiplos acessos com cores diferentes.
+
+O último passo é adicionar uma função nomeada `shoot/1` para o módulo `Portal` que irá receber uma cor e gerar um novo acesso como parte da nossa árvore de supervisão:
+
+```
+@doc """
+Shoots a new door with the given `color`.
+"""
+def shoot(color) do
+  Supervisor.start_child(Portal.Supervisor, [color])
+end
+```
+
+A função acima alcança o supervisor chamado `Portal.Supervisor` e pergunta por um novo filho pra ser iniciado. `Portal.Supervisor` é o nome do supervisor que nós definimos em `start/2` e o filho será um `Portal.Acesso` que foi especificado como um worker desse supervisor.
+
+Internamente, para iniciar um filho, o supervisor invocará `Portal.Acesso.start_link(color)`, onde cor é o valor passado na chamada `start_child/2` acima. Se nós tivéssemos chamado `Supervisor.start_child(Portal.Supervisor, [foo, bar, baz])`, o supervisor teria tentado iniciar um filho com `Portal.Door.start_link(foo, bar, baz)`.
+
+Vamos dar uma chance para a nossa função de atirar. Inicie uma nova sessão novo `iex -S mix` e:
+
+```
+iex> Portal.shoot(:orange)
+{:ok, #PID<0.72.0>}
+iex> Portal.shoot(:blue)
+{:ok, #PID<0.74.0>}
+iex> portal = Portal.transfer(:orange, :blue, [1, 2, 3, 4])
+#Portal<
+       :orange <=> :blue
+  [1, 2, 3, 4] <=> []
+>
+
+iex> Portal.push_right(portal)
+#Portal<
+    :orange <=> :blue
+  [1, 2, 3] <=> [4]
+>
+```
+
+E o que acontece se interrompermos o processo `:blue` agora?
+
+```
+iex> Process.unlink(Process.whereis(:blue))
+true
+iex> Process.exit(Process.whereis(:blue), :shutdown)
+true
+iex> Portal.push_right(portal)
+#Portal<
+  :orange <=> :blue
+   [1, 2] <=> [3]
+>
+```
+
+Note que dessa vez a seguinte operação `push_right/1` funcionou porque o supervisor automaticamente iniciou outro portal `:blue`. Infelizmente os dados que estavam no portal azul antes do crash foram perdidos mas nosso sistema se recuperou do crash.
+
+Na prática existem diferentes estratégias de supervisão para escolher assim como mecanismos para persistir os dados no caso de algo dar errado, permitindo que você escolha a melhor opção para suas explicações.
+
+Sensacional!
 
 ## Transferências distribuidas
 
