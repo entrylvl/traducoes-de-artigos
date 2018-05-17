@@ -612,6 +612,20 @@ iex(room1@COMPUTER-NAME)> Portal.Door.get(blue)
 
 Nossa transferência de portal distribuído funciona porque as portas são apenas processos e acessar/enviar os dados através das portas é feita enviando mensagens para esses processos através da API do Agente. Dizemos que enviar uma mensagem no Elixir é de localização transparente: podemos enviar mensagens para qualquer PID, independentemente se estiver no mesmo nó que o remetente ou em nós diferentes da mesma rede.
 
-## Wrapping up
+## Finalizando
 
-Caique
+Então nós chegamos ao final desse guia de como iniciar com Elixir! Foi um passeio divertido e nós fomos rapidamente de iniciar processos para atirar em acessos tolerantes a falhas manualmente para transferências de portal dstribuídas!
+
+Nós desafiamos você a continuar aprendendo e explorando mais sobre Elixir ao levar sua aplicação Portal para o próximo nível:
+  - Adiciona uma funcão `Portal.push_left/1` que transfira os dados na outra direção. Como você pode evitar o código duplicado existente entre as funções `push_left/1` e `push_right/1`?
+  - Aprenda mais sobre [ExUnit](http://elixir-lang.org/docs/stable/ex_unit/ExUnit.html), o framework de test do Elixir, e escreva testes para a funcionalidade que acabamos de construir. Lembre que já fizemos uma estrutura padrão estabelecida no diretório `test`.
+  - Gere a documentação HTML para o seu projeto com [ExDoc](http://github.com/elixir-lang/ex_doc)
+  - Suba o seu projeto em um repositório externo, como [Github](https://github.com/), e publique um pacote usando o [Hex package manager](https://hex.pm/).
+
+Nós convidamos você para explorar nosso [site](http://elixir-lang.org/) e ler nosso guia Getting Started ou muitos dos recursos disponíveis para aprender mas sobre Elixir e nossa comunidade vibrante.
+
+Finalmente, um enorme agradecimento ao [Augie De Blieck Jr.](http://twitter.com/augiedb) pelos desenhos nesse tutorial.
+
+Nos vemos por aí!
+
+José Valim
