@@ -21,13 +21,68 @@ Aqui está o que aprenderemos:
 
 Vamos começar!
 
-## Instalation
+## Instalação
 
-Caique
+O site do Elixir explica como instalar o Elixir. Apenas siga os [passos descritos na página de instalação do Elixir](http://elixir-lang.org/install.html).
 
-## Our first project
+Desenvolvedores Elixir passam muito tempo nos terminais do seu Sistema Operacional; uma vez que a instalação esteja completa, você terá novos executáveis disponíveis. Um deles é ```iex```. Apenas digite ```iex``` no seu terminal (ou ```iex.bat``` se você estiver no Windows) para fazer ele funcionar:
 
-Caique
+```
+$ iex
+Interactive Elixir - press Ctrl+C to exit (type h() ENTER for help)
+```
+
+``iex`` significa Elixir Interativo. No ```iex``` você pode digitar qualquer expressão e você terá o resultado de volta:
+
+```
+iex> 40 + 2
+42
+iex> "hello" <> " world"
+"hello world"
+iex> # This is a code comment
+nil
+```
+
+Além dos números e strings acima, nós também usamos frequentemente os seguintes tipos de dados:
+
+```
+iex> :atom           # An identifier (known as Symbols in other languages)
+:atom
+iex> [1, 2, "three"] # Lists (typically hold a dynamic amount of items)
+[1, 2, "three"]
+iex> {:ok, "value"}  # Tuples (typically hold a fixed amount of items)
+{:ok, "value"}
+```
+
+Uma vez que a nossa aplicação de portal esteja terminada, nós esperamos poder digitar o seguinte código dentro do ```iex```:
+
+```
+# Shoot two doors: one orange, another blue
+iex(1)> Portal.shoot(:orange)
+{:ok, #PID<0.72.0>}
+iex(2)> Portal.shoot(:blue)
+{:ok, #PID<0.74.0>}
+
+# Start transferring the list [1, 2, 3, 4] from orange to blue
+iex(3)> portal = Portal.transfer(:orange, :blue, [1, 2, 3, 4])
+#Portal<
+       :orange <=> :blue
+  [1, 2, 3, 4] <=> []
+>
+
+# Now every time we call push_right, data goes to blue
+iex(4)> Portal.push_right(portal)
+#Portal<
+    :orange <=> :blue
+  [1, 2, 3] <=> [4]
+>
+```
+
+Ele parece uma belezinha, né?
+
+## Nosso primeiro projeto
+
+
 
 # Pattern matching
 
@@ -81,9 +136,9 @@ iex> [0|list]
 [0, 1, 2, 3]
 ```
 
-## Modeling portal doors with Agents
+## Modelando portais com agentes
 
-Caique
+
 
 # Transferência de Portais
 
