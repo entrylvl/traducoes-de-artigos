@@ -25,52 +25,52 @@ Vamos começar!
 
 O site do Elixir explica como instalar o Elixir. Apenas siga os [passos descritos na página de instalação do Elixir](http://elixir-lang.org/install.html).
 
-Desenvolvedores Elixir passam muito tempo nos terminais do seu Sistema Operacional; uma vez que a instalação esteja completa, você terá novos executáveis disponíveis. Um deles é ```iex```. Apenas digite ```iex``` no seu terminal (ou ```iex.bat``` se você estiver no Windows) para fazer ele funcionar:
+Desenvolvedores Elixir passam muito tempo nos terminais do seu Sistema Operacional; uma vez que a instalação esteja completa, você terá novos executáveis disponíveis. Um deles é `iex`. Apenas digite `iex` no seu terminal (ou `iex.bat` se você estiver no Windows) para fazer ele funcionar:
 
-```
+```elixir
 $ iex
 Interactive Elixir - press Ctrl+C to exit (type h() ENTER for help)
 ```
 
-``iex`` significa Elixir Interativo. No ```iex``` você pode digitar qualquer expressão e você terá o resultado de volta:
+`iex` significa Elixir Interativo. No `iex` você pode digitar qualquer expressão e você terá o resultado de volta:
 
-```
+```elixir
 iex> 40 + 2
 42
 iex> "hello" <> " world"
 "hello world"
-iex> # This is a code comment
+iex> # Este é um código de comentário
 nil
 ```
 
 Além dos números e strings acima, nós também usamos frequentemente os seguintes tipos de dados:
 
-```
-iex> :atom           # An identifier (known as Symbols in other languages)
+```elixir
+iex> :atom # Um identificador (conhecido como símbolos em outras linguagens)
 :atom
-iex> [1, 2, "three"] # Lists (typically hold a dynamic amount of items)
+iex> [1, 2, "three"] # Listas (normalmente armazenam uma quantidade dinâmica de itens)
 [1, 2, "three"]
-iex> {:ok, "value"}  # Tuples (typically hold a fixed amount of items)
+iex> {:ok, "value"}  # Tuplas (normalmente armazenam uma quantidade fixa de itens)
 {:ok, "value"}
 ```
 
-Uma vez que a nossa aplicação de portal esteja terminada, nós esperamos poder digitar o seguinte código dentro do ```iex```:
+Uma vez que a nossa aplicação de portal esteja terminada, esperamos poder digitar o seguinte código dentro do `iex`:
 
-```
-# Shoot two doors: one orange, another blue
+```elixir
+# Atirar dois acessos: um laranja, outro azul
 iex(1)> Portal.shoot(:orange)
 {:ok, #PID<0.72.0>}
 iex(2)> Portal.shoot(:blue)
 {:ok, #PID<0.74.0>}
 
-# Start transferring the list [1, 2, 3, 4] from orange to blue
-iex(3)> portal = Portal.transfer(:orange, :blue, [1, 2, 3, 4])
+# Inicia transferência da lista [1, 2, 3, 4] do laranja para o azul
+iex(3)> portal = Portal.shoot(:orange, :blue, [1, 2, 3, 4])
 #Portal<
        :orange <=> :blue
   [1, 2, 3, 4] <=> []
 >
 
-# Now every time we call push_right, data goes to blue
+# Agora sempre que chamarmos push_right, os dados vão para o azul
 iex(4)> Portal.push_right(portal)
 #Portal<
     :orange <=> :blue
@@ -82,40 +82,40 @@ Ele parece uma belezinha, né?
 
 ## Nosso primeiro projeto
 
-Elixir possui uma ferramenta chamada Mix. Mix é o que os desenvolvedores Elixir usam para criar, compilar e testar novos projetos. Vamos criar um projeto chamado ```portal``` com ```mix```. Ao criar o projeto, nós também passaremos a opção ```--sup``` que vai criar uma árvore de supervisão. Nós vamos explorar o que a árvore de supervisão faz em sessões futuras. Por ora, apenas escreva:
+Elixir possui uma ferramenta chamada Mix. Mix é o que os desenvolvedores Elixir usam para criar, compilar e testar novos projetos. Vamos criar um projeto chamado `portal` com `mix`. Ao criar o projeto, nós também passaremos a opção `--sup` que vai criar uma árvore de supervisão. Nós vamos explorar o que a árvore de supervisão faz em sessões futuras. Por ora, apenas escreva:
 
-```
+```elixir
 $ mix new portal --sup
 ```
 
-O comando acima criou um novo diretório chamado ```portal``` com alguns arquivos dentro dele. Mude o seu diretório de trabalho para o ```portal``` e rode ```mix test``` para rodar os testes do projeto:
+O comando acima criou um novo diretório chamado `portal` com alguns arquivos dentro dele. Mude o seu diretório de trabalho para o `portal` e rode `mix test` para rodar os testes do projeto:
 
-```
+```elixir
 $ cd portal
 $ mix test
 ```
 
 Excelente, nós já temos um projeto rodando com um ambiente de testes configurado.
 
-Vamos explorar o projeto gerado usando um editor de texto. Eu pessoalmente não presto muita atenção em editores de texto, normalmente uso o [Sublime Text 3](http://www.sublimetext.com/3) mas você pode achar [suporte Elixir para diferentes editores de texto no site](http://elixir-lang.org/) na sessão "Code Editor Support".
+Vamos explorar o projeto gerado usando um editor de texto. Eu pessoalmente não presto muita atenção em editores de texto, normalmente uso o [Sublime Text 3](http://www.sublimetext.com/3) mas você pode encontrar [diferentes editores de texto com suporte Elixir no site](http://elixir-lang.org/) na sessão "Code Editor Support".
 
 Com o seu editor de aberto, explore os seguintes diretórios:
 
-`_build` - onde Mix guarda os artefatos de compilação
-`config` - onde configuramos nosso projeto e suas dependências
-`lib` - onde colocamos nosso código
-`mix.exs` - onde definimos nome, versão e dependências do nosso projeto
-`test` - onde definimos nossos testes
+* `_build` - onde Mix guarda os artefatos de compilação
+* `config` - onde configuramos nosso projeto e suas dependências
+* `lib` - onde colocamos nosso código
+* `mix.exs` - onde definimos nome, versão e dependências do nosso projeto
+* `test` - onde definimos nossos testes
 
-Agora nós podemos começar uma sessão ```iex``` dentro do nosso projeto também. Apenas rode:
+Agora nós podemos começar uma sessão `iex` dentro do nosso projeto também. Apenas rode:
 
-```
+```elixir
 $ iex -S mix
 ```
 
 # Pattern matching
 
-Antes de implementarmos nosso aplicativo, precisamos falar sobre pattern matching. O operador = no Elixir é um pouco diferente do que vemos em outros idiomas:
+Antes de implementarmos nosso aplicativo, precisamos falar sobre pattern matching. O operador = no Elixir é um pouco diferente do que vemos em outras linguagens:
 
 ```
 iex> x = 1
@@ -167,11 +167,11 @@ iex> [0|list]
 
 ## Modelando portais com agentes
 
-As estruturas de data do Elixir são imutáveis. Nos exemplos acima, nós nunca mudamos a lista. Nós podemos quebrar uma lista à parte ou adicionar novos elementos na cabeça, mas a lista original nunca é modificada.
+As estruturas de dados do Elixir são imutáveis. Nos exemplos acima, nós nunca mudamos a lista. Nós podemos quebrar em uma lista à parte ou adicionar novos elementos na cabeça, mas a lista original nunca é modificada.
 
 Dito isso, quando nós precisamos guardar algum tipo de estado, como os dados transferidos pelo portal, nós precisamos usar uma abstração que irá armazenar esse estado para nós. Uma dessas abstrações em Elixir é chamada de agente. Antes de usarmos agentes, nós precisamos conversar um pouco sobre funções anônimas:
 
-```
+```elixir
 iex> adder = fn a, b -> a + b end
 #Function<12.90072148/2 in :erl_eval.expr/5>
 iex> adder.(1, 2)
@@ -179,7 +179,7 @@ iex> adder.(1, 2)
 ```
 Uma função anônima é delimitada pelas palavras `fn` e `end` e uma seta `->` é usada para separar os argumentos do corpo da função anônima. Nós usamos funções anônimas para inicializar, pegar e armazenar o estado do agente:
 
-```
+```elixir
 iex> {:ok, agent} = Agent.start_link(fn -> [] end)
 {:ok, #PID<0.61.0>}
 iex> Agent.get(agent, fn list -> list end)
@@ -189,47 +189,47 @@ iex> Agent.update(agent, fn list -> [0|list] end)
 iex> Agent.get(agent, fn list -> list end)
 [0]
 ```
-Nota: vocẽ provavelmente terá valores `#PID<...>` diferentes dos que mostramos durante o tutorial. Não se preocupe, isso é esperado!
+> Nota: você provavelmente terá valores `#PID<...>` diferentes dos que mostramos durante o tutorial. Não se preocupe, isso é esperado!
 
-No exemplo acima, nós criamos um novo agente, passando uma função que retorna o estado inicial de uma lista vazia. O agente returnou `{:ok, #PID<0.61.0>}`.
+No exemplo acima, nós criamos um novo agente, passando uma função que retorna o estado inicial de uma lista vazia. O agente retornou `{:ok, #PID<0.61.0>}`.
 
-Chaves em Elixir especifica uma tupla; a tupla abaixo contém o atom `:ok` e um identificador de processo (PID). Nós usamos atoms no Elxir como se fossem tags. No exemplo acima, nós estamos marcando o agente como iniciado com sucesso.
+Chaves em Elixir especificam uma tupla; a tupla abaixo contém o atom `:ok` e um identificador de processo (PID). Nós usamos atoms no Elixir como se fossem marcadores. No exemplo acima, nós estamos marcando o agente como iniciado com sucesso.
 
-O `#PID<...>` é um identificador de processo para o agente. Quando dizemos processos no Elixir, não queremos dizer processos do Sistema Operacional, mas sim Processos Elixir, que são leves e isolados, permitindo que rodemos centenas de milhares deles na mesma máquina.
+O `#PID<...>` é um identificador de processo para o agente. Quando dizemos processos no Elixir não queremos dizer processos do Sistema Operacional, mas sim Processos Elixir, que são leves e isolados, permitindo que rodemos centenas de milhares deles na mesma máquina.
 
 Nós usaremos agentes para implementar nossos portais. Crie um novo arquivo chamado `lib/portal/door.ex` com o seguinte conteúdo:
 
-```
-defmodule Portal.Door do
+```elixir
+defmodule Portal.Acesso do
   @doc """
-  Starts a door with the given `color`.
+  Inicia um acesso com a `cor` recebida.
 
-  The color is given as a name so we can identify
-  the door by color name instead of using a PID.
+  A cor é recebida como um nome, então podemos identificar
+  o acesso pelo nome da cor ao invés de usar um PID.
   """
   def start_link(color) do
     Agent.start_link(fn -> [] end, name: color)
   end
 
   @doc """
-  Get the data currently in the `door`.
+  Pega a data existente na `door`.
   """
   def get(door) do
     Agent.get(door, fn list -> list end)
   end
 
   @doc """
-  Pushes `value` into the door.
+  Insere `value` na door.
   """
   def push(door, value) do
     Agent.update(door, fn list -> [value|list] end)
   end
 
   @doc """
-  Pops a value from the `door`.
+  Remove um valor de `door`
 
-  Returns `{:ok, value}` if there is a value
-  or `:error` if the hole is currently empty.
+  Retorna `{:ok, value}` se existe um valor
+  ou `:error` se o buraco estiver vazio.
   """
   def pop(door) do
     Agent.get_and_update(door, fn
@@ -242,9 +242,9 @@ end
 
 Em Elixir nós definimos códigos dentro de módulos, que são basicamente um grupo de funções. Nós temos definidas quatro funções acima, todas devidamente documentadas.
 
-Vamos dar uma chance a nossa implementação. Inicie um novo shell com `iex -S mix`.Quando o shell iniciar, nosso novo arquivo será automaticamente compilado, então podemos usá-lo diretamente:
+Vamos testar nossa implementação. Inicie um novo shell com `iex -S mix`.Quando o shell iniciar, nosso novo arquivo será automaticamente compilado, então podemos usá-lo diretamente:
 
-```
+```elixir
 iex> Portal.Door.start_link(:pink)
 {:ok, #PID<0.68.0>}
 iex> Portal.Door.get(:pink)
@@ -263,9 +263,9 @@ iex> Portal.Door.pop(:pink)
 
 Excelente!
 
-Um dos aspectos interessantes do Elixir é que essa documentação é tratada como um cidadão de primeira-classe. Uma vez que tenhamos documentado nosso código `Portal.Door`, agora podemos acessar facilmente sua documentação pelo terminal. Tente digitar:
+Um dos aspectos interessantes do Elixir é que essa documentação é tratada como um cidadão de primeira-classe. Uma vez que tenhamos documentado nosso código `Portal.Acesso`, agora podemos acessar facilmente sua documentação pelo terminal. Tente digitar:
 
-```
+```elixir
 iex> h Portal.Door.start_link
 ```
 
@@ -295,30 +295,30 @@ Vamos abrir `lib/portal.ex` e adicionar algum código ao módulo `Portal`. Obser
 defstruct [:left, :right]
 
 @doc """
-Starts transfering `data` from `left` to `right`.
+Inicia a transferência da `data` de `left` para `right`.
 """
 def transfer(left, right, data) do
-  # First add all data to the portal on the left
+  # Primeiro adiciona todos os dados no portal da esquerda
   for item <- data do
     Portal.Door.push(left, item)
   end
 
-  # Returns a portal struct we will use next
+  # Retorna uma struct de portal que usaremos depois
   %Portal{left: left, right: right}
 end
 
 @doc """
-Pushes data to the right in the given `portal`.
+Adiciona os dados na direita do `portal` fornecido.
 """
 def push_right(portal) do
-  # See if we can pop data from left. If so, push the
-  # popped data to the right. Otherwise, do nothing.
+  # Verifica se podemos deletar dados da esquerda. Se sim, inclui
+  # os dados deletados na direita. Caso contrário, não faz nada.
   case Portal.Door.pop(portal.left) do
     :error   -> :ok
     {:ok, h} -> Portal.Door.push(portal.right, h)
   end
 
-  # Let's return the portal itself
+  # Vamos retornar o portal
   portal
 end
 ```
@@ -326,25 +326,25 @@ end
 Nós definimos nossa estrutura `Portal` e uma função `Portal.transfer/3` (o `/3` indica que a função espera três argumentos). Vamos dar essa tentativa de transferência. Inicie outro shell com `iex -S mix` para que nossas mudanças sejam compiladas e digite:
 
 ```
-# Start doors
+# Inicia os acessos
 iex> Portal.Door.start_link(:orange)
 {:ok, #PID<0.59.0>}
 iex> Portal.Door.start_link(:blue)
 {:ok, #PID<0.61.0>}
 
-# Start transfer
+# Inicia a transferência
 iex> portal = Portal.transfer(:orange, :blue, [1, 2, 3])
 %Portal{left: :orange, right: :blue}
 
-# Check there is data on the orange/left door
+# Verifica se existem dados no acesso laranja/esquerdo.
 iex> Portal.Door.get(:orange)
 [3, 2, 1]
 
-# Push right once
+# Insere na direita uma vez
 iex> Portal.push_right(portal)
 %Portal{left: :orange, right: :blue}
 
-# See changes
+# Verifica as mudanças
 iex> Portal.Door.get(:orange)
 [2, 1]
 iex> Portal.Door.get(:blue)
@@ -406,22 +406,22 @@ iex> portal = Portal.transfer(:orange, :blue, [1, 2, 3])
 
 ## Atirando em acessos supervisionados
 
-Nós ouvimos com frequência que Erlang VM, a máquina virtual que roda o Elixir, juntamente com o ecossistema Erlang é boa para fazer aplicações tolerantes a falhas. Uma das razões para isso são as chamadas árvores de supervisão.
+Nós ouvimos com frequência que Erlang VM, a máquina virtual que roda o Elixir, juntamente com o ecossistema Erlang, é boa para fazer aplicações tolerantes a falhas. Uma das razões para isso são as chamadas árvores de supervisão.
 
-Nosso código até então não foi supervisionado. Vamos ver o que acontece quando nós desligamos explicitamente um dos agentes da porta:
+Nosso código até então não foi supervisionado. Vamos ver o que acontece quando nós desligamos explicitamente um dos agentes do acesso:
 
-```
+```elixir
 # Inicia os acessos e transferência
 iex> Portal.Door.start_link(:orange)
 {:ok, #PID<0.59.0>}
 iex> Portal.Door.start_link(:blue)
 {:ok, #PID<0.61.0>}
-iex> portal = Portal.transfer(:orange, :blue, [1, 2, 3])
+iex> portal = Portal.transfere(:orange, :blue, [1, 2, 3])
 
-# Primeiro desconecta a porta do shell para evitar que o shell quebre
+# Primeiro desconecta o acesso do shell para evitar que o shell quebre
 iex> Process.unlink(Process.whereis(:blue))
 true
-# Envia um sinal de desligamento para o agente blue
+# Envia um sinal de desligamento para o agente azul
 iex> Process.exit(Process.whereis(:blue), :shutdown)
 true
 
@@ -433,14 +433,14 @@ iex> Portal.push_right(portal)
     (portal) lib/portal.ex:25: Portal.push_right/1
 ```
 
-Nós recebemos uma mensagem de erro porque a porta `:blue` não existe. Você pode ver a mensagem `** (EXIT) no process` depois da nossa chamada da função. Para concertar a situação, nós vamos configurar um supervisor que será responsável por reiniciar um acesso do portal sempre que ele quebrar.
+Nós recebemos uma mensagem de erro porque a porta `:azul` não existe. Você pode ver a mensagem `** (EXIT) no process` depois da nossa chamada da função. Para consertar a situação, nós vamos configurar um supervisor que será responsável por reiniciar um acesso do portal sempre que ele quebrar.
 
 Lembra de quando nós passamos a flag `--sup` ao criarmos o nosso projeto `portal`? Nós passamos aquela flag porque os supervisores normalmente rodam dentro de árvores de supervisão e árvores de supervisão normalmente são iniciadas como parte da aplicação. Tudo que a flag `--sup` faz é criar uma estrutura supervisionada por padrão que nós podemos ver no nosso módulo `Portal.Application` em `lib/portal/application.ex`:
 
-```
+```elixir
 defmodule Portal.Application do
-  # See http://elixir-lang.org/docs/stable/elixir/Application.html
-  # for more information on OTP Applications
+  # Veja http://elixir-lang.org/docs/stable/elixir/Application.html
+  # para mais informações sobre Aplicações OTP
   @moduledoc false
 
   use Application
@@ -449,12 +449,12 @@ defmodule Portal.Application do
     import Supervisor.Spec, warn: false
 
     children = [
-      # Define workers and child supervisors to be supervised
+      # Define workers e filhos dos supervisores para serem supervisionados
       # worker(Portal.Worker, [arg1, arg2, arg3])
     ]
 
-    # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
-    # for other strategies and supported options
+    # Veja http://elixir-lang.org/docs/stable/elixir/Supervisor.html
+    # para outras estratégias e opções suportadas
     opts = [strategy: :one_for_one, name: Portal.Supervisor]
     Supervisor.start_link(children, opts)
   end
@@ -465,7 +465,7 @@ O código acima torna o módulo `Portal` uma aplicação de callback. A aplicaç
 
 Substitua a função `start/20` acima por:
 
-```
+```elixir
 def start(_type, _args) do
   import Supervisor.Spec, warn: false
 
@@ -480,27 +480,27 @@ end
 
 Nós fizemos duas coisas:
 
-  - Adicionamos uma especificação de filho no supervisor, do tipo `worker`, e o filho é representado pelo módulo `Portal.Door`. Nós não passamos argumentos para o worker, apenas uma lista vazia `[]`, como a cor será especificada depois.
-  - Mudamos a estratégia de `one_for_one` para `:simple_one_for_one`. Supervisores fornecem estratégias diferentes e `:simple_one_for_one` é útil quando queremos criar os filhos dinamicamente, muitas vezes com argumentos diferentes. Isso é exatamente  caso dos nossos acessos do portal, onde queremos gerar múltiplos acessos com cores diferentes.
+* Adicionamos uma especificação de filho no supervisor, do tipo `worker`, e o filho é representado pelo módulo `Portal.Acesso`. Nós não passamos argumentos para o worker, apenas uma lista vazia `[]`, já que a cor será especificada depois.
+* Mudamos a estratégia de `one_for_one` para `:simple_one_for_one`. Supervisores fornecem estratégias diferentes e `:simple_one_for_one` é útil quando queremos criar os filhos dinamicamente, muitas vezes com argumentos diferentes. Isso é exatamente  o caso dos nossos acessos do portal, onde queremos gerar múltiplos acessos com cores diferentes.
 
-O último passo é adicionar uma função nomeada `shoot/1` para o módulo `Portal` que irá receber uma cor e gerar um novo acesso como parte da nossa árvore de supervisão:
+O último passo é adicionar uma função chamada `shoot/1` para o módulo `Portal` que irá receber uma cor e gerar um novo acesso como parte da nossa árvore de supervisão:
 
-```
+```elixir
 @doc """
-Shoots a new door with the given `color`.
+Atira um novo acesso com a `color` recebida.
 """
 def shoot(color) do
   Supervisor.start_child(Portal.Supervisor, [color])
 end
 ```
 
-A função acima alcança o supervisor chamado `Portal.Supervisor` e pergunta por um novo filho pra ser iniciado. `Portal.Supervisor` é o nome do supervisor que nós definimos em `start/2` e o filho será um `Portal.Acesso` que foi especificado como um worker desse supervisor.
+A função acima alcança o supervisor chamado `Portal.Supervisor` e pergunta por um novo filho pra ser iniciado. `Portal.Supervisor` é o nome do supervisor que nós definimos em `start/2` e o filho será um `Portal.Door` que foi especificado como um worker desse supervisor.
 
-Internamente, para iniciar um filho, o supervisor invocará `Portal.Acesso.start_link(color)`, onde cor é o valor passado na chamada `start_child/2` acima. Se nós tivéssemos chamado `Supervisor.start_child(Portal.Supervisor, [foo, bar, baz])`, o supervisor teria tentado iniciar um filho com `Portal.Door.start_link(foo, bar, baz)`.
+Internamente, para iniciar um filho, o supervisor invocará `Portal.Door.start_link(cor)`, onde cor é o valor passado na chamada `start_child/2` acima. Se nós tivéssemos chamado `Supervisor.start_child(Portal.Supervisor, [foo, bar, baz])`, o supervisor teria tentado iniciar um filho com `Portal.Door.start_link(foo, bar, baz)`.
 
-Vamos dar uma chance para a nossa função de atirar. Inicie uma nova sessão novo `iex -S mix` e:
+Vamos testar a função de atirar. Inicie uma nova sessão `iex -S mix` e:
 
-```
+```elixir
 iex> Portal.shoot(:orange)
 {:ok, #PID<0.72.0>}
 iex> Portal.shoot(:blue)
@@ -520,7 +520,7 @@ iex> Portal.push_right(portal)
 
 E o que acontece se interrompermos o processo `:blue` agora?
 
-```
+```elixir
 iex> Process.unlink(Process.whereis(:blue))
 true
 iex> Process.exit(Process.whereis(:blue), :shutdown)
@@ -532,9 +532,9 @@ iex> Portal.push_right(portal)
 >
 ```
 
-Note que dessa vez a seguinte operação `push_right/1` funcionou porque o supervisor automaticamente iniciou outro portal `:blue`. Infelizmente os dados que estavam no portal azul antes do crash foram perdidos mas nosso sistema se recuperou do crash.
+Note que dessa vez a operação `push_right/1` funcionou porque o supervisor automaticamente iniciou outro portal `:blue`. Infelizmente os dados que estavam no portal azul antes do crash foram perdidos, mas nosso sistema se recuperou do crash.
 
-Na prática existem diferentes estratégias de supervisão para escolher assim como mecanismos para persistir os dados no caso de algo dar errado, permitindo que você escolha a melhor opção para suas explicações.
+Na prática existem diferentes estratégias de supervisão para escolher, assim como mecanismos para persistir os dados no caso de algo dar errado, permitindo que você escolha a melhor opção para suas explicações.
 
 Sensacional!
 
@@ -614,15 +614,15 @@ Nossa transferência de portal distribuído funciona porque as portas são apena
 
 ## Finalizando
 
-Então nós chegamos ao final desse guia de como iniciar com Elixir! Foi um passeio divertido e nós fomos rapidamente de iniciar processos para atirar em acessos tolerantes a falhas manualmente para transferências de portal dstribuídas!
+Então nós chegamos ao final desse guia de como iniciar com Elixir! Foi um passeio divertido e nós fomos rapidamente de iniciar processos para atirar em acessos tolerantes a falhas manualmente até transferências de portal distribuídas!
 
 Nós desafiamos você a continuar aprendendo e explorando mais sobre Elixir ao levar sua aplicação Portal para o próximo nível:
-  - Adiciona uma funcão `Portal.push_left/1` que transfira os dados na outra direção. Como você pode evitar o código duplicado existente entre as funções `push_left/1` e `push_right/1`?
-  - Aprenda mais sobre [ExUnit](http://elixir-lang.org/docs/stable/ex_unit/ExUnit.html), o framework de test do Elixir, e escreva testes para a funcionalidade que acabamos de construir. Lembre que já fizemos uma estrutura padrão estabelecida no diretório `test`.
-  - Gere a documentação HTML para o seu projeto com [ExDoc](http://github.com/elixir-lang/ex_doc)
-  - Suba o seu projeto em um repositório externo, como [Github](https://github.com/), e publique um pacote usando o [Hex package manager](https://hex.pm/).
+* Adicione uma função `Portal.push_left/1` que transfira os dados na outra direção. Como você pode evitar o código duplicado existente entre as funções `push_left/1` e `push_right/1`?
+* Aprenda mais sobre [ExUnit](http://elixir-lang.org/docs/stable/ex_unit/ExUnit.html), o framework de teste do Elixir, e escreva testes para a funcionalidade que acabamos de construir. Lembre-se que já fizemos uma estrutura padrão estabelecida no diretório `test`.
+ * Gere a documentação HTML para o seu projeto com [ExDoc](http://github.com/elixir-lang/ex_doc)
+ * Suba o seu projeto em um repositório externo, como [Github](https://github.com/), e publique um pacote usando o [Hex package manager](https://hex.pm/).
 
-Nós convidamos você para explorar nosso [site](http://elixir-lang.org/) e ler nosso guia Getting Started ou muitos dos recursos disponíveis para aprender mas sobre Elixir e nossa comunidade vibrante.
+Nós convidamos você para explorar nosso [site](http://elixir-lang.org/) e ler nosso guia Getting Started ou outros dos muitos recursos disponíveis para aprender mais sobre Elixir e nossa comunidade vibrante.
 
 Finalmente, um enorme agradecimento ao [Augie De Blieck Jr.](http://twitter.com/augiedb) pelos desenhos nesse tutorial.
 
