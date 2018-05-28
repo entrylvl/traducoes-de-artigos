@@ -8,6 +8,7 @@
   - [JavaScript](#javascript)
   - [Git](#git)
   - [UX](#ux)
+  - [Elixir](#elixir)
 - [Licença](#licença)
 
 ## Projeto
@@ -35,6 +36,7 @@ Dê uma olhada na [seção de contribuição](CONTRIBUTING.md) para ter mais det
 * [JavaScript](#javascript)
 * [Git](#git)
 * [UX](#ux)
+* [Elixir](#elixir)
 
 ### Javascript
 
@@ -52,6 +54,10 @@ Dê uma olhada na [seção de contribuição](CONTRIBUTING.md) para ter mais det
 ### UX
 
 * [Como começar na área de UX](ux/como-comecar-na-area-de-ux.md)
+
+### Elixir
+
+* [Como começar: Elixir](elixir/como-comecar-elixir/artigo.md)
 
 ## Licença
 [MIT License](https://github.com/entrylvl/traducoes-de-artigos//blob/master/LICENSE)
