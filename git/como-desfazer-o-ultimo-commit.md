@@ -2,16 +2,16 @@
 
 ---
 
-#Como desfazer o último commit
+# Como desfazer o último commit
 
 Neste artigo mostrarei como eu às vezes desfaço alterções erradas (commits) em um projeto de programação, usando o git no terminal.
 
-##Por que eu iria querer fazer isso?
+## Por que eu iria querer fazer isso?
 
 Na minha tese, estou trabalhando em um projeto que eu desenvolvo em um environment (ambiente), e então testo em outro environment composto de múltiplas máquinas virtuais. Então cada mudança importante que eu faço pode ter um impacto significante nas funcionalidades do projeto. Às vezes, a mudança que eu 
 faço pode não ter o resultado esperado. Então eu tenho que verificar as mudanças e analizar o comportamento do projeto antes e depois do último commit.
 
-##Como você vê o último commit?
+## Como você vê o último commit?
 
 Para testar um commit específico, você precisa do hash. Para obter o hash que você pode executar git log, obtendo esse resultado:
 
@@ -73,7 +73,7 @@ HEAD is now at <hash do commit>... <mensagem do commit>
 Depois de analisar o commit específico, se você decidir ficar nesse estado de commit,
  você pode desfazer o último commit.
 
-##Como desfazer este commit?
+## Como desfazer este commit?
 
 Se você desejar [desfazer / reverter](https://git-scm.com/docs/git-revert) 
 o último commit, você pode fazer o seguinte,
@@ -104,7 +104,7 @@ git checkout <branch atual>
 Durante a elaboração deste post, encontrei este tutorial -  [Desfazendo Commits e Alterações](https://www.atlassian.com/git/tutorials/undoing-changes)
  - pela Atlassian, que descreve muito bem essa questão.
 
-##Resumo
+## Resumo
 
 * Se você quiser testar o commit anterior apenas faça git checkout <test commit hash>; 
 então você pode testar a última versão de trabalho do seu projeto.

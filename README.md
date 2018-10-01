@@ -1,4 +1,4 @@
-# Traduções de artigos
+﻿# Traduções de artigos
 
 - [Projeto](#projeto)
 - [Motivação](#motivação)
@@ -50,6 +50,7 @@ Dê uma olhada na [seção de contribuição](CONTRIBUTING.md) para ter mais det
 
 * [O que é Git?](git/o-que-e-git.md)
 * [O que é controle de versão](/git/o-que-e-controle-de-versao.md)
+* [Como desfazer o útlimo commit?](/git/como-desfazer-o-ultimo-commit.md)
 
 ### UX
 
