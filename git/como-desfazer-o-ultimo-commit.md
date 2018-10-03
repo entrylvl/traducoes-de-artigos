@@ -1,4 +1,5 @@
 ﻿[Artigo original: How to undo the last commit](https://dev.to/isabelcmdcosta/how-to-undo-the-last-commit--31mg)
+
 [Tradutor: Carlos Magno](https://github.com/raymag)
 
 ---
