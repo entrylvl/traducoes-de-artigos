@@ -1,0 +1,7 @@
+[Artigo original: CSS Flesxbox - An Interactive Tutorial](https://medium.freecodecamp.org/css-flex-an-interactive-tutorial-19ff6e93558)
+
+# Fonte: 
+
+Eu passei praticamente por todos os tutoriais existentes sobre Flex, desde o mais simples até a documentação oficial do W3C. <br> Mas tem uma coisa que você nunca irá aprender sobre Flexbox sem um exemplo interativo: o comportamento das propriedades quando o tamanho de um item individual é alterado. Você pode ver o que eu quero dizer abaixo.
+
+![](https://cdn-images-1.medium.com/max/800/1*fB3iReGWE2yQGb0hYzcO2Q.gif)
