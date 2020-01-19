@@ -30,6 +30,8 @@ Flexibidade é um objetivo chave para o projeto do Git. Ele é flexível em vár
 
 Git foi projetado para suportar `branching` e `tagging` como cidadãos de primeira classe (diferente do SVN) e operações que afetam `branches` e `tags`(como `merging` ou `reverting`) são também guardados como parte do histórico de mudanças. Não são todos os controles de versão que possuem esse nível de monitoramento.
 
+Além da flexibilidade técnica como citado no primeiro paragrafo ele é flexivel quanto aos costumes da empresa, consegue facilmente ser adequado a tal rotina de projeto otimizando o tempo em mais produtividade e agrado aos desenvolvedores / Contribuidores do projeto.
+
 ## Controle de versão com Git
 
 Git é a melhor escolha para a maioria dos times de desenvolvimento de software atualmente. Ao passo em que todo time é diferente e deveria fazer sua própria análise quanto a isso, aqui vão alguns motivos pelos quais é recomendável realizar o controle de versionamento com Git ao invés de ferramentas alternativas:
